@@ -34,11 +34,17 @@ The Open-Pact License creates a tiered system based on **who you are** and **wha
 
 ## 4. Why Guilds?
 
-In traditional open source, maintainers are often burnout-prone volunteers.
-OPL-1.1 introduces the **Guild**: a decentralized, on-chain body of contributors that:
-*   **Manages Treasuries:** Royalties go to a shared pot, not just one person.
-*   **Votes on Policy:** Fees, exceptions, and enforcement are decided by the community.
-*   **Enforces Licenses:** Uses the blockchain as a public ledger of compliance.
+In traditional open source, maintainers are often burnout-prone volunteers
+with no collective governance or shared revenue. OPL-1.1 introduces the
+**Guild**: an organized collective of Contributors that:
+* **Manages Treasuries:** Royalties go to a shared pool, not just one person.
+* **Votes on Policy:** Fees, exceptions, and enforcement are decided by the community.
+* **Enforces Licenses:** Maintains a public registry of compliance and license holders.
+
+The Guild is a governance convention, not a legal entity. It operates
+as a contractual framework between Contributors and operates within
+existing legal structures (LLCs, cooperatives, or individual copyright
+holding) as applicable in each jurisdiction.
 
 ## 5. AI-Specific Protections
 

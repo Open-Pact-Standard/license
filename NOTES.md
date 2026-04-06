@@ -1,130 +1,73 @@
-# Open-Pact License v1.1 (OPL-1.1) -- Notes & Commentary
+# Open-Pact License v1.1 (OPL-1.1) — Section Notes
 
 ## Overview
+This document explains the intent, mechanics, and rationale behind each section of the Open-Pact License (OPL-1.1). It is not a substitute for the legal text, but it is designed to make the legal text accessible to developers, lawyers, and business leaders.
 
-This document provides plain-English commentary on the [Open-Pact License v1.1 (OPL-1.1)](LICENSE-OPL-1.1.md). It explains the intent behind each section and how it applies to different types of users.
-
-**This document is informative only. It does not supersede the license text. if there is a conflict, the license text in LICENSE-OPL-1.1.md controls.**
-
----
-
-## Preamble
-
-**What it says:**
-We are making a deal. You get access to the code for free. If you use it to make money or build AI, you pay the creators. The "Guild" (the community of contributors) manages this deal using on-chain transparency.
-
-**Why it's important:**
-Traditional licenses like MIT assume everyone is a developer sharing code at a university. They don't account for corporations extracting billions of dollars in value, or AI companies training models on code for free. The Preamble sets the intent: **This is a reciprocity agreement, not a public domain.**
+**Core Philosophy:** "Fair compensation for extraction, permissionless access for humans."
 
 ---
 
-## Section 1: Definitions
+### Preamble
+**The Intent:** The software world is broken. Traditional licenses either give everything away for free (MIT/Apache) or lock everything down (BSL/CC-NC). OPL sits in the middle: it allows individuals to use code freely, but requires businesses and AI companies to pay for the value they extract.
+**The Mechanism:** A tiered system governed by a "License Steward" (either a Guild of contributors or a solo developer).
 
-This is the dictionary. If a word here isn't defined here, it has its standard legal meaning (usually US Copyright Law).
+### Section 1: Definitions
+*   **1.2 License Steward:** The entity in charge. Can be a Guild (community) or a Solo dev. This means OPL works for a 1-person project just as well as a 10,000-person open source foundation.
+*   **1.4 - 1.4.3 The People Map:** We distinguish between:
+    *   **Contributor:** Someone with accepted code.
+    *   **Collaborator:** Someone who helps (tests, docs) but has no IP claim.
+    *   **Guild Member:** Someone with voting power on royalties and policy.
+*   **1.4.1 AI Agent:** AI is explicitly defined. It cannot hold copyright or vote. If an AI generates code, the *human or company* running it is responsible. This closes the "AI ghostwriter" loophole.
+*   **1.5 Total Workforce:** We count everyone who works: employees, contractors, gig workers, and autonomous AI agents. We *don't* count tools like Copilot or linters. This prevents companies from firing staff to hire "AI agents" to dodge fees.
+*   **1.22 Functionally Equivalent Work:** You can't just copy the exact behavior of our software and release it under MIT to avoid paying. If you build a clone to displace us, you still pay.
 
-*   **Guild:** Defined as the collective of Contributors. This is unique. It means no single person owns the "rights" to enforce the license or change fees. It's a decentralized governance body.
-*   **Personal Use:** The "Free" tier. If you are a student, a hobbyist, or doing security research, this is you. **Key distinction:** You cannot use the code if it supports a commercial operation, even if you personally aren't making money from it.
-*   **Commercial Use:** The "Business" tier. If this code helps you make money, save money, or run a business, you pay.
-*   **AI Training Use:** The "AI" tier. This is broad on purpose. It covers feeding code to LLMs, using outputs as training data, and fine-tuning. It explicitly separates AI extraction from standard "running" of the software.
-*   **Legal Entity:** Standard corporate definition (control, 50% ownership, etc).
+### Section 2: Personal Use (Tier 1)
+*   **Rights:** Full access, modification, redistribution.
+*   **Cost:** Free.
+*   **Internal Evaluation:** Companies can test the software for 90 days before buying. This removes the friction of "try before you buy."
+*   **Security Research:** Allowed for everyone, even if paid. You can hunt bugs in our code without fear of a lawsuit.
 
----
+### Section 3: Commercial Use (Tier 2)
+*   **Rights:** Use in business, SaaS, internal tools.
+*   **Cost:** Fees are set by the License Steward and published in a "Project Registry" (like a public URL). We intentionally keep fees out of the legal text so they can be updated easily as markets change.
+*   **Payment:** Stablecoins (USDC), Crypto, or Fiat.
+*   **Escrow:** If the Steward disappears (ghosts you), you can pay into escrow and you are considered valid.
 
-## Section 2: Personal Use License
+### Section 4: AI Training Use (Tier 3)
+*   **Rights:** Training models on our code.
+*   **Cost:** Higher premium than Commercial.
+*   **Disclosure:** You must list us in your Model Card.
+*   **Anti-Competitive:** You can't train a model specifically to replace our product using our own code.
 
-**For:** Students, Hobbyists, Researchers, Open Source Developers.
+### Section 5: Derivative Works (Tier 4)
+*   **Reciprocity:** If you build a business on our code and make over a minimum amount (the "de minimis" threshold), you must share at least 10% of the revenue with the original Stewards.
+*   **5.2 Anti-Evasion:** No revenue slicing, bundling, or transfer pricing games. If OPL is the primary value, all revenue counts.
+*   **5.5 Version Certification:** Every version of a Derivative Work must be "certified" as clean. This prevents bad actors from sneaking stolen GPL code into one specific version to poison the ecosystem.
 
-**The Deal:**
-*   **Cost:** $0.
-*   **Rights:** Perpetual, worldwide, royalty-free. You can modify, share, and build anything you want, as long as it's not for Commercial or AI Training use.
-*   **Obligations:** Keep the license file. Don't pretend you are a commercial licensee.
+### Section 10: Termination
+*   **10.4 Damages & Disgorgement:** We don't use fixed fines (which are just taxes). If you steal the software, we can claim all profits you made from it.
+*   **10.5 No Safe Harbor:** Just because we didn't put a specific penalty for a specific violation doesn't mean you can get away with it.
 
----
+### Section 11: Enforcement
+*   **Canary Tokens:** Each download of the software contains unique, invisible identifiers. If we find your company's "unique" code in the wild with a Token that matches a download you took but didn't pay for, that is non-rebuttable evidence of theft.
+*   **Registry:** We maintain a public record of who is licensed. This allows anyone to verify that you are allowed to use the code.
 
-## Section 3: Commercial Use License
+### Section 15: Miscellaneous
+*   **15.6 Succession:** If a solo Steward dies, the community can eventually take over if the heir doesn't step up.
+*   **15.7 Steward Removal:** If a Steward goes rogue (stealing royalties), the community (20% of contributors) can vote them out.
+*   **15.1 Arbitration:** For disputes involving companies with >$1M revenue, we agree to Binding Arbitration. This means we can enforce this license in 170+ countries (via the New York Convention) without relying on local courts that might ignore foreign IP laws.
 
-**For:** Startups, SaaS Companies, Enterprise Internal Tools.
+### Section 16: Sunset
+*   **36-Month Rule:** If a project is abandoned for 36 months AND has fewer than 3 active participants, it automatically becomes **Apache 2.0**. This ensures we never become "zombie software" that holds code hostage.
 
-**The Deal:**
-*   **Cost:** Tiered by company size (e.g., $100/yr for Micro, $50k/yr for Enterprise).
-*   **Rights:** Full commercial rights to use, modify, and deploy.
-*   **Mechanism:** You buy a license via the Guild registry (smart contract). You get a License Record on-chain.
-*   **Obligation:** Be honest about your size. If you lie about being "Micro" when you are "Enterprise," you breach the license and lose your rights.
+### Section 17: Whistleblower
+*   **Bounty:** 5% of all royalties go to a bounty pool.
+*   **Anonymity:** You can report violations anonymously.
+*   **Anti-Harassment:** False reports are penalized. No one can use the whistleblower system as a weapon against competitors. Only material violations (unlicensed commercial use) result in registry entries, with a 6-month cap per subject.
 
-**FAQ: Can I use this in a closed-source product?**
-Yes, as long as you hold a valid Commercial License. Unlike GPL, OPL does not "infect" your proprietary code. You buy the right to use it.
-
----
-
-## Section 4: AI Training Use License
-
-**For:** AI Companies, Model Labs, Agentic Frameworks.
-
-**The Deal:**
-*   **Cost:** Higher than commercial (e.g., $25k+).
-*   **Rights:** Training models, fine-tuning, evaluation.
-*   **The "Sticker":** You **must** disclose that you trained on this software. If your model spits out code that looks like this software, your user needs to know they might need a license too.
-*   **Anti-Competitive Clause:** You cannot train a model *specifically* to replace the Software using the Software's own code. (e.g., you can't train a model to replace this exact codebase using this codebase).
-
-**Why this is needed:**
-Standard licenses grant the right to "reproduce." AI companies argue training a model isn't reproduction, it's "fair use" or "inspiration." This clause closes that loophole by defining AI Training as a specific, licensable activity.
-
----
-
-## Section 5: Reciprocity (The "Network Effect")
-
-**For:** Forks, Plugin Authors, Derivative Products.
-
-**The Deal:**
-If you fork this code and make money from the fork:
-1.  You must use OPL-1.1 for your fork.
-2.  You must share at least 10% of your revenue with the original Guild.
-3.  Users of your fork also have to pay for Commercial/AI use.
-
-**Why this is needed:**
-This creates a network. If you build a successful business on top of this, you support the original creators. It prevents "leeching" where someone takes the code, modifies it slightly, and starts selling a better version without giving back.
-
----
-
-## Section 6 & 7: Copyright & Patent Grants
-
-**Legal Core:**
-These are standard "Apache-style" grants.
-*   **Copyright:** You give me permission to use the code.
-*   **Patent:** You (Contributor) give me permission to use any patents *I specifically need to use your contribution*. If I sue you for patent infringement later, I lose my license. This prevents "open source patent ambushes."
-
----
-
-## Section 8: Trademark
-
-**The Brand:**
-Just because you can use the code, doesn't mean you can use the **name**. You cannot call your fork "Project X" if the original is "Project X," and you can't use the logo.
-
----
-
-## Section 10: Termination
-
-**The "Three Strikes" Clause:**
-If you break the rules (e.g., use it commercially without paying), your license ends.
-*   **Grace Period:** You have 30 days to fix it. If you pay up within 30 days, you get your rights back. This is fairer than "one mistake and you're dead forever."
-
----
-
-## Section 11: Enforcement
-
-**The Guild Power:**
-Usually, "enforcement" implies a company sending letters. Here, the Guild *is* the enforcer. The Guild can vote to ban a user or sue. Because the registry is on-chain, proving "you didn't pay" is as easy as checking a blockchain address. There is no "I didn't get the email" excuse.
-
----
-
-## Section 12: Versions
-
-**Future-Proofing:**
-If we release OPL-2.0, you aren't forced to upgrade. You can stay on OPL-1.1 terms. This ensures stable, long-term legal certainty.
-
----
-
-## Section 15: Smart Contract Integration
-
-**The Bridge:**
-Most licenses assume paper contracts. We assume smart contracts. This clause says: "If the smart contract code says you paid, you paid. If the text says something different, the text wins." It bridges the gap between human law and machine execution.
+### Section 18: Third-Party Dependencies
+*   **Separation:** Dependencies (MIT, Apache, GPL, etc.) keep their own licenses. They are not "infected" by OPL. 
+*   **Definition:** A real Dependency must be (a) independently created and (b) have a verifiable license. You cannot use this to hide your own code.
+*   **Anti-Poisoning:** The Steward is responsible for ensuring dependencies aren't incompatible (e.g., GPL code in a commercial tool). Deliberate "poisoning" of a project's license status is illegal.
+*   **Shadow Dependencies:** If a product tries to hide OPL code inside a "Dependency" folder to avoid paying royalties, the law treats it as part of the main Software.
+*   **Good Faith Declaration:** All dependencies must be declared in a machine-readable file. Errors must be cured within 30 days.
