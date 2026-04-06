@@ -6,14 +6,14 @@ The Open-Pact License is designed for the age of AI and automated code extractio
 It guarantees source availability and individual freedom while establishing fair
 compensation when code is taken for commercial profit or AI training.
 
-Unlike traditional open source licenses written before the AI era, OPL-1.0
+Unlike traditional open source licenses written before the AI era, OPL-1.1
 recognizes two fundamentally different modes of software consumption:
 human use (reading, running, modifying) and machine use (training models,
 extracting patterns, automated consumption). Both are addressed under this
 license with appropriate terms.
 
 This license is governed by the License Steward -- either the Guild (a
-collective of contributors registered in the project's royalty registry)
+collective of Contributors registered in the project's royalty registry)
 or the original copyright holder for solo projects -- and is enforced
 through both traditional copyright law and verifiable registration.
 A Guild is optional; a single copyright holder may act as the License
@@ -125,7 +125,7 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
      individuals (employees, contractors, consultants, gig workers,
      temporary workers) and autonomous AI Agent systems that independently
      perform tasks that would otherwise require human labor, counted on a
-     full-time-equivalent ("FTE") basis. For avoidance of doubt, AI-driven
+     full-time-equivalent ("FTE") basis. For the avoidance of doubt, AI-driven
      developer tools used by human workers (e.g., code completion, linting,
      automated testing, CI/CD pipelines) do not count as separate AI Agent
      workers -- they are productivity tools, not workers. An AI Agent
@@ -134,13 +134,8 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
      whether the Legal Entity would have hired dedicated personnel for
      such tasks in the absence of the AI Agent. The Total Workforce
      calculation shall be made on a good-faith basis consistent
-     with the entity's own internal workforce reporting and public filings. For purposes of
-     determining company size under Section 3.2, the Total Workforce of
-     all entities under common control shall be aggregated. Any attempt to
-     artificially fragment a single organization into multiple entities or
-     to reclassify workers as external contractors for the purpose of
-     obtaining a lower fee tier constitutes a material breach of this
-     License. For the avoidance of doubt, "Total Workforce" supersedes
+     with the entity's own internal workforce reporting and public filings.
+     For the avoidance of doubt, "Total Workforce" supersedes
      any reference to "employee count" in this License.
 
 1.6. **"Contribution"** means any work of authorship, including the original
@@ -180,32 +175,32 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
      included in or attached to the work.
 
 1.8. **"Derivative Work"** means any work, whether in Source or Object
-      form, that is based on (or derived from) the Software, OR incorporates
-      any portion of the Software into a larger work. Modifications,
-      integrations, and translations count as Derivative Works. For purposes
-      of this License, Derivative Works shall not include works that remain
-      fully separable from, or merely link to (or bind by name), the interfaces
-      of the Software and Derivative Works thereof, PROVIDED THAT such
-      works do not derive their primary functional value from the Software
-      itself. A work that wraps, proxies, or otherwise provides access to
-      the Software as a core component of its functionality shall be deemed
-      a Derivative Work regardless of the technical means of integration.
+     form, that is based on or derived from the Software, OR incorporates
+     any portion of the Software into a larger work. Modifications,
+     integrations, and translations count as Derivative Works. For purposes
+     of this License, Derivative Works shall not include works that remain
+     fully separable from, or merely link to (or bind by name), the interfaces
+     of the Software and Derivative Works thereof, PROVIDED THAT such
+     works do not derive their primary functional value from the Software
+     itself. A work that wraps, proxies, or otherwise provides access to
+     the Software as a core component of its functionality shall be deemed
+     a Derivative Work regardless of the technical means of integration.
 
 1.9. **"Personal Use"** means use of the Software by an individual for
      non-commercial purposes, including but not limited to personal projects,
      education, research, experimentation, hobby development, and security
      auditing. Personal Use expressly excludes any activity that generates
      revenue, supports a business operation, or contributes to the development
-     of a commercial product or service, EXCEPT as provided in Section 11.3
-     (Security Research).
+     of a commercial product or service, EXCEPT as provided in Section 11.3.
 
 1.10. **"Commercial Use"** means any use of the Software in connection with a
      revenue-generating activity, business operation, or organizational
      function, including but not limited to: SaaS products, embedded
      software, internal business tools, consulting services, distributed
      products, or any use that supports commercial operations. Commercial
-     Use expressly excludes Academic Research (Section 1.18) and
-     Nonprofit Public-Interest Use (Section 1.19).
+     Use expressly excludes Academic Research (Section 1.17), Nonprofit
+     Public-Interest Use (Section 1.18), and Security Research
+     (Section 1.16).
 
 1.11. **"AI Training Use"** means use of the Software, Derivative Works, or
      any extract thereof to train, fine-tune, evaluate, prompt-engineer,
@@ -225,100 +220,108 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
      License.
 
 1.12. **"Object form"** means any form resulting from mechanical transformation
-      or translation of Source form, including compiled object code, generated
-      documentation, and conversions to other media types.
+     or translation of Source form, including compiled object code, generated
+     documentation, and conversions to other media types.
 
 1.13. **"Source form"** means the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
+     including but not limited to software source code, documentation
+     source, and configuration files.
 
 1.14. **"Royalties"** means any licensing fees, sale proceeds, or direct
-      monetary compensation received in exchange for granting rights to,
-      distributing, or providing access to the Software or a Derivative
-      Work. Royalties also include net revenue derived from offering a
-      Derivative Work as a hosted or managed service (e.g., SaaS, API, or
-      managed infrastructure), calculated as the gross revenue attributable
-      to that service minus reasonable, demonstrable infrastructure costs.
-      For purposes of Section 5.2, "total revenue derived from the
-      Derivative Work" includes any revenue stream that would not exist
-      or would be substantially diminished but for the existence of the
-      Derivative Work, including but not limited to data monetization,
-      advertising revenue directly tied to the Derivative Work, or
-      network-effect value generated by a user base attracted primarily
-      through the Derivative Work. Royalties do not include revenue from
-      services that are genuinely independent of the Software or Derivative
-      Work, such as training, consulting, or custom development performed
-      for a licensee, provided that those services do not themselves
-      include granting access to the Software or a Derivative Work.
+     monetary compensation received in exchange for granting rights to,
+     distributing, or providing access to the Software or a Derivative
+     Work. Royalties also include net revenue derived from offering a
+     Derivative Work as a hosted or managed service (e.g., SaaS, API, or
+     managed infrastructure), calculated as the gross revenue attributable
+     to that service minus reasonable, demonstrable infrastructure costs.
+     For purposes of Section 5.2, "total revenue derived from the
+     Derivative Work" includes any revenue stream that would not exist
+     or would be substantially diminished but for the existence of the
+     Derivative Work, including but not limited to data monetization,
+     advertising revenue directly tied to the Derivative Work, or
+     network-effect value generated by a user base attracted primarily
+     through the Derivative Work. Royalties do not include revenue from
+     services that are genuinely independent of the Software or Derivative
+     Work, such as training, consulting, or custom development performed
+     for a licensee, provided that those services do not themselves
+     include granting access to the Software or a Derivative Work.
 
 1.15. **"Internal Evaluation"** means use of the Software by a Legal Entity
-      for the sole purpose of testing, development, or prototyping in a
-      non-production environment, to determine whether to acquire a
-      Commercial License or AI Training License. Internal Evaluation is
-      limited to a period of ninety (90) consecutive days per Legal Entity.
-      An individual or Legal Entity may not extend this period by engaging
-      contractors, agents, or proxies to use the Software on their behalf.
-      A new Legal Entity formed primarily from individuals who previously
-      exhausted an Internal Evaluation period under another Legal Entity
-      within the preceding eighteen (18) months shall be considered the
-      same Legal Entity for purposes of this time limit.
+     for the sole purpose of testing, development, or prototyping in a
+     non-production environment, to determine whether to acquire a
+     Commercial License or AI Training License. Internal Evaluation is
+     limited to a period of ninety (90) consecutive days per Legal Entity.
+     An individual or Legal Entity may not extend this period by engaging
+     contractors, agents, or proxies to use the Software on their behalf.
+     A new Legal Entity formed primarily from individuals who previously
+     exhausted an Internal Evaluation period under another Legal Entity
+     within the preceding eighteen (18) months shall be considered the
+     same Legal Entity for purposes of this time limit.
 
 1.16. **"Security Research"** means the act of testing, auditing,
-      analyzing, or experimenting with the Software to identify
-      vulnerabilities, bugs, or technical flaws, AND includes the
-      publication, disclosure, and distribution of findings, proof-of-
-      concept demonstrations, advisories, and related research materials.
-      Security Research is treated as Personal Use regardless of whether
-      compensation is received, and does not constitute Commercial Use.
-      For the avoidance of doubt, Security Research does NOT include
-      training, fine-tuning, or improving an AI model for commercial
-      deployment, even if such activities are conducted under the banner
-      of "security evaluation," "red teaming," or "capability assessment."
-      A Security Research activity must (a) produce findings that are
-      genuinely related to security vulnerabilities, bugs, or technical
-      safety issues; (b) make such findings available to the public or
-      the License Steward within a reasonable time; and (c) not involve
-      the continued commercial deployment or exploitation of the Software
-      beyond what is necessary to conduct and report the research.
+     analyzing, or experimenting with the Software to identify
+     vulnerabilities, bugs, or technical flaws, AND includes the
+     publication, disclosure, and distribution of findings, proof-of-
+     concept demonstrations, advisories, and related research materials.
+     Security Research is treated as Personal Use regardless of whether
+     compensation is received, and does not constitute Commercial Use.
+     For the avoidance of doubt, Security Research does NOT include
+     training, fine-tuning, or improving an AI model for commercial
+     deployment, even if such activities are conducted under the banner
+     of "security evaluation," "red teaming," or "capability assessment."
+     A Security Research activity must (a) produce findings that are
+     genuinely related to security vulnerabilities, bugs, or technical
+     safety issues; (b) make such findings available to the public or
+     the License Steward within a reasonable time; and (c) not involve
+     the continued commercial deployment or exploitation of the Software
+     beyond what is necessary to conduct and report the research.
 
 1.17. **"Academic Research"** means non-commercial research, including
-      benchmarking, comparative analysis, and academic publication,
-      where no revenue is directly generated from the Software itself.
-      This exemption applies regardless of the researcher's institutional
-      affiliation. Academic Research is exempt from the Commercial Use
-      fee schedule. This exemption does not apply if a commercial entity
-      receives exclusive, early, or preferential access to research
-      results, findings, or data derived from the Software that are not
-      simultaneously made publicly available to all parties under the
-      same terms.
+     benchmarking, comparative analysis, and academic publication,
+     where no revenue is directly generated from the Software itself.
+     This exemption applies regardless of the researcher's institutional
+     affiliation. Academic Research is exempt from the Commercial Use
+     fee schedule. This exemption does not apply if a commercial entity
+     receives exclusive, early, or preferential access to research
+     results, findings, or data derived from the Software that are not
+     simultaneously made publicly available to all parties under the
+     same terms.
 
 1.18. **"Nonprofit Public-Interest Use"** means use of the Software by a
-      registered nonprofit organization or a nonprofit collective for
-      purposes that directly serve the public interest, including
-      healthcare, education, environmental conservation, disaster response,
-      or humanitarian aid, where no revenue is directly generated from
-      the Software itself. Nonprofit Public-Interest Use is exempt from
-      the Commercial Use fee schedule. For purposes of this License, a
-      "nonprofit collective" means an organized group pursuing public-
-      interest goals that does not distribute profits to owners or members
-      and can provide reasonable evidence of its nonprofit status and
-      public-interest purpose through publicly available documentation.
+     registered nonprofit organization or a nonprofit collective for
+     purposes that directly serve the public interest, including
+     healthcare, education, environmental conservation, disaster response,
+     or humanitarian aid, where no revenue is directly generated from
+     the Software itself. Nonprofit Public-Interest Use is exempt from
+     the Commercial Use fee schedule. For purposes of this License, a
+     "nonprofit collective" means an organized group pursuing public-
+     interest goals that does not distribute profits to owners or members
+     and can provide reasonable evidence of its nonprofit status and
+     public-interest purpose through publicly available documentation.
 
 1.19. **"Project Registry"** means the authoritative record of License
-      Records, fee schedules, and governance information for this Software.
-      The Project Registry may be an on-chain smart contract deployment,
-      a publicly accessible URL designated by the License Steward, or any
-      other mechanism providing public read access and tamper-evident
-      records. By default, the License Steward designates the initial
-      Project Registry location. If no Project Registry is designated by
-      the License Steward within thirty (30) days of first publication of
-      the Software, any Licensee may designate a temporary registry via
-      public notice, which shall serve as the authoritative Project
-      Registry until the License Steward designates an alternative.
+     Records, fee schedules, and governance information for this Software.
+     The Project Registry may be an on-chain smart contract deployment,
+     a publicly accessible URL designated by the License Steward (such
+     as a version-controlled file in the Software's repository, e.g.,
+     a REGISTRY.json file), or any other mechanism providing public
+     read access and tamper-evident records. For URL-based Registries,
+     the version-controlled nature of the hosting platform (e.g., git
+     commit history) satisfies the tamper-evidence requirement, provided
+     the Registry file contains a verifiable reference (git commit hash,
+     IPFS hash, or equivalent cryptographic identifier) to the specific
+     version of the file that constitutes the authoritative record.
+     The Registry URL shall be published in the Software's repository
+     (e.g., in LICENSE.md, README, or package metadata), where that URL
+     shall be presumed canonical. If no Project Registry is designated by
+     the License Steward within thirty (30) days of first publication of
+     the Software, any Licensee may designate a temporary registry via
+     public notice, which shall serve as the authoritative Project
+     Registry until the License Steward designates an alternative.
 
 1.20. **"License Record"** means a record in the Project Registry
-      that documents a Licensee's registration, payment, license
-      tier, and terms of use for the Software.
+     that documents a Licensee's registration, payment, license
+     tier, and terms of use for the Software.
 
 1.21. **"Legal Entity"** means the union of the acting entity and all other
      entities that control, are controlled by, or are under common control
@@ -432,9 +435,31 @@ Compensation required under this Section shall be commercially reasonable
 and proportionate to: (a) the Licensee's Total Workforce (Section 1.5);
 (b) the extent to which the Software is integrated into the Licensee's
 commercial offering; and (c) prevailing market rates for comparable
-commercial software licenses. In any enforcement action, the License
-Steward bears the burden of demonstrating that the demanded compensation
-is proportionate under the standard above.
+commercial software licenses. Fees published in the Project Registry
+create a rebuttable presumption of proportionality. In any enforcement
+action, the Licensee bears the burden of demonstrating that the
+published compensation is NOT proportionate under the standard above,
+by a preponderance of the evidence. The Licensee may not simply point to
+the existence of free or lower-cost alternatives as proof of
+disproportionality; the Licensee must demonstrate that the Registry-published
+fee is unreasonable relative to the actual value derived from the Software.
+The presumption of proportionality does not apply where the Licensee
+can demonstrate that the Registry-published fee schedule was not publicly
+accessible at any URL designated by the License Steward in the Software's
+repository (e.g., LICENSE.md, README, or package metadata) at the time
+of the Licensee's first Commercial Use. Where the Licensee demonstrates
+that they made a good-faith effort to identify fee obligations (including
+checking the Software's LICENSE.md and package metadata) but the
+fee schedule was not presented in a manner reasonably likely to come
+to their attention (e.g., buried in an obscure subdirectory, or the
+URL was only briefly accessible and not cached), the Steward retains
+the right to enforce the fee prospectively from the date the Licensee
+was put on actual notice, but may not seek retroactive fees for the
+period before actual notice. Additionally, if the
+Registry-published fee exceeds five percent (5%) of the Licensee's
+total annual revenue, the presumption of proportionality does not
+apply, and the Steward bears the burden of demonstrating that the
+fee is reasonable relative to the three factors above.
 
 ### 3.3 Conditions for Commercial Licensees
 You must:
@@ -491,6 +516,40 @@ In addition to the requirements in Section 3.3, AI Training Licensees must:
     of including those capabilities. A "competing product" is one whose
     primary stated purpose and market positioning directly overlap with
     the Software's core functionality.
+(d) Where a commercial AI model that was trained using the Software
+    (as defined by the broad AI Training Use definition in Section 1.11,
+    including but not limited to: feeding Software code into training
+    pipelines, extracting patterns or structures from the Software,
+    model distillation, synthetic data generation, or any other mechanism
+    by which the Software's content contributes to the model's capabilities)
+    generates annual revenue attributable to the model or its outputs
+    that exceeds the de minimis threshold defined in Section 5.2, the
+    derivative reciprocity obligations of Section 5.2 shall apply in
+    addition to the AI Training License fee.
+(e) For AI models offered primarily as a service (e.g., API access,
+    hosted inference, SaaS deployment), the Licensee shall be deemed the
+    Derivative Work's Steward for purposes of Section 5.2 and shall
+    publish a Project Registry for the model at a publicly accessible URL,
+    disclosing the royalty split percentage, payment method, and linkage
+    to the original Software's Registry. The URL of the model's Registry
+    shall be included in the model card and API documentation. Failure
+    to maintain such a Registry constitutes a material breach under
+    Section 10.1(e).
+(f) The Licensee's own characterization of its revenue attribution shall
+    not be dispositive. In any dispute, revenue attribution for purposes
+    of this Section shall be determined based on the Licensee's own public
+    representations (e.g., product documentation, marketing materials,
+    model cards), the material contribution of OPL-derived capabilities
+    to the user-facing product, and the Licensee's internal training data
+    records. The Licensee bears the burden of demonstrating that any
+    revenue excluded from the OPL-derived revenue base is genuinely
+    attributable to independently-developed capabilities that would
+    generate the same revenue absent the OPL-trained features.
+    However, the Licensee's training data records shall serve as evidence
+    but shall not be the exclusive means of establishing that the Software
+    was used in training; the Steward may establish AI Training Use through
+    any admissible evidence consistent with the broad definition in
+    Section 1.11.
 
 ### 4.4 Acknowledgment
 You acknowledge that:
@@ -521,17 +580,40 @@ Project Registry, or (ii) one hundred US dollars (USD 100) or its
 equivalent in stablecoin at the time of evaluation, in any twelve (12)
 month period:
 (a) The License Steward of the original Software must receive a proportional
-    share of royalties generated by the Derivative Work, being no less than
-    ten percent (10%) and no more than fifty percent (50%) of Derivative
-    Work revenues, unless the original Steward has approved a different
-    percentage;
-(b) Contributors to the Derivative Work receive the remaining share;
-(c) The split percentage and payment mechanism must be published in the
+    share of royalties generated by the Derivative Work, as defined in the
+    original Software's Project Registry (not the Derivative Work's Registry).
+    The derivative royalty percentage is NOT fixed by this License document.
+    Where the original Software's Project Registry publishes a derivative
+    reciprocity percentage, that percentage shall apply. Where no derivative
+    percentage is published in the original Software's Project Registry, the
+    Derivative Work's Steward may propose a rate by publishing it in the
+    Derivative Work's own Registry and notifying the original Software's
+    Steward at the contact address listed in the original Software's Registry.
+    If the original Software's Steward does not object within ninety (90) days
+    of written notification, the proposed rate shall be deemed accepted.
+    If the original Software's Steward objects within ninety (90) days, the
+    parties shall negotiate in good faith for thirty (30) days. If no agreement
+    is reached, the rate shall be set at ten percent (10%) of applicable
+    revenues, subject to either party's right to invoke arbitration under
+    Section 15.1. During the negotiation period, the Derivative Work may be
+    distributed commercially at the ten percent (10%) default rate, with any
+    excess or deficiency reconciled upon final resolution. Where no rate is
+    published in either Registry and no proposed rate has been notified, the
+    default rate shall be ten percent (10%);
+(b) If the License Steward of the original Software has not updated the
+    Project Registry in thirty-six (36) consecutive months and has not
+    responded to a written rate inquiry within ninety (90) days, the
+    Derivative Work may be distributed commercially at the ten percent
+    (10%) default rate, and the Steward's silence shall be deemed acceptance
+    of that rate for purposes of this Agreement;
+(c) Contributors to the Derivative Work receive the remaining share;
+(d) The split percentage and payment mechanism must be published in the
     Project Registry for both the original Work and the Derivative Work;
-(d) This reciprocity requirement extends to subsequent Derivative Works
+(e) This reciprocity requirement extends to subsequent Derivative Works
     (Derivative Works of Derivative Works), ensuring that original
     contributors continue to receive recognition and compensation through
     the chain of derivation.
+
 For the avoidance of doubt, "revenue derived from that Derivative Work"
 includes all revenue from products, services, or offerings that
 substantially incorporate or depend upon the Derivative Work, regardless
@@ -587,7 +669,7 @@ terms of this License and does not incorporate third-party code under
 incompatible licenses. This certification must include a list of all
 files added or removed in that version and their sources. Failure to
 publish a Version Certification for any distributed version constitutes
-a material violation of this License. Where a specific version of a Derivative
+a material violation of this License.
 
 ---
 
@@ -691,6 +773,8 @@ not limited to:
 (c) Failing to meet the disclosure requirements of Section 4.3;
 (d) Providing materially false information during license registration;
 (e) Distributing a Derivative Work without complying with Section 5;
+    including failure to publish a Project Registry as required by
+    Sections 4.3(e) or 5.3;
 (f) Re-licensing, re-distributing, or representing the Software or any
     Derivative Work thereof under any license other than this Open-Pact
     License (or a later version as permitted in Section 12). This includes
@@ -698,11 +782,9 @@ not limited to:
     Derivative Work under terms inconsistent with this License, whether
     labeled as "MIT," "Apache," "GPL," "proprietary," or any other form
     of license or terms of service. Such action constitutes a per se
-    material breach and subjects the violating party to enforcement under
-    Sections 10.4 (Disgorgement), 11.2 (Public Blacklist), and any
-    available remedies under applicable copyright law. Additionally, creating
-    or distributing a **Functionally Equivalent Work** (as defined in Section 1.22)
-    for the purpose of commercially displacing the Software without adhering
+    material breach. Additionally, creating or distributing a
+    **Functionally Equivalent Work** (as defined in Section 1.22) for
+    the purpose of commercially displacing the Software without adhering
     to the reciprocity obligations of this License (e.g., via clean room
     rewrites based on this Software's specific algorithmic implementations
     or test suites) constitutes a material breach of this License and
@@ -740,7 +822,11 @@ For the avoidance of doubt, "profits attributable" includes any revenue
 generated by a product or service that relies substantially on the
 Software. The burden of proof to demonstrate that profits were derived
 independently of the Software shall rest with the infringing party.
-Repeat violations (two or more prior confirmed violations or terminations)
+For the avoidance of doubt, where a Licensee holds a valid License Record
+but disputes the proportionality of fees under Section 3.2.4, the burden
+allocation of Section 3.2.4 shall govern and the burden of this Section
+shall not apply to the same facts.
+Repeat Offenders (two or more prior confirmed violations or terminations)
 are subject to the maximum available multiplier without further notice.
 For purposes of this Section, a "confirmed violation" means a violation
 that has not been cured within thirty (30) days of notice from the
@@ -776,9 +862,9 @@ The License Steward may pursue enforcement through:
     distributed, and semantically-integrated identifiers ("Canary
     Tokens") within the Software's structure, logic, and data to
     track authorized distributions. Canary Tokens are designed to
-    be indistinguishable from the Software's own code — embedded
+    be indistinguishable from the Software's own code -- embedded
     within control flow paths, data structures, and algorithmic
-    parameters — so that automated code transformation, AST
+    parameters -- so that automated code transformation, AST
     rewriting, identifier renaming, or structural reordering is
     highly likely to alter the Software's behavior if tokens are
     removed. Discovery of a Canary Token pattern consistent with
@@ -797,10 +883,19 @@ The License Steward may pursue enforcement through:
     This Registry is the mechanism by which compliance is verified across
     the OPL ecosystem.
 
----
-
 ### 11.3 Personal Use Exception
 This License expressly does not restrict the ability of any person or
+entity to engage in security research, independent development, or
+Personal Use activities as defined in this License. For the avoidance
+of doubt, Personal Use (Section 1.9) and Security Research (Section 1.16)
+are not subject to the Commercial Use or AI Training Use fee schedules,
+and no License Record is required for activities that fall exclusively
+within these categories. However, if activities that begin as Personal
+Use or Security Research evolve into Commercial Use (Section 1.10) or
+AI Training Use (Section 1.11), the applicable license and compensation
+obligations apply prospectively from the point of transition.
+
+---
 
 ## SECTION 12: VERSIONS AND UPDATES
 
@@ -998,201 +1093,60 @@ defines a path to open source conversion.
 ### 16.2 The Conversion Trigger (Solo-Friendly)
 If the License Steward (whether Guild or solo) fails to update the Project
 Registry (e.g., via a governance vote, registry update, or version release)
-for a continuous period of thirty-six (36) months ("The Sunset Period"),
-**and** the number of Active Participants -- defined as individuals who
-have made a Contribution, participated as a Collaborator (e.g., filed
-issues, participated in discussion forums, provided feedback, or
-participated in governance) within the preceding twelve (12) months --
-has fallen below three (3), the restrictions in Sections 3, 4, and 5
-regarding the Software shall automatically lift, and the Software shall
-be considered licensed under the terms of the **Apache License, Version
-2.0**. For solo Stewards, "governance" includes publication of fee
-schedules, changelog, or public statements regarding the Software's
-maintenance status.
-
-### 16.3 Effect of Conversion
-Upon conversion under Section 16.2:
-(a) The Software is available under the Apache License, Version 2.0
-    for all uses, including Commercial and AI Training Use, without
-    fees or registration.
-(b) This conversion is irrevocable.
-(c) Previous License Records for Commercial or AI Training Use are
-    honored as valid, but are no longer required.
-
-### 16.4 Restarting the Clock
-The Sunset Period is reset to zero if the License Steward publishes a new
-version of the Software or updates the Registry with a governance action.
-For the avoidance of doubt, a "governance action" requires substantive
-maintenance activity, defined as at least one of: (i) a code commit or
-merged contribution, (ii) publication of a versioned release, (iii) a
-documented bug fix or security patch, or (iv) a published fee schedule
-update. A mere public statement of intent to maintain the Software,
-without accompanying substantive action, does not restart the Sunset Period.
-
-### 16.5 Bad Faith Prevention
-A deliberate campaign to exhaust a License Steward by overwhelming it
-with frivolous governance proposals, spam, or harassment does not by
-itself constitute abandonment for purposes of Section 16.2. The Steward
-may establish anti-spam measures, minimum contribution requirements
-for proposal submissions, or other governance safeguards at their
-discretion. Such safeguards must be reasonable, publicly documented,
-and applied uniformly -- they may not be used as a pretext to silence
-legitimate community concern or prevent the Sunset Period from running.
-
-## SECTION 17: WHISTLEBLOWER PROGRAM AND BOUNTY FUND
-
-### 17.1 The Whistleblower Fund
-To facilitate enforcement of this License, the License Steward shall
-maintain a Bounty Pool funded by a percentage (e.g., 5%) of all Royalty
-collections. This funds auditing, legal action, and rewards for reporting
-violations. If the License Steward is a solo copyright holder (not a Guild),
-they may instead fulfill this obligation by committing to pay a bounty
-equal to the stated percentage of any recovered licensing fee or
-estimated damages, payable upon successful enforcement.
-
-### 17.2 Reporting Violations
-Any individual or Automated Agent may report a violation to the License
-Steward. Reports may be submitted anonymously through channels designated
-by the License Steward (e.g., encrypted submission, anonymous tip line).
-The License Steward shall not disclose the identity of the reporter to
-the subject of the report without the reporter's explicit written consent,
-except where disclosure is required by law or court order. The License
-Steward shall take all reasonable steps to protect the reporter from
-retaliation.
-
-To prevent abuse of this system, a report will only result in a
-Violation Record (Section 11.2(e)) or Enforcement Registry entry after
-the License Steward has: (a) independently verified the reported
-violation with documented evidence; (b) provided the subject of the
-report with written notice and at least thirty (30) days to respond or
-cure; and (c) determined that the violation is material -- meaning it
-constitutes unlicensed commercial use, unlicensed AI Training Use, or
-systematic evasion of royalty obligations, and does not include minor
-administrative errors that have been cured or are in the process of
-being cured. No more than one verified violation report per subject per
-six (6) month period shall result in an Enforcement Registry entry,
-unless the violations constitute distinct and substantively different
-categories of infringement. Retaliation against a reporter, including
-termination, demotion, harassment, or any adverse employment action
-taken in response to a good-faith report under this Section, constitutes
-a separate and actionable violation of this License and may subject the
-retaliating party to enhanced damages under Section 10.4.
-
-### 17.3 Bounty Payouts
-Upon verification of a reported violation, the License Steward shall use
-the Bounty Pool (or their personal commitment if solo) to reward the
-reporter, calculated as a percentage of the recovered licensing fee or
-estimated damages. For claims exceeding ten (10) times the applicable
-License fee, the License Steward must obtain independent verification
-of the violation from a third-party auditor, court ruling, or written
-admission by the infringing party. The License Steward shall not
-structure fee schedules or enforcement actions primarily to generate
-bounty revenue for themselves or any designated agent.
-
-### 17.4 Good Faith Reports
-Reports must be submitted in good faith with factual basis. Any
-individual who submits a false or knowingly misleading report with the
-intent to harass, extort, or gain competitive advantage over another
-Licensee shall be permanently barred from future bounty eligibility, and
-the submitting party may be held liable for the legal costs incurred by
-the falsely accused party and the administrative costs of investigating
-the false report.
-
-### 17.4 Amnesty for Good Faith Errors
-If a Licensee's error is found to be a minor administrative oversight
-(e.g., delayed renewal) and they cure the error within a 3-day window,
-no bounty shall be paid to the reporter.
+within thirty-six (36) consecutive months AND the Software has fewer than
+three (3) active Contributors (as measured by accepted Contributions in the
+preceding twelve (12) months), then this License shall automatically convert
+to the Apache License 2.0 for the Software. This conversion is irrevocable
+and applies to all copies of the Software, whether existing or future.
+For purposes of this Section, an "update" to the Project Registry includes
+any verifiable on-chain or cryptographic action that records a change to
+the Registry's fee schedules, governance decisions, or License Records.
 
 ---
 
-## SECTION 18: THIRD-PARTY DEPENDENCIES AND COMPATIBILITY
+## SECTION 17: WHISTLEBLOWER & COMPLIANCE INCENTIVES
 
-### 18.1 Separation of Licenses
-The Software may include, link to, or depend upon third-party components
-("Dependencies") that are licensed under terms other than this License
-(e.g., MIT, Apache 2.0, GPL). A "Dependency" is defined as a component
-that: (a) was created by an independent author or entity separate from
-the License Steward; (b) is distributed under a publicly verifiable
-and distinct license; and (c) is not a substantial reimplementation or
-vendored copy of code originally authored under this OPL framework. The
-terms of this License apply only to the specific code, documentation,
-and assets created by the Contributor(s) and governed by the License
-Steward. The terms of the Dependencies' respective licenses apply
-exclusively to those components. This License is not incompatible with
-permissive open-source licenses, and Dependencies remain under their
-original terms regardless of their inclusion in the Software.
+### 17.1 Whistleblower Protection
+Any individual who reports a material violation of this License to the
+License Steward in good faith shall be protected from retaliation by
+the License Steward, any Guild, or any party acting on their behalf.
+Retaliation includes but is not limited to: termination, demotion, denial
+of compensation or royalties, removal of Contributor status, or any
+adverse change to the reporting party's standing in the project or Guild.
 
-### 18.2 No Viral Effect
-Nothing in this License shall be construed as extending the terms of this
-License to any Dependency that is separately licensed under a different
-license. Use, modification, or distribution of the Software does not
-require Dependencies to be re-licensed under this Open-Pact License,
-provided the Dependencies are kept as separate and distinct modules or
-packages to the extent required by their own licenses. The "Derivative
-Work" definition in Section 1.8 applies to the Software itself, not to
-the distinct Dependencies it utilizes.
-
-### 18.3 AI Training and Commercial Use Tracking
-When the Software is used for AI Training (Section 4) or Commercial Use
-(Section 3), the Licensee is responsible for ensuring compliance with the
-terms of all Dependencies. The License Steward does not grant rights to
-Dependencies. If a Dependency is also licensed under this OPL (or a later
-version), the terms of that Dependency's specific License Steward apply
-to that component. The Licensee must track and compensate each OPL-
-licensed component independently.
-
-For the avoidance of doubt, if a commercial product or service derives
-substantial value from the Software and its Dependencies combined, the
-Licensee shall not artificially segment revenue attribution to evade
-Section 5.2 reciprocity obligations by claiming the substantive code is
-"only a Dependency." Where a Dependency was originally authored under this
-OPL framework (including vendored copies, forks, or reimplementations
-retaining substantially the same functional characteristics), that
-component shall be treated as part of the Software for purposes of
-Section 5.2 Royalty Reciprocity, regardless of its declared dependency
-status in any manifest file.
-
-### 18.4 Good Faith Declaration
-Contributors must declare all Dependencies and their respective licenses
-in a machine-readable manifest file (e.g., LICENSE-THIRD-PARTY, NOTICE,
-or DEPENDENCIES.json) included with the Software. Failure to accurately
-declare Dependencies that results in license conflicts (e.g., including
-copyleft code without disclosure or violating license compatibility)
-constitutes a violation of Section 1.6.2 (Malicious Contribution).
-The License Steward reserves the right to remove any Dependency that
-violates its license terms or creates a legal risk for the Software.
-Contributors and Licensees must cure any error in the Good Faith
-Declaration within thirty (30) days of discovery or notification;
-failure to cure constitutes a material breach.
-
-### 18.5 Anti-Poisoning
-The License Steward shall make reasonable efforts to ensure that
-Dependencies do not introduce incompatible license combinations
-(e.g., GPL copyleft in a commercial-only context) that would render
-the Software unusable for a specific tier. If a Dependency's terms
-are incompatible with the Software's intended use, the License
-Steward must either replace the Dependency or prominently disclose
-the incompatibility in the declaration so Licensees can make
-informed decisions. Deliberate inclusion of incompatible
-Dependencies to obstruct adoption constitutes a violation of
-Section 1.6.2.
-
-### 18.6 Shadow Dependency Prohibition
-Where a commercial product derives substantial value from the
-Software and its Dependencies combined, the Licensee shall not
-artificially segment revenue attribution by claiming that
-substantive code is "only a Dependency." Any Dependency that is a
-vendored copy, fork, or reimplementation of code originally
-authored under this OPL framework shall be treated as part of the
-Software for purposes of Section 5.2 Royalty Reciprocity,
-regardless of its declared dependency status.
+### 17.2 Compliance Bounty Fund
+The License Steward may allocate up to ten percent (10%) of any
+enforcement-related damages or settlements recovered under this License
+to a Compliance Bounty Fund. Bounties may be awarded to individuals
+who report material violations of this License, provided the report
+leads to a confirmed enforcement action (a violation that has not been
+cured within thirty (30) days of notice from the License Steward).
+Bounty amounts, eligibility criteria, and distribution rules shall be
+published in the Project Registry.
 
 ---
 
-END OF LICENSE
+## SECTION 18: THIRD-PARTY DEPENDENCIES
 
-Open-Pact License v1.1 (OPL-1.1)
-Designed for the age of AI. Governed by Guilds.
+### 18.1 Inclusion of Third-Party Dependencies
+The inclusion of third-party dependencies (libraries, packages, modules)
+with the Software does not make those dependencies subject to this
+License. The Software's license applies only to the original work and
+its Derivative Works as defined in Section 1.8. Third-party dependencies
+retain their original licenses. However, any modifications to
+third-party dependencies made as part of the Software or a Derivative
+Work shall be licensed under this License.
 
-For registration, compliance verification, and guild governance:
-https://open-pact.dev
+### 18.2 Manifest Requirement
+The License Steward shall maintain a manifest of all third-party
+dependencies included with the Software, including their names, versions,
+licenses, and the nature of their inclusion (direct dependency,
+transitive dependency, vendored, or optional). This manifest shall be
+published in the Project Registry and updated with each major release.
+Failure to maintain an accurate manifest does not affect the
+applicability of third-party licenses but may be used as evidence of
+bad faith in enforcement proceedings.
+
+---
+
+*End of Open-Pact License v1.1 (OPL-1.1)*

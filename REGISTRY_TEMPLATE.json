@@ -1,0 +1,104 @@
+{
+  "$schema": "https://open-pact.org/schemas/registry-v1.json",
+  "_README": "This is a fallback Project Registry for OPL-1.1 projects not using smart contracts.",
+  "_USAGE": "Customize this file and include it in your repository root. Update the fee schedule as needed.",
+  
+  "project": {
+    "name": "Your Project Name",
+    "repository": "https://github.com/your-org/your-project",
+    "license_version": "OPL-1.1",
+    "description": "A brief description of the project"
+  },
+  
+  "steward": {
+    "type": "solo",
+    "contact": "steward@your-email.com",
+    "wallet": "0x1234567890abcdef",
+    "last_updated": "2026-04-06"
+  },
+  
+  "commercial_fees": [
+    {
+      "tier": "Tier1_Individual",
+      "type": "flat",
+      "amount": 100,
+      "currency": "USDC",
+      "conditions": {
+        "description": "Individuals and small teams (up to 10 people)",
+        "max_employees": 10,
+        "max_revenue": 100000
+      }
+    },
+    {
+      "tier": "Tier2_Team",
+      "type": "flat",
+      "amount": 500,
+      "currency": "USDC",
+      "conditions": {
+        "description": "Small to medium teams",
+        "min_employees": 10,
+        "max_employees": 100,
+        "max_revenue": 1000000
+      }
+    },
+    {
+      "tier": "Tier3_Organization",
+      "type": "flat",
+      "amount": 2500,
+      "currency": "USDC",
+      "conditions": {
+        "description": "Organizations",
+        "min_employees": 100,
+        "max_employees": 1000,
+        "max_revenue": 10000000
+      }
+    },
+    {
+      "tier": "Tier4_LargeOrg",
+      "type": "revenue_share",
+      "percentage": 2.5,
+      "min_annual_fee": 10000,
+      "currency": "USDC",
+      "conditions": {
+        "description": "Large organizations (over 1000 employees or $10M+ revenue)"
+      }
+    }
+  ],
+  
+  "ai_training": {
+    "type": "custom",
+    "base_fee": 10000,
+    "currency": "USDC",
+    "revenue_share_percentage": 5.0,
+    "disclosure_required": true,
+    "notes": "Contact steward for custom AI Training pricing. Disclosure of training data usage is mandatory per OPL-1.1 Section 4.3."
+  },
+  
+  "derivative_reciprocity": {
+    "percentage": 20,
+    "description": "Original Steward receives 20% of Derivative Work revenues (per OPL-1.1 Section 5.2). This percentage applies when a derivative work generates revenue above the de minimis threshold."
+  },
+  
+  "de_minimis_threshold": {
+    "value": 100,
+    "currency": "USDC",
+    "period": "12_months",
+    "description": "Derivative Works generating less than $100/year owe no reciprocity fees"
+  },
+  
+  "payment_instructions": {
+    "method": "manual",
+    "contact": "steward@your-email.com",
+    "accepted_currencies": ["USDC", "USDT", "ETH", "USD"],
+    "invoice_required": true,
+    "notes": "Email with your project details, totalWorkforce count, and intended use case."
+  },
+  
+  "registry_metadata": {
+    "version": "2026-04-06",
+    "canonical_url": "https://github.com/your-org/your-project/blob/main/REGISTRY.json",
+    "ipfs_hash": "optional-if-hosted-on-ipfs",
+    "git_commit": "optional-git-hash-when-file-was-created",
+    "last_modified": "2026-04-06T00:00:00Z"
+  }
+}
