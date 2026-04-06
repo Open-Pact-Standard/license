@@ -1,72 +1,116 @@
 # Open-Pact License v1.1 (OPL-1.1)
 
-**Source-Available Software for the Age of AI. Governed by Guilds.**
+> **Source-Available Software for the Age of AI.**
 
-The Open-Pact License (OPL-1.1) is a new licensing model designed to bridge the gap between "free open source" and "closed proprietary." It keeps software accessible for individuals and researchers while ensuring businesses and AI companies pay a fair share to the creators.
+The Open-Pact License is a four-tier licensing framework designed to bridge the gap between permissive open source and closed proprietary software. It guarantees source availability and individual freedom while establishing fair compensation when code is used for commercial profit or AI model training.
 
-[**Read the Full License Text**](LICENSE.md)
+**Current Status:** [Soft Launch](#soft-launch) · [Read the Legal Text](LICENSE.md) · [Submit Feedback](https://github.com/open-pact/license/issues/1)
+
+---
+
+## At a Glance
+
+| Tier | Who | Cost | Rights |
+| :--- | :--- | :--- | :--- |
+| **1. Personal Use** | Individuals, Students, Researchers | **Free** | Full access, modification, redistribution, and security research. |
+| **2. Commercial Use** | Businesses, SaaS, Enterprise | **Fee** | Production use, support, and distribution. |
+| **3. AI Training Use** | LLMs, Model Training, AI Companies | **Premium** | Training access with mandatory model card disclosure. |
+| **4. Reciprocity** | Derivative Works, Forks | **10% Revenue Share** | Build on our code, share royalties back. |
 
 ---
 
 ## Why Open-Pact?
 
-Traditional licenses like MIT allow companies to take code for free and use it to build competing products or train AI models, offering zero return to the original creators. **OPL-1.1** changes this by establishing a system of reciprocity governed by a **Guild** (the community of contributors).
+Every major open-source project built today faces the same problem: **extractive consumption without reciprocity.**
 
-### The 4 Tiers
+| Use Case | MIT/Apache | GPL | BSL/SSPL | **OPL-1.1** |
+| :--- | :--- | :--- | :--- | :--- |
+| **Free for individuals** | Yes | Yes | Yes | **Yes** |
+| **Free for commercial use** | Yes | Yes | No | **Fee (fair, scaled)** |
+| **AI training allowed freely** | Yes | Unclear | Yes | **Premium + Disclosure** |
+| **Creator compensated** | No | No | Only originator | **Yes (Community Guild)** |
+| **Abandonware protection** | No | No | Time-delay | **36-month Apache 2.0** |
 
-| Tier | User Type | Cost | Rights |
-| :--- | :--- | :--- | :--- |
-| **1. Personal** | Students, Hobbyists, Researchers | **Free** | Full access, modification, and redistribution. |
-| **2. Commercial** | Businesses, SaaS, Enterprise | **Tiered Fee** | Licensed based on company size. |
-| **3. AI Training** | LLMs, AI Agents, Model Training | **Premium** | Licensed usage + Required Model Card disclosure. |
-| **4. Reciprocity** | Derivatives & Forks | **Revenue Share** | Must share 10% royalties back to the original Guild. |
+### The Three Principles
+
+1. **Humans First.** Individuals can always learn, build, and share freely.
+2. **Fair Compensation.** When code creates commercial value, the creators share in it.
+3. **AI Transparency.** If you train on our code, you disclose it. If you clone it, you reciprocate.
 
 ---
 
 ## Key Features
 
-### **For Developers:**
-*   **Internal Evaluation:** You can clone, test, and prototype the software for free within your company (non-production) to see if it fits your needs before buying.
-*   **Stewardship Sunset:** If the Guild abandons the project for 3 years, the software automatically converts to **Apache 2.0** forever. You are never trapped.
+### Stewardship Sunset
+No one controls this license forever. If a project has no active stewardship for **36 months** and fewer than **3 active participants**, the code automatically converts to [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0). You are never trapped by abandonware.
 
-### **For Companies:**
-*   **Fair Pricing:** Fees are scaled to your size. A startup pays $100/year; an enterprise pays $50k/year.
-*   **Clear Compliance:** We don't hide terms in a EULA. The rules are in the license, and compliance is verified on-chain via the Guild Registry.
-*   **AI Auditing & Bounties:** We deploy AI Agents and offer 5% Whistleblower Bounties to ensure compliance is automated and community-driven.
-*   **AI Auditing & Bounties:** We deploy AI Agents and offer 5% Whistleblower Bounties to ensure compliance is automated and community-driven.
+### The License Steward
+The Steward governs the license, sets fees, and maintains the Project Registry. A Steward can be a **solo developer** or a **Guild** (a community governance body). Solo Stewards can transition to Guild governance at any time by publishing notice.
 
-### **For AI Companies:**
-*   **Disclosure:** If you train on our code, you must disclose it in your model card.
-*   **Anti-Competitive:** You cannot train a model specifically designed to replace the software using the software's own code.
+### Community Accountability
+If a Steward goes rogue, **20% of active Contributors** can petition for removal. If the Steward doesn't cure within 90 days, stewardship transfers to the community.
+
+### AI Agent Definition
+The license explicitly defines AI Agents -- including AGI -- and their legal status. AI cannot hold copyright, vote in governance, or exercise any rights under this license. The human or entity operating the Agent bears legal responsibility.
+
+### Canary Token Enforcement
+To prevent invisible code theft, Stewards embed unique identifiers in software distributions. Discovery of a Canary Token in unauthorized use is **non-rebuttable evidence** of infringement.
+
+### International Arbitration
+Disputes involving companies with >$1M annual revenue are resolved through **binding arbitration** enforceable under the **[New York Convention](https://en.wikipedia.org/wiki/New_York_Convention)** in 170+ jurisdictions worldwide.
 
 ---
 
-## How to Use This
+## How to Use This License
 
-1.  **For Projects:** Copy `LICENSE.md` to your repository root.
-2.  **For Companies:** Check your usage tier. If you are commercial or using this for AI, please register with the Guild Registry.
-3.  **For Individuals:** Enjoy the code. You are free to use it under the Personal Use license.
+### For Projects
+1. Add `LICENSE.md` to your repository root.
+2. Add a reference in your `package.json`, `Cargo.toml`, or `pyproject.toml`:
+   ```json
+   { "license": "OPL-1.1" }
+   ```
+3. Register with the [Project Registry](https://open-pact.dev) to publish your fee schedule.
+
+### For Individuals
+Clone, fork, test, and share. Personal Use is always **free and permissionless**.
+
+### For Companies
+1. Determine your **Total Workforce** (employees + contractors + autonomous AI agents).
+2. Register with the License Steward and pay the applicable fee.
+3. If training AI models on our code, disclose it in your Model Card.
+
+---
 
 ## Repository Structure
 
-| Path | Description |
+| File | Description |
 | :--- | :--- |
-| `LICENSE.md` | The canonical text of the OPL-1.1 license. |
-| `RATIONALE.md` | The "Why" – Our philosophy on AI extraction and sustainability. |
-| `NOTES.md` | Section-by-section commentary (Plain English explanations). |
-| `FAQ.md` | Frequently Asked Questions for developers and legal teams. |
+| [**`LICENSE.md`**](LICENSE.md) | The canonical legal text of OPL-1.1. |
+| [**`RATIONALE.md`**](RATIONALE.md) | The philosophy -- why we built this, and why existing licenses fail. |
+| [**`NOTES.md`**](NOTES.md) | Section-by-section commentary in plain English. |
+| [**`FAQ.md`**](FAQ.md) | Frequently asked questions for developers and legal teams. |
+| [**`INDEX.md`**](INDEX.md) | Master index and release checklist for the OPL-1.1 package. |
 
 ---
 
-## Soft Launch Status
+## Soft Launch
 
-This license is currently in **Soft Launch**. We are inviting projects, developers, and legal scholars to review the text. We are specifically looking for feedback on:
-*   The enforceability of the "AI Training Disclosure" (Section 4).
-*   The fairness of the "Commercial Tiers" (Section 3).
-*   The governance structure of the Guild Registry (Section 11).
+This license is currently in **Soft Launch**. We are inviting projects, developers, and legal scholars to review the text and provide feedback before our formal release.
 
-[**Submit an Issue or Pull Request**](https://github.com/open-pact/license/issues) if you have feedback.
+### What We're Looking For
+- **Enforceability** of the "AI Training Disclosure" requirement (Section 4).
+- **Fairness** of the Commercial Tiers and Total Workforce calculation (Section 3).
+- **Compatibility** with existing dependency ecosystems (Section 18).
+- **Clarity** of the governance model for Guild and solo Stewards.
+
+### Adversarial Testing
+OPL-1.1 has survived **7 rounds** of automated adversarial stress testing (48 findings, all patched). See the [Final Report](FINAL_REPORT.md) for the complete audit trail.
+
+### How to Contribute
+- 📝 [Submit Feedback](https://github.com/open-pact/license/issues/1)
+- 🔍 [Review the Text](LICENSE.md)
+- 💬 [Discuss on the OPL Forum](https://open-pact.dev)
 
 ---
 
-*Note: The Open-Pact License is a source-available license. It is NOT an "Open Source" license as defined by the OSI, as it places restrictions on field of endeavor (Commercial/AI use) to ensure creator compensation.*
+> **Note:** The Open-Pact License is a **source-available** license. It is not an "Open Source" license as defined by the Open Source Initiative (OSI), as it places restrictions on fields of endeavor (commercial and AI use) to ensure creator compensation.

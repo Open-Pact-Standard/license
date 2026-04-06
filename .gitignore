@@ -1,0 +1,11 @@
+# Ignore IDE and OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Ignore any build artifacts
+build/
+dist/
+*.log
