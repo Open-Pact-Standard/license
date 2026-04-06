@@ -29,7 +29,12 @@ This document explains the intent, mechanics, and rationale behind each section 
 
 ### Section 3: Commercial Use (Tier 2)
 *   **Rights:** Use in business, SaaS, internal tools.
-*   **Cost:** Fees are set by the License Steward and published in a "Project Registry" (like a public URL). We intentionally keep fees out of the legal text so they can be updated easily as markets change.
+*   **Cost:** Fees are **NOT fixed** in this legal text. They are set by the License Steward and published in a **Project Registry** (a public URL or Smart Contract). This allows flexible pricing (flat fee, usage-based, revenue share) tailored to the software's specific value.
+*   **Key Safeguards:**
+    *   **Canonical Registry (3.2.1):** You can only use the Steward's official registry.
+    *   **Per-Project (3.2.2):** One fee covers one project.
+    *   **Temporal (3.2.3):** Prices change prospectively, not retroactively. If no price is listed, you must negotiate in good faith within 30 days.
+    *   **Proportionality (3.2.4):** Fees must be reasonable based on your company size and how much you use the code.
 *   **Payment:** Stablecoins (USDC), Crypto, or Fiat.
 *   **Escrow:** If the Steward disappears (ghosts you), you can pay into escrow and you are considered valid.
 

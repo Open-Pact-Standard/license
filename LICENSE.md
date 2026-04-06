@@ -390,40 +390,51 @@ reproduce, prepare Derivative Works of, publicly display, publicly
 perform, and distribute the Software for Commercial Use, subject to
 the terms and conditions of this Section 3.
 
-### 3.2 Fee Schedule and Payment
-(a) Fees for Commercial Use are set by the License Steward (the Guild,
-    or the original copyright holder in the absence of a Guild) and
-    published in the Project Registry (on-chain or a publicly accessible
-    URL). Fee schedules shall be denominated in stablecoins (e.g., USDC,
-    DAI), fiat currency, or a combination thereof as determined by the
-    License Steward. Licensees may pay using any stablecoin,
-    cryptocurrency, or fiat currency accepted by the Steward.
-(b) The Steward may adjust fee schedules at any time; existing Licensees
-    are locked into the fee schedule in effect at the time of their
-    registration until renewal. If no explicit fee schedule is published,
-    the default fee structure applies as specified in the Project Registry.
-(c) Upon successful payment, You will receive a License Record in the
-    Project Registry granting full Commercial Use rights for the license
-    period of one (1) year from the date of payment, renewable upon
-    re-registration.
-(d) Self-attested information (e.g., Total Workforce as defined in
-    Section 1.5) must be provided in good faith and in accordance with
-    reasonable commercial standards. For purposes of this Section,
-    "Total Workforce" includes all employees, contractors, consultants,
-    gig workers, temporary workers, and AI Agents functioning as workers
-    on behalf of the Legal Entity. Providing materially false information
-    to obtain a lower tier fee constitutes a breach of this License and
-    may result in termination under Section 10. For the avoidance of
-    doubt, reclassifying employees as contractors, replacing full-time
-    workers with agency labor, or engaging any arrangement designed to
-    reduce the reported Total Workforce for the primary purpose of
-    obtaining a lower fee tier constitutes materially false information.
-(e) If the License Steward fails to provide a functioning registration
-    mechanism or fails to respond to a written registration request
-    within thirty (30) days, the Licensee may register by publishing a
-    public notice of intent to comply and depositing the applicable fee
-    in escrow. Such Licensee shall be deemed compliant for the duration
-    of the License Steward's failure to provide registration.
+### 3.2 Compensation Structure
+Commercial Use requires compensation as determined by the License Steward.
+The specific fee structure, pricing model, and payment terms are NOT fixed
+by this License document. Instead, they are defined dynamically in the
+Project Registry or via Smart Contracts deployed by the Steward.
+
+Compensation models may include (but are not limited to) flat licensing fees,
+revenue-sharing percentages, per-seat pricing, usage-based metrics, or
+custom enterprise agreements. The structure reflects the value of the
+Software to the Licensee and the economic model chosen by the Steward.
+
+### 3.2.1 Canonical Registry
+The Project Registry authoritative for this Software is the one designated
+by the License Steward at the time of registration. A Licensee cannot
+designate, deploy, or rely upon any registry other than the one officially
+published by the License Steward. If the License Steward publishes the
+Registry URL in the Software's repository (e.g., in LICENSE.md, README,
+or package metadata), that URL shall be presumed canonical.
+
+### 3.2.2 Per-Project Obligation
+Each distinct Software operating under this License requires a separate
+registration and compensation. Possession of a License Record for one
+OPL-licensed project does not satisfy compensation obligations for other
+OPL-licensed projects, even if they share a common License Steward or
+Guild.
+
+### 3.2.3 Temporal Applicability
+Fees published in the Project Registry apply to Commercial Use commencing
+after the publication date. Changes to fee schedules published in the
+Registry apply prospectively to the next billing cycle. Existing License
+Records are not retroactively repriced. If no fee structure is published
+in the Project Registry, the Licensee must, in good faith, initiate
+contact with the License Steward to negotiate compensation within thirty
+(30) days of commencing Commercial Use. Failure to initiate negotiations
+or make a reasonable offer within this period constitutes a material
+breach of this License.
+
+### 3.2.4 Proportionality
+Compensation required under this Section shall be commercially reasonable
+and proportionate to: (a) the Licensee's Total Workforce (Section 1.5);
+(b) the extent to which the Software is integrated into the Licensee's
+commercial offering; and (c) prevailing market rates for comparable
+commercial software licenses. In any enforcement action, the License
+Steward bears the burden of demonstrating that the demanded compensation
+is proportionate under the standard above.
 
 ### 3.3 Conditions for Commercial Licensees
 You must:
@@ -446,13 +457,17 @@ the Software, including its Source and Object forms, for the purpose of
 training, fine-tuning, evaluating, or otherwise improving artificial
 intelligence models, subject to the terms and conditions of this Section 4.
 
-### 4.2 AI Training Fee Schedule
-Fees for AI Training Use are set by the License Steward (the Guild, or
-the original copyright holder in the absence of a Guild) and published
-in the Project Registry alongside Commercial Use fees. Fee schedules
-shall be denominated in stablecoins, fiat currency, or a combination
-thereof. Payment may be made in any stablecoin, cryptocurrency, or
-fiat currency accepted by the Steward.
+### 4.2 AI Training Compensation Structure
+AI Training Use requires compensation as determined by the License
+Steward. The specific fee structure and payment terms are NOT fixed
+by this License document. Instead, they are defined dynamically in
+the Project Registry or via Smart Contracts.
+
+Compensation models may vary based on the value of the data, the scale
+of training, and the Steward's chosen economic model (e.g., flat fee,
+revenue share, or per-token pricing). Sections 3.2.1 (Canonical Registry),
+3.2.3 (Temporal Applicability), and 3.2.4 (Proportionality) apply
+mutatis mutandis to AI Training Compensation.
 
 ### 4.3 AI Training Disclosure Requirement
 In addition to the requirements in Section 3.3, AI Training Licensees must:
