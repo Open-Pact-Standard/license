@@ -13,7 +13,7 @@ The Open-Pact License is a four-tier licensing framework designed to bridge the 
 | Tier | Who | Cost | Rights |
 | :--- | :--- | :--- | :--- |
 | **1. Personal Use** | Individuals, Students, Researchers | **Free** | Full access, modification, redistribution, and security research. |
-| **2. Commercial Use** | Businesses, SaaS, Enterprise | **Fee** | Production use, support, and distribution. |
+| **2. Commercial** | Businesses, SaaS, Enterprise | **Dynamic** | Defined by Project Registry (Flat, Usage, or Revenue Share). |
 | **3. AI Training Use** | LLMs, Model Training, AI Companies | **Premium** | Training access with mandatory model card disclosure. |
 | **4. Reciprocity** | Derivative Works, Forks | **10% Revenue Share** | Build on our code, share royalties back. |
 
