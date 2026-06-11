@@ -21,6 +21,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # fetch-depth: 0 is required for lychee-action v2 to associate the
+          # workflow run with the PR (so the auto-comment lands on the right
+          # PR) and to give the report generator full git context.
+          fetch-depth: 0
 
       - name: Run lychee link checker
         uses: lycheeverse/lychee-action@v2
@@ -32,26 +37,32 @@ jobs:
           # `--timeout 20`: per-request timeout in seconds.
           # `--max-retries 2`: retry transient failures (e.g., 5xx, timeouts).
           # `--max-concurrency 8`: cap concurrent requests to be polite.
-          # `--exclude-mail`: skip mailto: links (they are not URLs in the
-          #   traditional sense and most mail servers don't accept probe GETs).
-          # `--format markdown --output lychee/out.md`: emit a human-readable
-          #   markdown report that the next step uploads as a CI artifact.
+          # `--exclude-mail`: skip mailto: links.
+          # `--skip https://github.com/.*/actions/runs/.*`: skip ephemeral
+          #   GitHub action-run URLs (rate-limited and not stable links).
+          # `--format markdown`: emit a human-readable markdown report.
+          #
+          # IMPORTANT: do NOT put `--output` in `args` -- lychee-action v2
+          # owns the output path via the `output` parameter below, and
+          # passing it in args triggers:
+          #   "Error: 'output' is set in args as well as in the action
+          #    configuration. Please remove one of them."
           args: >-
             --timeout 20
             --max-retries 2
             --max-concurrency 8
             --exclude-mail
-            # Skip ephemeral GitHub action-run URLs (rate-limited
-            # and not stable links worth checking in a license repo).
             --skip https://github.com/.*/actions/runs/.*
             --format markdown
-            --output lychee/out.md
             README.md
             DESIGN.md
             CHANGELOG.md
             LICENSE.md
             OPL-AI.md
             NOTICE.example
+          # Output path for the markdown report. The next step uploads this
+          # as a CI artifact, and the fallback-comment step below summarizes it.
+          output: lychee/out.md
           # Fail the build if lychee finds any broken links.
           fail: true
           # `GITHUB_TOKEN` is required for lychee-action to:
@@ -68,3 +79,44 @@ jobs:
           name: lychee-report
           path: lychee/out.md
           if-no-files-found: ignore
+
+      # Explicit fallback PR-comment step. lychee-action v2 should auto-post a
+      # broken-link summary on the PR when this job fails (because `token`
+      # and `pull-requests: write` are set), but if the auto-comment silently
+      # fails (a known v2 gotcha in some configurations), these two steps
+      # guarantee a full per-URL report lands on the PR. The lychee-report
+      # artifact has the same content for archival.
+
+      - name: Read lychee report
+        if: failure()
+        id: read-report
+        run: |
+          if [ -f lychee/out.md ]; then
+            {
+              echo "report<<EOF"
+              cat lychee/out.md
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+          else
+            echo "report=Lychee report file not found at lychee/out.md. See the lychee-report artifact for details." >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post broken-link report on PR (fallback)
+        if: failure()
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ## Lychee link check failed
+
+            The `lychee` link checker found broken links in one or more of the v1.3.1 markdown files. Full per-URL report below.
+
+            <details>
+            <summary>Click to expand the full report</summary>
+
+            ${{ steps.read-report.outputs.report }}
+
+            </details>
+
+            Please fix the broken links (or add appropriate `--skip` patterns to `.github/workflows/ci.yml` for false positives) and push a new commit.
+          edit-mode: replace

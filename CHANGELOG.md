@@ -76,7 +76,6 @@ OPL-1.3 is a major redesign of the Open-Pact License. It supersedes OPL-1.2 (PR 
 - 48 patches applied in response to adversarial findings.
 - See `FINAL_REPORT.md` for the full audit trail.
 
-[Unreleased]: https://github.com/Open-Pact-Standard/license/compare/v1.1...HEAD
+[Unreleased]: https://github.com/Open-Pact-Standard/license/compare/v1.3.1...HEAD
 [1.3.1]: https://github.com/Open-Pact-Standard/license/pull/4
 [1.3]: https://github.com/Open-Pact-Standard/license/pull/3
-[1.1]: https://github.com/Open-Pact-Standard/license/releases/tag/v1.1
