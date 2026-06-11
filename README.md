@@ -53,3 +53,5 @@ See [CHANGELOG.md](CHANGELOG.md) for the full release notes.
 OPL-1.3.1 is **published** — see the [v1.3.1 release](https://github.com/Open-Pact-Standard/license/releases/tag/v1.3.1) — and now awaits broader community and legal review for the 1.4 cycle. The license is functional and complete; refinements are tracked in [CHANGELOG.md](CHANGELOG.md).
 
 For questions or feedback, open an issue on this repo.
+
+<!-- ci-test-2 2026-06-11T18:10:43Z -->
