@@ -1,0 +1,158 @@
+# OPL-1.3 NOTICE File Example
+# ============================
+#
+# This is an EXAMPLE of a NOTICE file for a project licensed under the
+# Open-Pact License v1.3 (OPL-1.3). It is a template.
+#
+# How to use this file:
+#   1. Copy this file to NOTICE in the root of your project repository.
+#   2. Replace the placeholder values with your real values.
+#   3. Remove every line that begins with "#" (these are comments).
+#   4. Keep every line that does NOT begin with "#".
+#   5. Optional fields may be removed entirely; do not include them at all.
+#
+# Per OPL-1.3 §13, your NOTICE must include at minimum:
+#   - OPL Version
+#   - Maintainer's name and reachable contact
+#   - Governing Jurisdiction
+#   - Standard Terms URL (your published commercial-use pricing/payment terms)
+#   - OPL-AI opt-in/opt-out
+#
+# The following are optional:
+#   - Abandonment period (12-60 months; default 36)
+#   - Trademark notice
+#
+# IMPORTANT: If you do not declare a Valid Standard Terms URL, Commercial
+# Use is not permitted under LICENSE.md §3.3. A Valid URL is HTTPS, returns
+# 2xx, is HTML (not PDF), and is human-readable in a major browser without
+# authentication. See LICENSE.md §3.3 for full requirements.
+#
+# For the full OPL-1.3 license text, see LICENSE.md.
+# For the OPL-AI addendum, see OPL-AI-v1.3.md.
+# For the Standard Terms requirements, see LICENSE.md §3.3.
+
+# ----- REQUIRED FIELDS -----
+
+OPL Version: 1.3
+# The Open-Pact License version this NOTICE is authored against. Useful
+# for future-proofing: if you upgrade later, update this line. The
+# SPDX-License-Identifier in each source file is the authoritative
+# version reference; this line is for human readability.
+
+Maintainer: Your Name <[email protected]>
+# A reachable contact. The Maintainer must respond to written licensing
+# inquiries within 60 days (LICENSE.md §4.2). Failure to do so for 36
+# consecutive months (or whatever period you declare below) triggers
+# abandonment per LICENSE.md §5.
+
+Governing Jurisdiction: California, United States
+# Use a specific legal jurisdiction: state/province + country. Examples:
+# "Delaware, United States", "England and Wales", "New South Wales, Australia",
+# "Ontario, Canada", "Berlin, Germany". This is the jurisdiction whose
+# laws govern the license per LICENSE.md §12. If unspecified, the
+# Maintainer's location applies.
+
+Standard Terms URL: https://example.com/standard-terms
+# REQUIRED for Commercial Use to be permitted under LICENSE.md §3.3.
+# If absent or invalid, Commercial Use is not permitted.
+#
+# A Valid Standard Terms URL is one that:
+#   (a) is HTTPS
+#   (b) returns a 2xx response
+#   (c) is a webpage (HTML) — not a PDF, plain text, or other document
+#   (d) is human-readable in a major browser without authentication
+#
+# The page must publish your commercial-use pricing and payment
+# mechanism. You choose the mechanism — see EXAMPLE STANDARD TERMS URL
+# BLOCKS at the bottom of this file for 5 common patterns.
+#
+# You may change the URL with 90 days' notice for existing commercial
+# users. New users are bound by the Standard Terms as they exist at
+# the time of access.
+
+OPL-AI: opted out.
+# REQUIRED. State whether the OPL-AI addendum applies. Default (if this
+# line is omitted): not incorporated, AI training is permitted.
+#
+# To opt out (matches the default):  "OPL-AI: opted out. AI training is
+#              permitted under the same terms as other use." (Or simply
+#              omit this line; the default is opt-out.)
+# To opt in:  "OPL-AI: opted in. AI training is restricted under the
+#              OPL-AI addendum (v1.3)." See OPL-AI-v1.3.md.
+
+# ----- OPTIONAL FIELDS -----
+# Uncomment and fill in any of the following. Remove any you do not need.
+# A line that begins with "#" is a comment and will be ignored; remove the
+# leading "#" to make a line active. To remove an optional field entirely,
+# delete the line.
+
+# Abandonment Period: 24
+# A number of months between 12 and 60. Default: 36. After this many
+# consecutive months of Maintainer unresponsiveness, the Work
+# automatically converts to Apache License 2.0 per LICENSE.md §5.
+# A shorter period (e.g., 12) means faster conversion; a longer period
+# (e.g., 60) means more time to find a successor.
+
+# Trademark Notice: "FooBar" is a trademark of Your Name. See https://example.com/trademark-policy for permitted use.
+# Any trademark notice you wish to assert under LICENSE.md §10.
+
+# ----- EXAMPLE STANDARD TERMS URL BLOCKS (delete this entire section when finalizing your NOTICE) -----
+#
+# Below are 5 example blocks showing what your Standard Terms page might
+# contain. These are PATTERNS, not the actual text — you write your own
+# Standard Terms and publish them at the URL you declared above.
+#
+# The 5 patterns:
+#
+# 1. SMART CONTRACT (cryptocurrency, on-chain payment)
+#    URL: https://example.com/standard-terms
+#    Body:
+#      "Commercial Use of this Work requires payment to the Maintainer
+#       via the following smart contract on Ethereum mainnet:
+#         Contract: 0x1234...abcd
+#         Function: payLicense()
+#         Amount:    0.05 ETH per commercial deployment
+#       See https://example.com/pay for instructions. The smart contract
+#       is the operative payment mechanism; this page is documentation."
+#
+# 2. STRIPE LINK (fiat, hosted checkout)
+#    URL: https://example.com/standard-terms
+#    Body:
+#      "Commercial Use of this Work requires payment to the Maintainer
+#       via Stripe at https://buy.stripe.com/example-link. Pricing tiers:
+#         Solo / indie:  $50/month
+#         Team:          $200/month
+#         Enterprise:    contact us
+#       Annual subscriptions receive a 20% discount."
+#
+# 3. GITHUB SPONSORS (voluntary; not actually a Commercial-Use gate)
+#    URL: https://example.com/standard-terms
+#    Body:
+#      "Commercial Use of this Work is encouraged (but not required) to
+#       sponsor the Maintainer at https://github.com/sponsors/yourname
+#       at the 'Silver' tier or above. Sponsorship is voluntary; non-
+#       sponsorship does not prohibit Commercial Use under this license.
+#       (Note: this is a 'voluntary Commercial Use' model — the license
+#       permits Commercial Use without payment; sponsorship is at the
+#       user's discretion.)"
+#
+# 4. CONTACT EMAIL (negotiated, no public pricing)
+#    URL: https://example.com/standard-terms
+#    Body:
+#      "Commercial Use of this Work requires a separate written
+#       agreement with the Maintainer. Email [email protected] with
+#       a description of your intended use. We respond within 14 days.
+#       No public pricing; each use case is negotiated individually."
+#
+# 5. TIERED PRICING (public schedule, multiple bands)
+#    URL: https://example.com/standard-terms
+#    Body:
+#      "Commercial Use of this Work requires payment per the following
+#       schedule (annual, paid in advance):
+#         ARR under $100K:      $500/year flat
+#         ARR $100K – $1M:      0.5% of ARR
+#         ARR $1M – $10M:       0.25% of ARR
+#         ARR over $10M:        0.1% of ARR
+#       ARR = Annual Recurring Revenue attributable to the Derivative.
+#       Payment address: bank wire on request, or Stripe at
+#       https://buy.stripe.com/example-link."
