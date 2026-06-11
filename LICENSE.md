@@ -20,7 +20,8 @@ OPL-1.2 is not "open source" as defined by the Open Source Initiative. It restri
 - **"You"** means any individual or entity exercising rights under this license.
 - **"Maintainer"** means the person or legal entity named in the project's `NOTICE` file, or their designated successor.
 - **"Derivative"** means any work that includes a substantial portion of the Work, modified or unmodified.
-- **"Hosted Service"** means a service operated by You, accessible to third parties over a network, whose primary functionality is the Work or a Derivative.
+- **"Functional Equivalent"** has the meaning given in §3.6. The term captures works that are not textually derived from the Work but are substantially similar in function and were developed with access to the Work.
+- **"Hosted Service"** means a service operated by You, accessible to third parties over a network, whose primary functionality is the Work, a Derivative, or a Functional Equivalent.
 - **"Revenue"** means gross income received by You from a Hosted Service or Derivative, net of refunds, chargebacks, payment-processing fees, and sales taxes. Revenue "attributable to" a Derivative means the Revenue of the product or service whose primary functionality is the Derivative.
 - **"AI System"** has the meaning given in the **OPL-AI addendum**, incorporated by reference.
 - **"Contributor"** means any individual who has submitted a merged change to the Work, as recorded in the project's contribution history.
@@ -87,6 +88,14 @@ This fallback exists so that downstream users are not trapped by an unresponsive
 You may not use the Work, a Derivative, or any output of the Work for the training, fine-tuning, alignment, evaluation, or distillation of any AI System, and You may not operate an AI System whose outputs are materially derived from the Work, without a separate written agreement with the Maintainer.
 
 The full definition of "AI System," the scope of restricted uses, and the available exceptions are specified in the **OPL-AI addendum** (current version: OPL-AI-1.0). The Maintainer may opt out of the OPL-AI addendum in `NOTICE`; if the Maintainer has not done so, OPL-AI is incorporated by reference.
+
+### 3.6 Functional Equivalent Work
+
+You may not create or distribute a **Functional Equivalent** of the Work under terms more permissive than this license, and you may not operate a Hosted Service whose primary functionality is a Functional Equivalent, without a separate written agreement with the Maintainer.
+
+A **"Functional Equivalent"** is a work whose primary functional purpose is substantially the same as the Work's, and that was developed with access to the Work or a Derivative. Access is presumed if the Functional Equivalent is publicly released within 36 months of the Work's first public release and addresses a problem domain that the Work addresses. Independent creation evidence rebuts the presumption of access.
+
+This section does not restrict independent development that arrives at substantially similar functionality without access to the Work. The "Functional Equivalent" test is a contractual analog to the fair-use analysis in *Sega Enterprises Ltd. v. Accolade, Inc.*, 977 F.2d 1510 (9th Cir. 1992), adapted for a private license. The contractual nature of this section means that case-law developments in fair use do not automatically extend to or from this test; the section operates on its own terms.
 
 ---
 
@@ -169,6 +178,8 @@ This license is governed by the laws of the jurisdiction specified in the projec
 
 Nothing in this section prevents the parties from agreeing to binding arbitration for a specific dispute.
 
+**12.1 Injunctive relief.** Notwithstanding §12, either party may seek injunctive or other equitable relief in a court of competent jurisdiction to prevent irreparable harm, including but not limited to infringement of the Work. The Maintainer's ability to seek such relief is not conditioned on the parties' agreement to arbitrate, and is not waived by any other provision of this license.
+
 ---
 
 ## 13. How to apply this license
@@ -205,7 +216,8 @@ That's it. No registry required. No on-chain anything. No Guild. No Custodial St
 | Abandonment → Apache 2.0 | 36 months of unresponsiveness | 24 months + 30-day cure period + counter-notice verification + SPI as fiscal sponsor default |
 | Terminology | "Steward" | "Maintainer" (OSS-native) |
 | SaaS companion license (OPL-SaaS 1.0) | Required for hosted services | Not required; §3.3 covers it directly, with a small-scale ($5K / 10K MAU) carve-out |
-| Trademark, no-endorsement, choice-of-forum | Absent or unclear | Added (§10, §11, §12) |
+| Trademark, no-endorsement, choice-of-forum | Absent or unclear | Added (§10, §11, §12); §12.1 injunctive-relief carve-out |
+| Functionally Equivalent Work / clean-room defense | Present in v1.1 (Round 8 fix) but dropped in early v1.2 drafts | Restored in §3.6 with a Sega-v.-Accolade "starting point" test and a 36-month access presumption |
 
 ---
 
