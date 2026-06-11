@@ -1,6 +1,6 @@
-# OPL-AI Addendum v1.3 (DRAFT)
+# OPL-AI Addendum v1.3.1 (DRAFT)
 
-> **Status:** Draft for review. Companion to OPL-1.3. This addendum is incorporated into OPL-1.3 §3.5 **only if** the Maintainer has affirmatively opted in via `NOTICE`. **Default: not incorporated.**
+> **Status:** Draft for review. Companion to OPL-1.3 / OPL-1.3.1. This addendum is incorporated into OPL-1.3 §3.5 **only if** the Maintainer has affirmatively opted in via `NOTICE`. **Default: not incorporated.** v1.3.1 is a clarification release that adds a canonical syntax for the opt-in/opt-out declaration (see §8.1–§8.3 below). The substance of v1.3 (the default flip and the §2–§7 restrictions) is preserved.
 >
 > **Note on the v1.3 change:** OPL-AI v1.0 (for OPL-1.2) was incorporated by reference and required the Maintainer to opt out. OPL-AI v1.3 (for OPL-1.3) flips the default: the addendum is **not** incorporated unless the Maintainer affirmatively opts in via `NOTICE`. The change is consistent with OPL-1.3's broader shift from "default restrictions" to "default permissions, with per-work opt-ins." A Maintainer who wants AI training restricted must now declare that in `NOTICE` (e.g., `OPL-AI: opted in.`); a Maintainer who does nothing has a license that permits AI training under the same terms as any other use. The substantive restrictions in §2–§7 are unchanged. Only the default, the mechanism (§8), the version reference in OPL-1.3 §3.5, and one cross-reference in §3.2 (OPL-1.2 §3.3 "Hosted Service restriction" → OPL-1.3 §3.3 "Commercial Use requires Standard Terms payment") are affected. Note that OPL-1.3 §3.3 is a payment mechanism, not a prohibition, so the "may not" in §3.2 still works when the Maintainer has not granted a separate written agreement.
 >
@@ -106,7 +106,7 @@ The Maintainer may request, and AI System operators are encouraged to provide, v
 
 ### 6.5 Suspension during abandonment
 
-If no Maintainer is reachable for the period specified in OPL-1.3 §5, the mechanisms in §6.1, §6.2, and §6.3 are suspended. They resume on re-assumption of stewardship. Canary tokens that were embedded in source prior to abandonment remain in the source; the suspension applies to the *act of monitoring and asserting them*, not to their presence in the codebase.
+If no Maintainer is reachable for the period specified in OPL-1.3.1 §5, the mechanisms in §6.1, §6.2, and §6.3 are suspended. They resume on re-assumption of stewardship. Canary tokens that were embedded in source prior to abandonment remain in the source; the suspension applies to the *act of monitoring and asserting them*, not to their presence in the codebase.
 
 ---
 
@@ -135,7 +135,7 @@ OPL-AI: opted in. AI training is restricted under the OPL-AI addendum (v1.3).
 
 When opted in, OPL-1.3 §3.5 incorporates this addendum by reference, and the restrictions in §2–§7 apply. The Maintainer may revoke the opt-in at any time by updating `NOTICE` (e.g., `OPL-AI: opted out.`); the revocation is not retroactive, and prior acts in reliance on the opt-in remain subject to the addendum.
 
-The default in OPL-1.3 is **not** to opt in. A Maintainer who does nothing has a license that permits AI training under the same terms as any other use.
+The default in OPL-1.3 / OPL-1.3.1 is **not** to opt in. A Maintainer who does nothing has a license that permits AI training under the same terms as any other use.
 
 Opting in is intended for Maintainers who:
 
@@ -143,17 +143,81 @@ Opting in is intended for Maintainers who:
 - Operate in an ecosystem where the restriction is a competitive or ethical advantage.
 - Have decided, after consideration, that the trade-off benefits the Work.
 
+**8.1 Canonical syntax**
+
+The canonical forms are:
+
+```
+OPL-AI: opted in. [optional human-readable text]
+OPL-AI: opted out. [optional human-readable text]
+```
+
+**Parsing rules.**
+
+1. The line must begin with the literal string `OPL-AI:` (case-sensitive — only this exact casing is recognized).
+2. The prefix may be followed by **any amount of ASCII whitespace** (spaces or tabs), including zero.
+3. The value must be exactly one of:
+   - `opted in.`
+   - `opted out.`
+
+   The value is **case-insensitive** — `Opted In.`, `OPTED OUT.`, and `opted in.` are all recognized. (The case-insensitivity is a usability concession; the prefix remains case-sensitive to prevent false matches with non-OPL metadata.)
+4. After the value, the line may continue with optional human-readable text. **A parser may ignore** any text after the value. The text is documentation, not part of the syntax.
+5. The line may be **commented out** (preceded by `#` or `//` per the NOTICE file's comment convention) — a commented line is treated as if absent. The default (line absent or commented) is opt-out, per OPL-1.3 §3.5.
+6. If **multiple** `OPL-AI:` lines appear in the NOTICE (e.g., from a copy-paste error or a poorly-merged update), the **last uncommented occurrence wins**. A parser should warn if multiple lines are present.
+
+**8.2 Versioning**
+
+The version reference (e.g., `(v1.3.1)`) in the optional text is **documentation only**. The currently-published version of the OPL-AI addendum (referenced from OPL-1.3.1 §3.5) applies regardless of the version reference in the NOTICE line. A Maintainer who specifies a different version (e.g., `(v1.4)` before v1.4 is published) is treated as opting in to the **currently-published version**, not a future version. To bind a specific historical version, the Maintainer should reference it via a different mechanism (e.g., an explicit version field in `NOTICE`).
+
+**8.3 Examples**
+
+Valid opt-in lines:
+
+```
+OPL-AI: opted in.
+OPL-AI: opted in. AI training is restricted under the OPL-AI addendum (v1.3.1).
+OPL-AI: OPTED IN.
+OPL-AI:  opted  in.
+OPL-AI: Opted In.   (note: case-insensitive value)
+```
+
+Valid opt-out lines:
+
+```
+OPL-AI: opted out.
+OPL-AI: opted out. AI training is permitted under the same terms as other use.
+OPL-AI: OPTED OUT.
+```
+
+Invalid lines (parser should treat as absent; default = opt-out):
+
+```
+OPL-AI: yes.                         # missing the canonical "opted in" verb
+OP-LAI: opted in.                    # typo in the prefix
+OPL AI: opted in.                    # missing colon
+OPL-AI: opted in (v1.3).             # missing the trailing period
+OPLAI: opted in.                     # missing the dash in the prefix
+AI training: opted in.               # wrong prefix
+```
+
+Treated-as-absent lines (parser should ignore, fall back to default = opt-out):
+
+```
+# OPL-AI: opted in.                  # commented out
+// OPL-AI: opted in.                 # commented out (alt convention)
+```
+
 ---
 
 ## 9. Compatibility with other licenses
 
-OPL-AI v1.3 is compatible, by design, with:
+OPL-AI v1.3.1 is compatible, by design, with:
 
 - **MIT, Apache 2.0, BSD-2/3, MPL-2.0:** A Work may be dual-licensed OPL-1.3 + OPL-AI and any of these, at the Maintainer's discretion.
 - **GPL-3.0, AGPL-3.0:** Compatible, subject to the no-stripping provision in OPL-1.3 §3.2.
-- **OPL-1.2:** A Work migrating from OPL-1.2 to OPL-1.3 may adopt OPL-AI v1.3; the conversion is not retroactive to prior versions. Note that OPL-1.2's OPL-AI v1.0 used an opt-out default; OPL-1.3's OPL-AI v1.3 uses an opt-in default.
+- **OPL-1.2 → OPL-1.3.1:** A Work migrating from OPL-1.2 to OPL-1.3.1 may adopt OPL-AI v1.3.1; the conversion is not retroactive to prior versions. Note that OPL-1.2's OPL-AI v1.0 used an opt-out default; OPL-1.3 / OPL-1.3.1's OPL-AI v1.3.1 uses an opt-in default.
 
-OPL-AI v1.3 is not currently compatible with BUSL, FSL, or SSPL. Cross-license work is an area for future work.
+OPL-AI v1.3.1 is not currently compatible with BUSL, FSL, or SSPL. Cross-license work is an area for future work.
 
 ---
 

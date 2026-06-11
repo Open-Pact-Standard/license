@@ -1,8 +1,8 @@
-# OPL-1.3 NOTICE File Example
-# ============================
+# OPL-1.3.1 NOTICE File Example
+# ==============================
 #
 # This is an EXAMPLE of a NOTICE file for a project licensed under the
-# Open-Pact License v1.3 (OPL-1.3). It is a template.
+# Open-Pact License v1.3.1 (OPL-1.3.1). It is a template.
 #
 # How to use this file:
 #   1. Copy this file to NOTICE in the root of your project repository.
@@ -11,7 +11,7 @@
 #   4. Keep every line that does NOT begin with "#".
 #   5. Optional fields may be removed entirely; do not include them at all.
 #
-# Per OPL-1.3 §13, your NOTICE must include at minimum:
+# Per OPL-1.3.1 §13, your NOTICE must include at minimum:
 #   - OPL Version
 #   - Maintainer's name and reachable contact
 #   - Governing Jurisdiction
@@ -23,17 +23,19 @@
 #   - Trademark notice
 #
 # IMPORTANT: If you do not declare a Valid Standard Terms URL, Commercial
-# Use is not permitted under LICENSE.md §3.3. A Valid URL is HTTPS, returns
-# 2xx, is HTML (not PDF), and is human-readable in a major browser without
-# authentication. See LICENSE.md §3.3 for full requirements.
+# Use is not permitted under LICENSE.md §3.3. A Valid URL satisfies all 7
+# criteria in LICENSE.md §3.3 (HTTPS, redirect-following, HTML, no-auth,
+# no-JavaScript-only rendering, stability, substantive content). See
+# LICENSE.md §3.3 for the full 7-criteria definition and the rebuttable-
+# presumption rule with burden allocation.
 #
-# For the full OPL-1.3 license text, see LICENSE.md.
-# For the OPL-AI addendum, see OPL-AI-v1.3.md.
+# For the full OPL-1.3.1 license text, see LICENSE.md.
+# For the OPL-AI addendum (v1.3.1), see OPL-AI-v1.3.1.md.
 # For the Standard Terms requirements, see LICENSE.md §3.3.
 
 # ----- REQUIRED FIELDS -----
 
-OPL Version: 1.3
+OPL Version: 1.3.1
 # The Open-Pact License version this NOTICE is authored against. Useful
 # for future-proofing: if you upgrade later, update this line. The
 # SPDX-License-Identifier in each source file is the authoritative
@@ -43,7 +45,8 @@ Maintainer: Your Name <[email protected]>
 # A reachable contact. The Maintainer must respond to written licensing
 # inquiries within 60 days (LICENSE.md §4.2). Failure to do so for 36
 # consecutive months (or whatever period you declare below) triggers
-# abandonment per LICENSE.md §5.
+# abandonment per LICENSE.md §5. During a §3.7 wind-down, the §5
+# abandonment clock and the wind-down clock run in parallel.
 
 Governing Jurisdiction: California, United States
 # Use a specific legal jurisdiction: state/province + country. Examples:
@@ -56,19 +59,35 @@ Standard Terms URL: https://example.com/standard-terms
 # REQUIRED for Commercial Use to be permitted under LICENSE.md §3.3.
 # If absent or invalid, Commercial Use is not permitted.
 #
-# A Valid Standard Terms URL is one that:
-#   (a) is HTTPS
-#   (b) returns a 2xx response
-#   (c) is a webpage (HTML) — not a PDF, plain text, or other document
-#   (d) is human-readable in a major browser without authentication
+# A Valid Standard Terms URL satisfies all 7 criteria in LICENSE.md §3.3:
+#   (a) uses the https scheme
+#   (b) returns 2xx (after following redirects within the Maintainer's domain)
+#   (c) is a webpage (HTML) — not a PDF, plain text, image, etc.
+#   (d) is human-readable in a major browser WITHOUT authentication
+#       (no login, no paywall, no IP gating, no cookie gating other
+#       than a standard cookie-consent banner)
+#   (e) is NOT behind JavaScript-only rendering — the Standard Terms
+#       must be in the HTML source, visible with JavaScript disabled
+#   (f) is reasonably stable — a persistent URL on a domain the
+#       Maintainer controls, not a transient post or one-time link
+#   (g) publishes your commercial-use pricing, payment mechanism, and
+#       scope of permitted Commercial Use in clear human-readable
+#       language
+#
+# A URL is PRESUMED valid if all 7 criteria are met. The presumption
+# is REBUTTABLE — see LICENSE.md §3.3 for burden allocation in a
+# dispute.
 #
 # The page must publish your commercial-use pricing and payment
 # mechanism. You choose the mechanism — see EXAMPLE STANDARD TERMS URL
 # BLOCKS at the bottom of this file for 5 common patterns.
 #
 # You may change the URL with 90 days' notice for existing commercial
-# users. New users are bound by the Standard Terms as they exist at
-# the time of access.
+# users (LICENSE.md §3.3). New users are bound by the Standard Terms
+# as they exist at the time of access. If you revoke Commercial Use
+# entirely or materially change the Standard Terms, existing
+# commercial users are granted a 90-day wind-down period per
+# LICENSE.md §3.7.
 
 OPL-AI: opted out.
 # REQUIRED. State whether the OPL-AI addendum applies. Default (if this
@@ -78,7 +97,13 @@ OPL-AI: opted out.
 #              permitted under the same terms as other use." (Or simply
 #              omit this line; the default is opt-out.)
 # To opt in:  "OPL-AI: opted in. AI training is restricted under the
-#              OPL-AI addendum (v1.3)." See OPL-AI-v1.3.md.
+#              OPL-AI addendum (v1.3.1)." See OPL-AI-v1.3.1.md.
+#
+# Canonical syntax: the prefix "OPL-AI:" is case-sensitive; the value
+# "opted in." / "opted out." is case-insensitive; whitespace is
+# tolerant; trailing text after the value is treated as human-readable
+# commentary. See OPL-AI-v1.3.1.md §8.1–§8.3 for the full parsing
+# rules and 16+ examples.
 
 # ----- OPTIONAL FIELDS -----
 # Uncomment and fill in any of the following. Remove any you do not need.
@@ -92,6 +117,8 @@ OPL-AI: opted out.
 # automatically converts to Apache License 2.0 per LICENSE.md §5.
 # A shorter period (e.g., 12) means faster conversion; a longer period
 # (e.g., 60) means more time to find a successor.
+# Note: the §5 abandonment clock runs in PARALLEL with any §3.7
+# wind-down clock — they do not pause each other.
 
 # Trademark Notice: "FooBar" is a trademark of Your Name. See https://example.com/trademark-policy for permitted use.
 # Any trademark notice you wish to assert under LICENSE.md §10.
