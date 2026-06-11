@@ -1,3 +1,7 @@
+> **Note:** This document describes **OPL-1.1**, which has been **superseded by OPL-1.2** (the recommended version). The current license text is `LICENSE.md` in this repository. This document is preserved for existing v1.1 adopters; for new projects, please adopt OPL-1.2.
+>
+> See `LICENSE-OPL-1.1.md` for the preserved v1.1 text, and `CHANGELOG.md` for what changed.
+
      1|# 📦 Open-Pact Release Manifest (v1.1)
      2|
      3|This document serves as the master index for the **Open-Pact License v1.1 (OPL-1.1)** release package.

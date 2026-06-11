@@ -1,3 +1,6 @@
+> **Heads up: v1.2 is now the recommended version.** The current license is in `LICENSE.md`. The previous version (v1.1) is preserved at `LICENSE-OPL-1.1.md` for existing adopters. See `CHANGELOG.md` for what changed. The v1.1 documentation in this repo (RATIONALE, NOTES, FAQ, INDEX, MINIMAL_SETUP, FINAL_REPORT, ROUND10_ANALYSIS) is preserved for reference; new projects should follow the v1.2 license text and the `OPL-AI.md` addendum.
+
+
 # Open-Pact License v1.1 (OPL-1.1)
 
 > **Source-Available Software for the Age of AI.**
