@@ -29,6 +29,28 @@ To apply OPL-1.3.1 to a Work:
 
 That\u2019s it. No registry, no on-chain fee collection, no framework required. The license is the contract.
 
+## Adoption tools
+
+Free CLI tools for adopting OPL-1.3.1 — automate every step of the quick start above:
+
+| Tool | What it does |
+|------|-------------|
+| [`opl_init.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_init.py) | Generate a valid `NOTICE` file (interactive or `--non-interactive`) |
+| [`opl_spdx_inject.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_spdx_inject.py) | Add `SPDX-License-Identifier: OPL-1.3.1` to every source file (60+ languages) |
+| [`opl_check.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_check.py) | Validate compliance: LICENSE, NOTICE, SPDX headers, Standard Terms URL |
+| [`opl_registry_gen.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_registry_gen.py) | Generate `REGISTRY.json` for Tier 1 adopters with structured fee schedules |
+| [`opl_migrate.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_migrate.py) | Migrate from MIT/Apache/GPL/BSD — auto-detect license, generate report |
+
+```bash
+# Quick start with tools:
+git clone https://github.com/Open-Pact-Standard/tools.git && cd tools
+python3 tools/opl_init.py                              # Step 3: generate NOTICE
+python3 tools/opl_spdx_inject.py ..                     # Step 4: add SPDX headers
+python3 tools/opl_check.py .. --skip-remote             # Verify compliance
+```
+
+See the [tools repo](https://github.com/Open-Pact-Standard/tools) for full documentation.
+
 ## The 3 v1.3.1 patches (vs. v1.3)
 
 v1.3.1 is a clarification release on top of v1.3. The substance of v1.3 is preserved; only 3 open ambiguities are resolved:
