@@ -1,6 +1,6 @@
-# Open-Pact License v1.3 (DRAFT)
+# Open-Pact License v1.3.1 (DRAFT)
 
-> **Status:** Draft for review. Not yet published. This is a redesign of OPL-1.2 with the goal of doing one thing well: keeping the Work open for personal use while letting the Maintainer get paid for commercial use through a payment mechanism they choose.
+> **Status:** Draft for review. Not yet published. v1.3.1 is a clarification release that resolves 3 open design questions in v1.3 (see `v1.3.1-CHANGELOG.md`): (1) Standard Terms URL validity, (2) wind-down period, (3) OPL-AI opt-in syntax. The substance of v1.3 is preserved; only the three open ambiguities are resolved.
 >
 > **Headline:** *Free for personal use. Paid for commercial use. The Maintainer decides how.*
 
@@ -27,7 +27,7 @@ OPL-Standard (the organization that publishes this license) does not charge for 
 - **"Personal Use"** means use by an individual for non-commercial purposes: study, modification, personal projects, education, research, evaluation. Includes use within a single legal entity for internal **non-revenue-generating** purposes (e.g., internal tooling, internal evaluation, internal research) where the use does not contribute to revenue-producing activities.
 - **"Commercial Use"** means any use that is not Personal Use. Commercial Use includes: (a) offering the Work, a Derivative, or a Functional Equivalent as a hosted or managed service, (b) distributing a Derivative to third parties for use in their commercial activities, (c) using the Work, a Derivative, or a Functional Equivalent to provide paid services to third parties, (d) using the Work, a Derivative, or a Functional Equivalent in a product or service offered for sale or license.
 - **"Standard Terms"** means the Maintainer's published commercial-use pricing, payment mechanism, and terms, available at the URL declared in `NOTICE`. The Standard Terms are part of this license as incorporated by reference. The License incorporates the Standard Terms as they exist at the URL at the time of access by the user (i.e., the *current* Standard Terms, not a frozen snapshot). The Maintainer's duty: if the Maintainer changes the Standard Terms at the URL, they must also update the URL in `NOTICE` (if the URL itself changes) and respect the 90-day notice period in §13.
-- **"Valid Standard Terms URL"** means an HTTPS URL that (a) returns a 2xx response, (b) is a webpage (HTML), not a PDF or other document, and (c) is human-readable in a major browser without authentication.
+- **"Valid Standard Terms URL"** means an HTTPS URL that (a) returns a 2xx response, (b) is a webpage (HTML), not a PDF or other document, and (c) is human-readable in a major browser without authentication. **See §3.3 for the full 7-criteria definition** (HTTPS, redirect-following, HTML, no-auth, no-JS-only rendering, stability, substantive content) and the rebuttable-presumption rule with burden allocation.
 - **"AI System"** has the meaning given in the **OPL-AI addendum**, incorporated by reference **only if** the Maintainer has opted in via `NOTICE`.
 - **"Contributor"** means any individual who has submitted a merged change to the Work, as recorded in the project's contribution history.
 - **"Designated Successor"** means a person or entity identified as the Maintainer's successor by a signed statement from the prior Maintainer in an updated `NOTICE` file. If no such statement exists, succession follows the abandonment procedure in §5.
@@ -75,7 +75,17 @@ This is light copyleft. It propagates the protections, not the code. A Derivativ
 
 **Default when `NOTICE` is silent** (no Valid Standard Terms URL declared, OR a URL declared but blank / malformed / unresolving): **Commercial Use is not permitted**, with a 30-day cure window for the Maintainer to fix a blank or unresolving URL. The 30-day window is short enough to discourage Maintainer neglect of the URL, but long enough to allow routine maintenance, hosting migrations, and similar brief outages. This is the Polyform Mixed default: the Maintainer opts INTO Commercial Use by publishing a Valid Standard Terms URL; until they do (or until the cure window closes), only Personal Use is allowed. Existing commercial users at the time the URL becomes invalid are granted a **90-day grace period** (matching the change-notice period) to negotiate new terms with the Maintainer or stop using the Work.
 
-A **Valid Standard Terms URL** is one that (a) is HTTPS, (b) returns a 2xx response, (c) is a webpage (HTML) — not a PDF, plain-text, or other document, and (d) is human-readable in a major browser without authentication.
+A **Valid Standard Terms URL** is a URL that, at the time of access:
+
+(a) uses the `https` scheme;
+(b) returns a response with a 2xx HTTP status code, including after following any redirects (3xx responses are permitted only if they ultimately lead to a 2xx response on the same domain or a domain the Maintainer controls);
+(c) serves a webpage with `Content-Type: text/html` (or equivalent), not a PDF, plain text, image, or other non-HTML document;
+(d) is human-readable in a major browser **without authentication** (no login, no paywall, no IP-based gating, no cookie-based gating other than a standard cookie-consent banner);
+(e) is **not** behind JavaScript-only rendering — the substantive Standard Terms (pricing, payment mechanism, scope) must be present in the HTML source as served, and must be visible in a browser with JavaScript disabled. (Tools: a parser using `curl` or `wget` must be able to extract the Standard Terms without executing scripts.)
+(f) is **reasonably stable** — a persistent URL on a domain the Maintainer controls, or on a long-lived public service the Maintainer has registered (e.g., a Stripe product page, a GitHub-hosted page, a smart-contract explorer entry). A URL to a transient social-media post, a temporary blog entry, or a one-time-publish link does **not** satisfy this criterion, even if it currently returns 2xx HTML.
+(g) publishes the Maintainer's commercial-use pricing, **payment mechanism**, and **scope of permitted Commercial Use** in clear, human-readable language. The license does not prescribe a particular payment mechanism; the criterion is that the page actually publishes *some* mechanism, not merely that the URL resolves.
+
+A URL is **presumed valid** if all 7 criteria are met at the time of access. The presumption is rebuttable: a User may show that the URL failed a criterion at the time of access (e.g., the page returned 200 OK but served an empty HTML body, or the page redirected to a different domain at the time of the User's access). In a dispute, the **User bears the initial burden** of showing that the URL failed a criterion; the **Maintainer bears the burden** of showing that the URL satisfied the criteria at the time of the User's access (e.g., via an archived snapshot, a server log, or a third-party uptime monitor).
 
 **Integration with §3.6 (Functional Equivalent):** Operating a Hosted Service whose primary functionality is a Functional Equivalent of the Work (as defined in §3.6) counts as Commercial Use under §3.3, regardless of whether the Hosted Service distributes the Work's source. This closes the clean-room rewrite gap.
 
@@ -97,7 +107,7 @@ By default, this License does **not** restrict the use of the Work for AI traini
 
 If the Maintainer has declared in `NOTICE` that the OPL-AI addendum is incorporated, then You may not use the Work, a Derivative, or any output of the Work for the training, fine-tuning, alignment, evaluation, or distillation of any AI System, and You may not operate an AI System whose outputs are materially derived from the Work, without a separate written agreement with the Maintainer.
 
-The full definition of "AI System," the scope of restricted uses, and the available exceptions are specified in the **OPL-AI addendum** (current version: OPL-AI-1.3). The default is opt-in: the Maintainer must affirmatively declare in `NOTICE` that the addendum applies. The OPL-AI addendum's substance (§2–§7) is unchanged from v1.0; only the default has been flipped from opt-out (v1.0) to opt-in (v1.3). See `OPL-AI-v1.3.md` for the addendum text.
+The full definition of "AI System," the scope of restricted uses, and the available exceptions are specified in the **OPL-AI addendum** (current version: OPL-AI-1.3.1). The default is opt-in: the Maintainer must affirmatively declare in `NOTICE` that the addendum applies. The OPL-AI addendum's substance (§2–§7) is unchanged from v1.0; only the default has been flipped from opt-out (v1.0) to opt-in (v1.3). See `OPL-AI-v1.3.md` for the addendum text.
 
 ### 3.6 Functional Equivalent Work
 
@@ -107,7 +117,35 @@ A **"Functional Equivalent"** is a work whose primary functional purpose is subs
 
 This section does not restrict independent development that arrives at substantially similar functionality without access to the Work. The "Functional Equivalent" test is a contractual analog to the fair-use analysis in *Sega Enterprises Ltd. v. Accolade, Inc.*, 977 F.2d 1510 (9th Cir. 1992), adapted for a private license. The contractual nature of this section means that case-law developments in fair use do not automatically extend to or from this test; the section operates on its own terms.
 
-### 3.7 Reserved
+### 3.7 Wind-down of Commercial Use
+
+**3.7.1 Triggers.** This section applies if a Valid Standard Terms URL is declared in `NOTICE` and Commercial Use is permitted, and the Maintainer later:
+
+(a) **Revokes Commercial Use entirely** — by changing the Standard Terms to declare "Commercial Use is not permitted", by removing the Valid Standard Terms URL and not replacing it, or by explicitly declaring in `NOTICE` that Commercial Use is no longer offered; or
+(b) **Materially changes the Standard Terms** — a substantial increase in the commercial-use rate (defined as an increase of more than 100% of the previous rate or a 2x multiplication of the per-deployment fee, whichever is greater), a change in the payment mechanism that materially affects a user's ability to pay (e.g., switching from a fiat mechanism to a cryptocurrency-only mechanism when the user is unable to transact in cryptocurrency), or a change in scope that **excludes a class of use** the user was engaged in (e.g., changing the Standard Terms to prohibit Hosted Services when the user is operating a Hosted Service).
+
+**3.7.2 Wind-down period.** Existing commercial users at the time of the change are granted a **90-day wind-down period** to:
+
+- Negotiate new terms with the Maintainer;
+- Migrate to a different Work, a different implementation, or an older version of the Work under the prior Standard Terms; or
+- Stop using the Work.
+
+During the 90-day wind-down period, the **previous Standard Terms continue to apply** to existing commercial users. The wind-down period is automatic; no action by the Maintainer is required to trigger it. The wind-down period is **not extendable by the Maintainer unilaterally** (a Maintainer who wishes to grant users more time may do so by publishing a transition schedule in a new URL — but the new URL must satisfy the validity criteria in §1 and §3.3).
+
+**3.7.3 Who is an "existing commercial user".** A User is "existing" for the purposes of this section if, at the time of the change, the User is **actively engaged in Commercial Use** of the Work — meaning the User has either (a) paid the Maintainer under the Standard Terms, (b) signed a written agreement with the Maintainer for Commercial Use, or (c) is **demonstrably operating** a Commercial Use product or service based on the Work (e.g., the product is live, the service has paying customers, or the source code has been deployed in a production environment). A User who has merely *evaluated* the Work, or who has *signed up* for a payment mechanism but has not yet deployed, is **not** an existing commercial user for this purpose.
+
+**3.7.4 What the wind-down period does NOT cover.** The wind-down period does not apply to:
+
+- **New commercial users** — who access the URL **after** the change is published. New users are bound by the Standard Terms as they exist at the time of access.
+- **Users with a perpetual Commercial Use license** — granted by the Maintainer in a separate written agreement that explicitly states the license is perpetual. Such a license is not affected by this section.
+- **The Maintainer's own use** — the Maintainer may use the Work for any purpose, including Commercial Use, without paying themselves. (The Maintainer is, after all, the recipient of the payment.)
+- **Personal Use** — Personal Use is not affected by Commercial Use changes; Personal Use is always permitted under §2.
+
+**3.7.5 Maintainer unreachable during wind-down.** If the Maintainer becomes unreachable at the contact in `NOTICE` during the 90-day wind-down period, **the wind-down clock continues to run** and the **§5 abandonment clock runs in parallel**. If the §5 abandonment period expires during wind-down, the Work converts to Apache License 2.0 under §5, and Commercial Use is no longer subject to this license at all (Apache 2.0 is a permissive license that does not restrict commercial use). The wind-down period does not pause the §5 clock, and the §5 clock does not pause the wind-down clock.
+
+**3.7.6 Cure of an invalid URL.** If the trigger for this section is a **§3.3 cure-window failure** (the Maintainer failed to restore a Valid Standard Terms URL within the 30-day cure window), the 90-day wind-down period runs from the **end of the cure window**, not from the date the URL first became invalid. This gives existing commercial users a clear clock that starts when the cure window closes.
+
+### 3.8 Reserved
 
 ---
 
@@ -211,6 +249,16 @@ To apply OPL-1.3 to a Work:
 That's it. No registry required. No on-chain anything. No Guild. No Custodial Steward. No on-chain fee collection. Those are options in the optional `Open-Pact-Standard/framework` repository, available to Maintainers who want them; none of them are required by this license. The Maintainer chooses their own payment mechanism in their Standard Terms.
 
 ---
+
+## v1.3.1 — what changed from v1.3
+
+v1.3.1 resolves 3 open design questions from v1.3 (see `v1.3.1-CHANGELOG.md` for the full rationale):
+
+- **§3.3 Valid Standard Terms URL.** Expanded from 4 criteria to **7 criteria** (added: redirect-following, no-JavaScript-only rendering, reasonable stability, and substantive content). Added a **rebuttable-presumption** rule with a clear burden allocation for disputes.
+- **§3.7 Wind-down of Commercial Use (new).** Defines what happens when a Maintainer revokes Commercial Use or materially changes the Standard Terms. The 90-day wind-down period is **automatic**, applies to **existing commercial users only**, and **runs in parallel** with the §5 abandonment clock. The cure-window start time is clarified (runs from end of cure window, not from initial URL failure).
+- **§3.8 Reserved** (renumbered from old §3.7 Reserved).
+
+The substance of v1.3 is preserved. The Polyform Mixed default, the §3.5 OPL-AI opt-in, the §3.6 Functional Equivalent test, §5 abandonment, and §13 NOTICE shape are all unchanged.
 
 ## What changed from OPL-1.2
 
