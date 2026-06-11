@@ -37,8 +37,8 @@ jobs:
           # `--timeout 20`: per-request timeout in seconds.
           # `--max-retries 2`: retry transient failures (e.g., 5xx, timeouts).
           # `--max-concurrency 8`: cap concurrent requests to be polite.
-          # `--exclude <regex>`: skip URLs matching this regex. The pattern below
-          #   excludes ephemeral GitHub action-run URLs (rate-limited and not stable).
+          # `--exclude <regex>`: skip URLs matching this regex. The patterns below
+          #   exclude ephemeral GitHub action-run URLs and Stripe example payment links.
           #
           # IMPORTANT: do NOT put `--output` in `args` -- lychee-action v2
           # owns the output path via the `output` parameter below, and
@@ -50,6 +50,7 @@ jobs:
             --max-retries 2
             --max-concurrency 8
             --exclude https://github.com/.*/actions/runs/.*
+            --exclude https://buy.stripe.com/.*
             README.md
             DESIGN.md
             CHANGELOG.md
@@ -114,5 +115,5 @@ jobs:
 
             </details>
 
-            Please fix the broken links (or add appropriate `--skip` patterns to `.github/workflows/ci.yml` for false positives) and push a new commit.
+            Please fix the broken links (or add appropriate `--exclude` patterns to `.github/workflows/ci.yml` for false positives) and push a new commit.
           edit-mode: replace
