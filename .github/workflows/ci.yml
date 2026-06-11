@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Use the least-privilege token scopes required for the link-check job.
+# `pull-requests: write` is required so lychee-action can comment on PRs with
+# any broken links it finds. `contents: read` is the default and explicit here
+# for clarity.
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  link-check:
+    name: Check markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run lychee link checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Check exactly the 6 v1.3.1 markdown files. Positional args at the
+          # end of `args` are file/dir targets passed to lychee. CLI flags
+          # before them tune the run.
+          #
+          # `--timeout 20`: per-request timeout in seconds.
+          # `--max-retries 2`: retry transient failures (e.g., 5xx, timeouts).
+          # `--max-concurrency 8`: cap concurrent requests to be polite.
+          # `--exclude-mail`: skip mailto: links (they are not URLs in the
+          #   traditional sense and most mail servers don't accept probe GETs).
+          # `--format markdown --output lychee/out.md`: emit a human-readable
+          #   markdown report that the next step uploads as a CI artifact.
+          args: >-
+            --timeout 20
+            --max-retries 2
+            --max-concurrency 8
+            --exclude-mail
+            # Skip ephemeral GitHub action-run URLs (rate-limited
+            # and not stable links worth checking in a license repo).
+            --skip https://github.com/.*/actions/runs/.*
+            --format markdown
+            --output lychee/out.md
+            README.md
+            DESIGN.md
+            CHANGELOG.md
+            LICENSE.md
+            OPL-AI.md
+            NOTICE.example
+          # Fail the build if lychee finds any broken links.
+          fail: true
+          # `GITHUB_TOKEN` is required for lychee-action to:
+          #   1. Avoid GitHub API rate limits (5000/hr authenticated vs 60/hr
+          #      unauthenticated), so PR/issue/release links in DESIGN.md and
+          #      CHANGELOG.md resolve reliably.
+          #   2. Post a summary comment on the PR with the broken-link report.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload lychee report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lychee-report
+          path: lychee/out.md
+          if-no-files-found: ignore
