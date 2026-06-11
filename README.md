@@ -42,11 +42,11 @@ Free CLI tools for adopting OPL-1.3.1 — automate every step of the quick start
 | [`opl_migrate.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_migrate.py) | Migrate from MIT/Apache/GPL/BSD — auto-detect license, generate report |
 
 ```bash
-# Quick start with tools:
-git clone https://github.com/Open-Pact-Standard/tools.git && cd tools
-python3 tools/opl_init.py                              # Step 3: generate NOTICE
-python3 tools/opl_spdx_inject.py ..                     # Step 4: add SPDX headers
-python3 tools/opl_check.py .. --skip-remote             # Verify compliance
+# Quick start with tools (run from your project root):
+git clone https://github.com/Open-Pact-Standard/tools.git .opl-tools
+python3 .opl-tools/tools/opl_init.py --non-interactive   --maintainer "Your Name <you@example.com>"   --jurisdiction "California, United States"   --terms-url "https://example.com/standard-terms"
+python3 .opl-tools/tools/opl_spdx_inject.py .
+python3 .opl-tools/tools/opl_check.py . --skip-remote
 ```
 
 See the [tools repo](https://github.com/Open-Pact-Standard/tools) for full documentation.
