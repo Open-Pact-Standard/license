@@ -1,7 +1,7 @@
-# Open-Pact License v1.4 (OPL-1.4)
+# Open-Pact License v1.4.1 (OPL-1.4)
 
 >
-> **Status:** Draft v1.4. Not yet published. Supersedes published v1.3.1.
+> **Status:** Draft v1.4.1 (clarifications to v1.4; same `OPL-1.4` SPDX identifier). Not yet published. Supersedes published v1.3.1.
 > **Headline:** *Free for personal use. Paid for commercial use. The Maintainer decides how.*
 
 ---
@@ -173,7 +173,7 @@ OPL does not impose a scheduled open-source conversion. A Maintainer who wants o
 
 If `NOTICE` declares a DOSP period, then in addition to the abandonment conversion in §5, each **Version** of the Work converts to the **Apache License 2.0** on the scheduled date.
 
-- A "Version" is a release identified by a version number in the Work's package manifest or `NOTICE` file. The DOSP date for a Version is **N months after that Version's first public release date**, where N is the DOSP period declared in `NOTICE` (recommended range 24-60 months; other values permitted at the Maintainer's discretion, including values that exceed the recommended range for long-horizon projects).
+- A "Version" is a release identified by a version number in the Work's package manifest or `NOTICE` file. The DOSP date for a Version is **N months after that Version's first public release date**, where N is the DOSP period declared in `NOTICE` (recommended range 24-60 months; other values permitted at the Maintainer's discretion, including values that exceed the recommended range for long-horizon projects). For the purpose of this section, the **first public release date** is the date on which that Version was first made available to the public through a public registry, repository, package index, or distribution channel (for example, a tagged release, a published package, or a public download), and a **Version** is each such distinct, version-identified release; a change or hotfix that does not carry a distinct version identifier is part of the Version it modifies, not a new Version.
 - The conversion is **automatic** and applies to the **source of that Version** as published. No third-party authorization, fiscal sponsor, or public notice is required.
 - **Existing licensees are unaffected.** A party who lawfully obtained Commercial Use rights under §3.3 before the DOSP date keeps those rights for the Version they licensed; DOSP only opens the source to *new* adopters after the DOSP date.
 - The abandonment conversion in §5 and the DOSP conversion in this section are **independent triggers**; whichever occurs first opens the relevant source.
@@ -250,7 +250,7 @@ To apply OPL-1.4 to a Work:
    - **OPL-AI opt-in/opt-out**: explicitly state whether the OPL-AI addendum applies (default: opt-out, addendum not incorporated).
    - **Abandonment period** (optional): a number of months between 12 and 60; default 36.
    - **DOSP period** (optional, opt-in): if declared, a number of months (recommended 24-60; other values permitted at the Maintainer's discretion, including longer horizons for long-lived projects) after each Version's first public release on which that Version's source converts to Apache 2.0. **If absent, version-based DOSP does NOT apply** — the Work stays source-available (it converts to Apache 2.0 only under §5 abandonment, if at all). OPL is opt-out of scheduled conversion by default; declaring this field is the Maintainer's explicit choice to adopt DOSP.
-   - **Commercial Terms file** (optional but recommended): the filename of a `COMMERCIAL_TERMS.md` (or equivalent) file in the repository that pins the exact commercial terms — pricing, payment mechanism, and scope — for the specific Version identified in `NOTICE`. This file is immutable per Version: once published for a Version, it is not changed for that Version. It provides enterprise users a mathematically predictable, legally immutable contract for the exact Version they obtained, independent of any Standard Terms URL.
+   - **Commercial Terms file** (optional but recommended): the filename of a `COMMERCIAL_TERMS.md` (or equivalent) file in the repository that pins the exact commercial terms — pricing, payment mechanism, and scope — for the specific Version identified in `NOTICE`. This file is immutable per Version: once published for a Version, it is not changed for that Version. It provides enterprise users a mathematically predictable, legally immutable contract for the exact Version they obtained, independent of any Standard Terms URL. **If the referenced Commercial Terms file is absent or cannot be located, the Standard Terms URL (§3.3) governs Commercial Use for that Version**; the absence of the file does not by itself render Commercial Use free of charge.
    - **Trademark notice** (optional): any trademark notice the Maintainer wishes to assert under §10.
 3. Add `SPDX-License-Identifier: OPL-1.4` to each source file.
 4. Reference the license from your package manifest (`pyproject.toml`, `Cargo.toml`, `package.json`, etc.) using the SPDX identifier.
@@ -294,5 +294,12 @@ v1.4 is a substantive adoption-focused revision (not a clarification):
 | Steward/Guild | Mentioned as "options in framework repo" | **Removed entirely.** OPL-Standard does not act as steward. The Maintainer is the steward. |
 
 ---
+
+## v1.4.1 — clarifications (no rights or obligations changed)
+
+v1.4.1 is a clarification patch. It does **not** add, remove, or alter any grant, restriction, or obligation. The `OPL-1.4` SPDX identifier is unchanged; this patch tightens wording the Custom OPL validation gate (`ambiguity-stress-test`) flagged as ambiguous:
+
+- **§5.1 "first public release date" and "Version" defined.** Clarifies that the first public release date is the date a Version was first made available to the public through a public registry, repository, package index, or distribution channel, and that a change or hotfix without a distinct version identifier is part of the Version it modifies (not a new Version). This removes the boundary ambiguity around hotfixes and internal demos.
+- **§13 Commercial Terms file — absence fallback.** If the referenced `COMMERCIAL_TERMS.md` is absent or cannot be located, the Standard Terms URL (§3.3) governs Commercial Use for that Version; absence of the file does not by itself make Commercial Use free of charge. This closes the gap where a missing pinned file left Commercial Use terms undefined.
 
 *End of OPL-1.4 draft.*
