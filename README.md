@@ -2,15 +2,29 @@
 
 **A fair-source license**: free for personal use, paid for commercial use. The Maintainer decides how.
 
-> [v1.3.1 release](https://github.com/Open-Pact-Standard/license/releases/tag/v1.3.1) \u00b7 [CHANGELOG](CHANGELOG.md) \u00b7 [LICENSE](LICENSE.md)
+> [v1.3.1 release](https://github.com/Open-Pact-Standard/license/releases/tag/v1.3.1) · [CHANGELOG](CHANGELOG.md) · [LICENSE](LICENSE.md)
 
 ## What this is
 
-OPL-1.3.1 is a fair-source license. It lets anyone use, modify, and share the Work freely for **personal** purposes. **Commercial** use requires payment to the Maintainer per the **Standard Terms** they publish at a URL declared in `NOTICE`. The Maintainer chooses the payment mechanism \u2014 a smart contract, a Stripe link, a bank transfer, an \u201cemail me\u201d line \u2014 whatever is simplest.
+OPL-1.3.1 is a **fair-source** license with two tiers:
 
-This is the **Polyform Mixed** model: free Personal Use, paid Commercial Use, Maintainer-controlled pricing. v1.3.1 supersedes v1.2 (Reciprocity) and v1.1.
+- **Personal Use — free.** Use, modify, and share the Work for study, personal projects, education, research, and internal non-revenue tooling. No gate, no permission, no fee, no registry.
+- **Commercial Use — paid at the Maintainer's price.** When someone profits from the Work, they pay the Maintainer per the Standard Terms the Maintainer publishes. The Maintainer sets the price, chooses the payment mechanism, and chooses whether to restrict AI training. The license does not prescribe a rate.
 
-OPL-1.3.1 is not \u201copen source\u201d as defined by the Open Source Initiative. It restricts commercial use unless the Maintainer has published Standard Terms and you comply with them. That is the trade-off, and it is intentional.
+This is the **Polyform Mixed** model. v1.3.1 supersedes v1.2 (Reciprocity) and v1.1.
+
+**No chain. No system token. No DAO. No registry required.** The license is the contract. The only external dependency is the Standard Terms URL — an HTTPS HTML page where the Maintainer publishes their pricing and payment mechanism. The Maintainer can use Stripe, a bank transfer, an email address, a smart contract address (for documentation), or any other mechanism they choose. x402-style crypto payments are supported as an optional payment mechanism via the adoption tools.
+
+OPL-1.3.1 is not "open source" as defined by the Open Source Initiative. It restricts commercial use unless the Maintainer has published Standard Terms and you comply with them. That is the trade-off, and it is intentional.
+
+## What is NOT part of this license
+
+- **No on-chain registry.** The license does not require deploying smart contracts, registering on a chain, or paying gas.
+- **No system token.** There is no $OPL token and no token economics in this license.
+- **No DAO or guild governance.** The Maintainer is the steward. There is no governance layer.
+- **No registry requirement.** The framework repository (if it exists) is an optional, separate product. It is not required by this license.
+
+These things may exist as separate products or optional tools, but they are not part of OPL-1.3.1. A creator can adopt this license in under an hour with three Python commands and a Standard Terms page. See [SYSTEM_DESIGN.md](SYSTEM_DESIGN.md) for the full architecture.
 
 ## Quick start
 
@@ -23,11 +37,11 @@ To apply OPL-1.3.1 to a Work:
    - `Maintainer: <name and reachable contact>`
    - `Governing Jurisdiction: <state/province, country>`
    - `Standard Terms URL: <URL where your commercial-use pricing lives>`
-   - `OPL-AI: opted in.` (or `opted out.` \u2014 default is opt-out)
+   - `OPL-AI: opted in.` (or `opted out.` — default is opt-out)
 4. **Add `SPDX-License-Identifier: OPL-1.3.1`** to each source file.
 5. **Reference the license** from your package manifest (`pyproject.toml`, `Cargo.toml`, `package.json`, etc.) using the SPDX identifier.
 
-That\u2019s it. No registry, no on-chain fee collection, no framework required. The license is the contract.
+That's it. No registry, no on-chain fee collection, no framework required. The license is the contract.
 
 ## Adoption tools
 
@@ -55,7 +69,7 @@ See the [tools repo](https://github.com/Open-Pact-Standard/tools) for full docum
 
 v1.3.1 is a clarification release on top of v1.3. The substance of v1.3 is preserved; only 3 open ambiguities are resolved:
 
-1. **Standard Terms URL validity (LICENSE \u00a73.3).** A \u201cValid\u201d URL now satisfies **7 criteria**: HTTPS, redirect-following, HTML, no-authentication, no-JavaScript-only rendering, reasonable stability, and substantive content. A rebuttable-presumption rule with burden allocation applies in disputes (User shows failure, Maintainer shows satisfaction).
+1. **Standard Terms URL validity (LICENSE \u00a73.3).** A "Valid" URL now satisfies **7 criteria**: HTTPS, redirect-following, HTML, no-authentication, no-JavaScript-only rendering, reasonable stability, and substantive content. A rebuttable-presumption rule with burden allocation applies in disputes (User shows failure, Maintainer shows satisfaction).
 
 2. **Wind-down of Commercial Use (LICENSE \u00a73.7, new).** If a Maintainer revokes Commercial Use or materially changes the Standard Terms, existing commercial users are granted a **90-day wind-down period** to negotiate, migrate, or stop using the Work. The \u00a75 abandonment clock and the \u00a73.7 wind-down clock **run in parallel**.
 
@@ -65,10 +79,10 @@ See [CHANGELOG.md](CHANGELOG.md) for the full release notes.
 
 ## Files in this repo
 
-- [LICENSE.md](LICENSE.md) \u2014 the v1.3.1 license text
-- [OPL-AI.md](OPL-AI.md) \u2014 the v1.3.1 AI training addendum (incorporated only if Maintainer opts in)
-- [NOTICE.example](NOTICE.example) \u2014 template for the required `NOTICE` file
-- [CHANGELOG.md](CHANGELOG.md) \u2014 release notes for v1.1, v1.3, and v1.3.1
+- [LICENSE.md](LICENSE.md) — the v1.3.1 license text
+- [OPL-AI.md](OPL-AI.md) — the v1.3.1 AI training addendum (incorporated only if Maintainer opts in)
+- [NOTICE.example](NOTICE.example) — template for the required `NOTICE` file
+- [CHANGELOG.md](CHANGELOG.md) — release notes for v1.1, v1.3, and v1.3.1
 
 ## Status
 

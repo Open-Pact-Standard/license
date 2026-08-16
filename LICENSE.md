@@ -1,7 +1,7 @@
-# Open-Pact License v1.3.1 (DRAFT)
+# Open-Pact License v1.3.1 (OPL-1.3.1)
 
-> **Status:** Draft for review. Not yet published. v1.3.1 is a clarification release that resolves 3 open design questions in v1.3 (see `v1.3.1-CHANGELOG.md`): (1) Standard Terms URL validity, (2) wind-down period, (3) OPL-AI opt-in syntax. The substance of v1.3 is preserved; only the three open ambiguities are resolved.
 >
+> **Status:** Published v1.3.1. Not a draft.
 > **Headline:** *Free for personal use. Paid for commercial use. The Maintainer decides how.*
 
 ---

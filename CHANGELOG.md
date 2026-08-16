@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.3.1] - 2026-06-11 (Draft)
+## [1.3.1] - 2026-06-11 (Published)
 
 OPL-1.3.1 is a clarification release on top of OPL-1.3. The substance of v1.3 is preserved; only the 3 open design questions (ODQs) from the v1.3 PR (#3) checklist are resolved.
 
@@ -44,7 +44,7 @@ OPL-1.3 is a major redesign of the Open-Pact License. It supersedes OPL-1.2 (PR 
 
 ### Notes
 
-- The v1.3 PR (#3) was opened as a draft on `release/v1.3` targeting `main`. v1.3.1 (PR #4) layers 3 patches on top of v1.3. Both PRs are draft until lawyer sign-off.
+- The v1.3 PR (#3) was opened as a draft on `release/v1.3` targeting `main`. v1.3.1 (PR #4) layers 3 patches on top of v1.3. Both PRs were published as v1.3.1 on 2026-06-11.
 
 ## [1.1] - 2026-04-05 (Soft Launch)
 
