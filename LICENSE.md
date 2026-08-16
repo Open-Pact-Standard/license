@@ -1,7 +1,7 @@
-# Open-Pact License v1.4.1 (OPL-1.4)
+# Open-Pact License v1.4.2 (OPL-1.4)
 
 >
-> **Status:** Draft v1.4.1 (clarifications to v1.4; same `OPL-1.4` SPDX identifier). Not yet published. Supersedes published v1.3.1.
+> **Status:** Draft v1.4.2 (abandonment-conversion robustness; same `OPL-1.4` SPDX identifier). Not yet published. Supersedes published v1.3.1.
 > **Headline:** *Free for personal use. Paid for commercial use. The Maintainer decides how.*
 
 ---
@@ -151,7 +151,7 @@ The Maintainer must:
 - **4.1 Reachable contact.** Be reachable at the contact published in `NOTICE`.
 - **4.2 Response window.** Respond to written licensing inquiries within 60 days.
 - **4.3 Valid Standard Terms URL or no-Commercial-Use declaration.** Maintain a Valid Standard Terms URL (so that Commercial Use is permitted under §3.3), OR declare in `NOTICE` that Commercial Use is not permitted and accept only Personal Use. The Maintainer may change between these two modes at any time by updating `NOTICE`.
-- **4.4 Designated Successor.** Maintain the Work, or designate a Designated Successor and update `NOTICE` accordingly.
+- **4.4 Designated Successor (optional).** The Maintainer may, but is not required to, designate a Designated Successor in `NOTICE` (see §5). If a Successor is named, the Maintainer should keep `NOTICE` current; if no Successor is named, the abandonment conversion in §5 still takes effect under its standing grant with no actor required.
 
 These are not aspirations. Failure to satisfy §4.1 or §4.3 for the period specified in §5 is a condition for abandonment.
 
@@ -159,9 +159,9 @@ These are not aspirations. Failure to satisfy §4.1 or §4.3 for the period spec
 
 ## 5. Abandonment
 
-If no Maintainer is reachable at the contact in `NOTICE` for **36 consecutive months**, the Work converts to the **Apache License 2.0**.
+If no Maintainer is reachable at the contact in `NOTICE` for the period declared in `NOTICE` (default **36 consecutive months**), the Maintainer **hereby grants each recipient a license under the Apache License 2.0**, effective automatically on abandonment, for the Work as published. This is a **standing conditional grant**: it requires no further act by the Maintainer, no third-party authorization, no fiscal sponsor, no counter-notice process, and no public notice (a public-notice mechanism creates an enforcement problem for a solo Maintainer who lacks access to a recognized venue).
 
-The conversion is **automatic**. No third-party authorization is required. No fiscal sponsor. No counter-notice process. No public notice requirement (a public-notice mechanism creates an enforcement problem for a solo Maintainer who lacks access to a recognized venue).
+**Optional Designated Successor (Maintainer's choice).** A Maintainer may, but is not required to, name a Designated Successor in `NOTICE` (see §4.4). If a Successor is named, the Successor is **authorized — but not required** — to record the abandonment conversion by publishing an Apache License 2.0 `LICENSE` for the Work. Such a recording is **conclusive evidence** of the conversion; it is **not a precondition**. The conversion takes effect under the standing grant above regardless of whether any Successor acts. A Successor's power is strictly limited to recording the predefined Apache-2.0 terms; a Successor may not modify the Work, set or change price, revoke licenses, or assume any other Maintainer power.
 
 A Maintainer may voluntarily relinquish stewardship at any time by publishing a public statement and designating a successor in `NOTICE`. If no successor is named, abandonment is deemed to have begun on the date of the relinquishment.
 
@@ -176,7 +176,7 @@ If `NOTICE` declares a DOSP period, then in addition to the abandonment conversi
 - A "Version" is a release identified by a version number in the Work's package manifest or `NOTICE` file. The DOSP date for a Version is **N months after that Version's first public release date**, where N is the DOSP period declared in `NOTICE` (recommended range 24-60 months; other values permitted at the Maintainer's discretion, including values that exceed the recommended range for long-horizon projects). For the purpose of this section, the **first public release date** is the date on which that Version was first made available to the public through a public registry, repository, package index, or distribution channel (for example, a tagged release, a published package, or a public download), and a **Version** is each such distinct, version-identified release; a change or hotfix that does not carry a distinct version identifier is part of the Version it modifies, not a new Version.
 - The conversion is **automatic** and applies to the **source of that Version** as published. No third-party authorization, fiscal sponsor, or public notice is required.
 - **Existing licensees are unaffected.** A party who lawfully obtained Commercial Use rights under §3.3 before the DOSP date keeps those rights for the Version they licensed; DOSP only opens the source to *new* adopters after the DOSP date.
-- The abandonment conversion in §5 and the DOSP conversion in this section are **independent triggers**; whichever occurs first opens the relevant source.
+- The abandonment conversion in §5 and the DOSP conversion in this section are **independent triggers**; whichever occurs first opens the relevant source. The optional Designated Successor (§5) is authorized to record either conversion by publishing the applicable Apache License 2.0 `LICENSE`; in either case the conversion takes effect under the standing grant regardless of whether the Successor acts.
 - **Opt-out by default.** If `NOTICE` declares no DOSP period, version-based DOSP does not apply and the Work converts to Apache 2.0 only under §5 (abandonment, if at all). The Work is then source-available for the life of the project unless the Maintainer later adds a DOSP period or abandons stewardship.
 
 ---
@@ -301,5 +301,15 @@ v1.4.1 is a clarification patch. It does **not** add, remove, or alter any grant
 
 - **§5.1 "first public release date" and "Version" defined.** Clarifies that the first public release date is the date a Version was first made available to the public through a public registry, repository, package index, or distribution channel, and that a change or hotfix without a distinct version identifier is part of the Version it modifies (not a new Version). This removes the boundary ambiguity around hotfixes and internal demos.
 - **§13 Commercial Terms file — absence fallback.** If the referenced `COMMERCIAL_TERMS.md` is absent or cannot be located, the Standard Terms URL (§3.3) governs Commercial Use for that Version; absence of the file does not by itself make Commercial Use free of charge. This closes the gap where a missing pinned file left Commercial Use terms undefined.
+
+## v1.4.2 — abandonment-conversion robustness
+
+v1.4.2 closes the fair-source abandonment weakness surfaced during Adoption Kit dogfooding ("who actually relicenses the work?"). It is a **strengthening**, not a new restriction:
+
+- **§5 standing conditional grant.** Replaced the vague "the Work converts to Apache-2.0" with an explicit grant: the Maintainer *hereby grants each recipient an Apache-2.0 license, effective automatically on abandonment*. This makes the conversion a right that flows by the license's own terms — **no actor, successor, or registry is required**. The fallback works even if the Maintainer and any Successor have vanished.
+- **§5 optional Designated Successor (Maintainer's choice, never required).** A Maintainer *may* name a Successor in `NOTICE`; that Successor is **authorized but not required** to *record* the conversion by publishing an Apache-2.0 `LICENSE`. The recording is conclusive evidence but **not a precondition** — the standing grant applies regardless. A Successor's power is strictly bounded: they may only record the predefined Apache-2.0 terms; they cannot modify the Work, set price, revoke licenses, or assume other Maintainer powers. This keeps the successor a convenience/evidence mechanism, never a new gatekeeper.
+- **§5.1** extended so the optional Successor may record either trigger (abandonment or DOSP).
+
+This makes OPL the most abandonment-robust fair-source license: automatic by the license's own grant, human-recordable if the Maintainer opts in, zero new infrastructure, and the fallback never depends on anyone acting.
 
 *End of OPL-1.4 draft.*
