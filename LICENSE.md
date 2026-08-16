@@ -1,7 +1,7 @@
-# Open-Pact License v1.4.2 (OPL-1.4)
+# Open-Pact License v1.4.3 (OPL-1.4)
 
 >
-> **Status:** Draft v1.4.2 (abandonment-conversion robustness; same `OPL-1.4` SPDX identifier). Not yet published. Supersedes published v1.3.1.
+> **Status:** Draft v1.4.3 (clarifications from legal-skills review; same `OPL-1.4` SPDX identifier). Not yet published. Supersedes published v1.3.1.
 > **Headline:** *Free for personal use. Paid for commercial use. The Maintainer decides how.*
 
 ---
@@ -22,14 +22,14 @@ OPL-Standard (the organization that publishes this license) does not charge for 
 - **"You"** means any individual or entity exercising rights under this license.
 - **"Maintainer"** means the person or legal entity named in the project's `NOTICE` file, or their designated successor.
 - **"Derivative"** means any work that includes a substantial portion of the Work, modified or unmodified.
-- **"Hosted Service"** means a service operated by You, accessible to third parties over a network, whose primary functionality is the Work or a Derivative.
+- **"Hosted Service"** means a service operated by You, accessible to third parties over a network, whose primary functionality is the Work or a Derivative, or that offers the Work or a Derivative as a distinct, separately-marketed capability. Incidental inclusion of the Work within a larger product whose primary functionality is otherwise unrelated is not a Hosted Service.
 - **"Personal Use"** means use by an individual for non-commercial purposes: study, modification, personal projects, education, research, evaluation. Includes use within a single legal entity for internal **non-revenue-generating** purposes (e.g., internal tooling, internal evaluation, internal research) where the use does not contribute to revenue-producing activities.
 - **"Commercial Use"** means any use that is not Personal Use. Commercial Use includes: (a) offering the Work or a Derivative as a hosted or managed service, (b) distributing a Derivative to third parties for use in their commercial activities, (c) using the Work or a Derivative to provide paid services to third parties, (d) using the Work or a Derivative in a product or service offered for sale or license.
-- **"Standard Terms"** means the Maintainer's published commercial-use pricing, payment mechanism, and terms, available at the URL declared in `NOTICE`. The Standard Terms are part of this license as incorporated by reference. The License incorporates the Standard Terms as they exist at the URL at the time of access by the user (i.e., the *current* Standard Terms, not a frozen snapshot). The Maintainer's duty: if the Maintainer changes the Standard Terms at the URL, they must also update the URL in `NOTICE` (if the URL itself changes) and respect the 90-day notice period in §13.
+- **"Standard Terms"** means the Maintainer's published commercial-use pricing, payment mechanism, and terms, available at the URL declared in `NOTICE`. The Standard Terms are part of this license as incorporated by reference. The License incorporates the Standard Terms as they exist at the URL at the time of access by the user (i.e., the *current* Standard Terms, not a frozen snapshot), **subject to the wind-down protections in §3.7 for existing commercial users**. The Maintainer's duty: if the Maintainer changes the Standard Terms at the URL, they must also update the URL in `NOTICE` (if the URL itself changes) and respect the 90-day notice period in §13.
 - **"Valid Standard Terms URL"** means an HTTPS URL that (a) returns a 2xx response, (b) is a webpage (HTML), not a PDF or other document, and (c) is human-readable in a major browser without authentication. **See §3.3 for the full 7-criteria definition** (HTTPS, redirect-following, HTML, no-auth, no-JS-only rendering, stability, substantive content) and the rebuttable-presumption rule with burden allocation.
 - **"AI System"** has the meaning given in the **OPL-AI addendum**, incorporated by reference **only if** the Maintainer has opted in via `NOTICE`.
 - **"Contributor"** means any individual who has submitted a merged change to the Work, as recorded in the project's contribution history.
-- **"Designated Successor"** means a person or entity identified as the Maintainer's successor by a signed statement from the prior Maintainer in an updated `NOTICE` file. If no such statement exists, succession follows the abandonment procedure in §5.
+- **"Designated Successor"** means a person or entity identified as the Maintainer's successor in `NOTICE` (see §4.4). If no Successor is named in `NOTICE`, succession follows the abandonment procedure in §5.
 
 ---
 
@@ -66,7 +66,7 @@ If You distribute the Work or a Derivative, You must:
 
 You may not distribute the Work or a Derivative under terms that remove, weaken, or fail to enforce the conditions in §3.3 and §3.5.
 
-This is light copyleft. It propagates the protections, not the code. A Derivative may be relicensed for any other terms as long as the protections in this section continue to apply to the protections themselves.
+This is light copyleft. It propagates the protections, not the code. A Derivative may be relicensed under any other terms, provided that any Commercial Use of the Derivative remains subject to the §3.3 payment requirement — the payment protection travels with the Work and applies to the Derivative wherever it is distributed. You may not distribute a Derivative under terms that permit Commercial Use without the §3.3 payment obligation.
 
 ### 3.3 Commercial Use requires Standard Terms payment
 
@@ -148,7 +148,7 @@ During the 90-day wind-down period, the **previous Standard Terms continue to ap
 
 The Maintainer must:
 
-- **4.1 Reachable contact.** Be reachable at the contact published in `NOTICE`.
+- **4.1 Reachable contact.** Be reachable at the contact published in `NOTICE` — meaning a human response is returned to a written inquiry at that contact within the response window in §4.2. A contact that bounces, is unanswered beyond the §4.2 window, or is not monitored is not "reachable."
 - **4.2 Response window.** Respond to written licensing inquiries within 60 days.
 - **4.3 Valid Standard Terms URL or no-Commercial-Use declaration.** Maintain a Valid Standard Terms URL (so that Commercial Use is permitted under §3.3), OR declare in `NOTICE` that Commercial Use is not permitted and accept only Personal Use. The Maintainer may change between these two modes at any time by updating `NOTICE`.
 - **4.4 Designated Successor (optional).** The Maintainer may, but is not required to, designate a Designated Successor in `NOTICE` (see §5). If a Successor is named, the Maintainer should keep `NOTICE` current; if no Successor is named, the abandonment conversion in §5 still takes effect under its standing grant with no actor required.
@@ -173,7 +173,7 @@ OPL does not impose a scheduled open-source conversion. A Maintainer who wants o
 
 If `NOTICE` declares a DOSP period, then in addition to the abandonment conversion in §5, each **Version** of the Work converts to the **Apache License 2.0** on the scheduled date.
 
-- A "Version" is a release identified by a version number in the Work's package manifest or `NOTICE` file. The DOSP date for a Version is **N months after that Version's first public release date**, where N is the DOSP period declared in `NOTICE` (recommended range 24-60 months; other values permitted at the Maintainer's discretion, including values that exceed the recommended range for long-horizon projects). For the purpose of this section, the **first public release date** is the date on which that Version was first made available to the public through a public registry, repository, package index, or distribution channel (for example, a tagged release, a published package, or a public download), and a **Version** is each such distinct, version-identified release; a change or hotfix that does not carry a distinct version identifier is part of the Version it modifies, not a new Version.
+- A "Version" is a release identified by a version number in the Work's package manifest or `NOTICE` file. The DOSP date for a Version is **N months after that Version's first public release date**, where N is the DOSP period declared in `NOTICE` (recommended range 24-60 months; other values permitted at the Maintainer's discretion, including values that exceed the recommended range for long-horizon projects). For the purpose of this section, the **first public release date** is the date on which that Version was first made available to the public through a public registry, repository, package index, or distribution channel (for example, a tagged release, a published package, or a public download) **on or after the OPL adoption date declared in `NOTICE`**; a Version first released before OPL adoption is not subject to DOSP, and **a Version** is each such distinct, version-identified release; a change or hotfix that does not carry a distinct version identifier is part of the Version it modifies, not a new Version.
 - The conversion is **automatic** and applies to the **source of that Version** as published. No third-party authorization, fiscal sponsor, or public notice is required.
 - **Existing licensees are unaffected.** A party who lawfully obtained Commercial Use rights under §3.3 before the DOSP date keeps those rights for the Version they licensed; DOSP only opens the source to *new* adopters after the DOSP date.
 - The abandonment conversion in §5 and the DOSP conversion in this section are **independent triggers**; whichever occurs first opens the relevant source. The optional Designated Successor (§5) is authorized to record either conversion by publishing the applicable Apache License 2.0 `LICENSE`; in either case the conversion takes effect under the standing grant regardless of whether the Successor acts.
@@ -209,7 +209,7 @@ IN NO EVENT SHALL ANY CONTRIBUTOR OR MAINTAINER BE LIABLE FOR ANY CLAIM, DAMAGES
 
 **9.3** The Maintainer may publish a **clarification** of an existing term in `NOTICE`, but a clarification: (a) may not impose a new restriction, (b) may not expand the scope of any existing restriction, (c) is not retroactive, and (d) is subject to a 30-day public-comment period before taking effect. A "clarification" that violates (a), (b), or (c) is null and void.
 
-**9.4** This license does not supersede any applicable law. Where the law requires more, the law controls. Where this license requires more and the law allows, this license controls.
+**9.4** This license does not supersede any applicable law. Where the law requires more, the law controls. Where this license requires more and the law allows, this license controls. Nothing in this license limits any mandatory right a consumer has under applicable consumer-protection law, nor a consumer's right to bring proceedings in their local court.
 
 ---
 
@@ -233,7 +233,7 @@ This license is governed by the laws of the jurisdiction specified in the projec
 
 Nothing in this section prevents the parties from agreeing to binding arbitration for a specific dispute.
 
-**12.1 Injunctive relief.** Notwithstanding §12, either party may seek injunctive or other equitable relief in a court of competent jurisdiction to prevent irreparable harm, including but not limited to infringement of the Work. The Maintainer's ability to seek such relief is not conditioned on the parties' agreement to arbitrate, and is not waived by any other provision of this license.
+**12.1 Injunctive relief.** Notwithstanding §12, either party may seek injunctive or other urgent court relief in a court of competent jurisdiction to prevent irreparable harm, including but not limited to infringement of the Work. The Maintainer's ability to seek such relief is not conditioned on the parties' agreement to arbitrate, and is not waived by any other provision of this license.
 
 ---
 
@@ -311,5 +311,24 @@ v1.4.2 closes the fair-source abandonment weakness surfaced during Adoption Kit 
 - **§5.1** extended so the optional Successor may record either trigger (abandonment or DOSP).
 
 This makes OPL the most abandonment-robust fair-source license: automatic by the license's own grant, human-recordable if the Maintainer opts in, zero new infrastructure, and the fallback never depends on anyone acting.
+
+## v1.4.3 — clarifications from legal-skills review
+
+v1.4.3 closes the three material seams flagged by an `ambiguity-stress-test` (contract profile) + `contract-risk-analyzer` review of OPL v1.4.2, performed as a real-adopter red-team. All three are clarifications; no rights or obligations materially changed. Validated by re-running the stress-test — the target scenarios no longer sustain a genuine dispute.
+
+- **§4.1 "reachable" defined.** A contact is "reachable" only if a human response is returned to a written inquiry within the §4.2 window; a bouncing, unanswered, or unmonitored contact is not reachable. Closes the abandonment-trigger vagueness (Scenario 3).
+- **§1 "Standard Terms" qualified.** The "current Standard Terms at time of access" language is now expressly "subject to the wind-down protections in §3.7 for existing commercial users," removing the characterization conflict with §3.7.1(b) rate-increase wind-down (Scenario 1).
+- **§3.2 Derivative copyleft stated plainly.** A Derivative may be relicensed under any terms, but Commercial Use of the Derivative remains subject to the §3.3 payment requirement, and a Derivative may not be distributed under terms that permit Commercial Use without that obligation. Replaces the metaphysical "protections apply to the protections themselves" with enforceable language (Scenario 5).
+- **§1 "Designated Successor" aligned to `NOTICE`.** Definition now matches §4.4/§5 ("identified in NOTICE"), removing the prior "signed statement" mismatch (Scenario 2 cosmetic).
+- **§1 "Hosted Service" narrowed.** Now excludes "incidental inclusion of the Work within a larger product whose primary functionality is otherwise unrelated," and captures a distinct, separately-marketed capability — closing the incidental-embedding ambiguity (Scenario 4).
+- **§5.1 DOSP clock anchored.** "First public release date" is now expressly "on or after the OPL adoption date declared in NOTICE"; a Version released before OPL adoption is not subject to DOSP (Scenario 6).
+
+**Regional / jurisdictional hardening** (from REGIONAL_REVIEW.md — cross-system scan against German/BGB, EU, and other civil-law systems). Pure clarifications; no substance changed:
+- **§9.4 consumer carve-out.** Added that nothing limits a consumer's mandatory rights under applicable consumer-protection law, nor a consumer's right to proceedings in their local court. Closes the consumer blind spot (regional finding #1; §9.4 already subordinated OPL to applicable law, this makes the consumer point explicit).
+- **§12.1 "equitable relief" → "urgent court relief".** Removes the US-equity-court label artifact that is meaningless in civil-law systems (regional finding #3).
+
+**Advisor guidance (not a license change):** a Maintainer whose Standard Terms are AGB (German standard business terms) should have those terms reviewed for AGB-compliance; OPL's own burden-allocation (§3.3) and liability exclusion (§7/§8) can be challenged as AGB against consumers (regional findings #2/#5). OPL's draft status means a qualified German/EU practitioner should confirm the regional findings before v1.4.3 is published as final.
+
+Items from the review are now fully closed; OPL v1.4.3 incorporates the complete legal-skills-review pass (ambiguity stress-test + 5-clause risk + regional discrepancy scan).
 
 *End of OPL-1.4 draft.*
