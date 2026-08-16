@@ -1,16 +1,16 @@
-# Open-Pact License v1.3.1 (OPL-1.3.1)
+# Open-Pact License v1.4 (OPL-1.4)
 
 >
-> **Status:** Published v1.3.1. Not a draft.
+> **Status:** Draft v1.4. Not yet published. Supersedes published v1.3.1.
 > **Headline:** *Free for personal use. Paid for commercial use. The Maintainer decides how.*
 
 ---
 
 ## What this license is
 
-OPL-1.3 is a fair-source license. It lets You use, modify, and share the Work freely for **personal** purposes. **Commercial** use requires payment to the Maintainer per the Standard Terms they publish. The Maintainer chooses the payment mechanism — a smart contract, a Stripe link, a bank transfer, an email — whatever is simplest. The license itself is free; only the *use of the Work for commercial purposes* is paid, and the payment goes to the Maintainer, not to the licensor.
+OPL-1.4 is a fair-source license. It lets You use, modify, and share the Work freely for **personal** purposes. **Commercial** use requires payment to the Maintainer per the Standard Terms they publish. The Maintainer chooses the payment mechanism — a smart contract, a Stripe link, a bank transfer, an email — whatever is simplest. The license itself is free; only the *use of the Work for commercial purposes* is paid, and the payment goes to the Maintainer, not to the licensor.
 
-OPL-1.3 is not "open source" as defined by the Open Source Initiative. It restricts commercial use unless the Maintainer has published Standard Terms and You comply with them. That is the trade-off, and it is intentional.
+OPL-1.4 is not "open source" as defined by the Open Source Initiative. It restricts commercial use unless the Maintainer has published Standard Terms and You comply with them. That is the trade-off, and it is intentional.
 
 OPL-Standard (the organization that publishes this license) does not charge for the license itself, does not process payments, and does not take a cut. The license is a pact between the Maintainer and the user. OPL-Standard provides the license text and free, open-source example tools (smart-contract templates, payment integrations, "pay and move on" scripts) for Maintainers who want them.
 
@@ -22,10 +22,9 @@ OPL-Standard (the organization that publishes this license) does not charge for 
 - **"You"** means any individual or entity exercising rights under this license.
 - **"Maintainer"** means the person or legal entity named in the project's `NOTICE` file, or their designated successor.
 - **"Derivative"** means any work that includes a substantial portion of the Work, modified or unmodified.
-- **"Functional Equivalent"** has the meaning given in §3.6. The term captures works that are not textually derived from the Work but are substantially similar in function and were developed with access to the Work.
-- **"Hosted Service"** means a service operated by You, accessible to third parties over a network, whose primary functionality is the Work, a Derivative, or a Functional Equivalent. (Used in §3.3 to define the integration with Functional Equivalents.)
+- **"Hosted Service"** means a service operated by You, accessible to third parties over a network, whose primary functionality is the Work or a Derivative.
 - **"Personal Use"** means use by an individual for non-commercial purposes: study, modification, personal projects, education, research, evaluation. Includes use within a single legal entity for internal **non-revenue-generating** purposes (e.g., internal tooling, internal evaluation, internal research) where the use does not contribute to revenue-producing activities.
-- **"Commercial Use"** means any use that is not Personal Use. Commercial Use includes: (a) offering the Work, a Derivative, or a Functional Equivalent as a hosted or managed service, (b) distributing a Derivative to third parties for use in their commercial activities, (c) using the Work, a Derivative, or a Functional Equivalent to provide paid services to third parties, (d) using the Work, a Derivative, or a Functional Equivalent in a product or service offered for sale or license.
+- **"Commercial Use"** means any use that is not Personal Use. Commercial Use includes: (a) offering the Work or a Derivative as a hosted or managed service, (b) distributing a Derivative to third parties for use in their commercial activities, (c) using the Work or a Derivative to provide paid services to third parties, (d) using the Work or a Derivative in a product or service offered for sale or license.
 - **"Standard Terms"** means the Maintainer's published commercial-use pricing, payment mechanism, and terms, available at the URL declared in `NOTICE`. The Standard Terms are part of this license as incorporated by reference. The License incorporates the Standard Terms as they exist at the URL at the time of access by the user (i.e., the *current* Standard Terms, not a frozen snapshot). The Maintainer's duty: if the Maintainer changes the Standard Terms at the URL, they must also update the URL in `NOTICE` (if the URL itself changes) and respect the 90-day notice period in §13.
 - **"Valid Standard Terms URL"** means an HTTPS URL that (a) returns a 2xx response, (b) is a webpage (HTML), not a PDF or other document, and (c) is human-readable in a major browser without authentication. **See §3.3 for the full 7-criteria definition** (HTTPS, redirect-following, HTML, no-auth, no-JS-only rendering, stability, substantive content) and the rebuttable-presumption rule with burden allocation.
 - **"AI System"** has the meaning given in the **OPL-AI addendum**, incorporated by reference **only if** the Maintainer has opted in via `NOTICE`.
@@ -65,7 +64,7 @@ If You distribute the Work or a Derivative, You must:
 
 ### 3.2 No stripping
 
-You may not distribute the Work or a Derivative under terms that remove, weaken, or fail to enforce the conditions in §3.3, §3.5, and §3.6.
+You may not distribute the Work or a Derivative under terms that remove, weaken, or fail to enforce the conditions in §3.3 and §3.5.
 
 This is light copyleft. It propagates the protections, not the code. A Derivative may be relicensed for any other terms as long as the protections in this section continue to apply to the protections themselves.
 
@@ -87,7 +86,7 @@ A **Valid Standard Terms URL** is a URL that, at the time of access:
 
 A URL is **presumed valid** if all 7 criteria are met at the time of access. The presumption is rebuttable: a User may show that the URL failed a criterion at the time of access (e.g., the page returned 200 OK but served an empty HTML body, or the page redirected to a different domain at the time of the User's access). In a dispute, the **User bears the initial burden** of showing that the URL failed a criterion; the **Maintainer bears the burden** of showing that the URL satisfied the criteria at the time of the User's access (e.g., via an archived snapshot, a server log, or a third-party uptime monitor).
 
-**Integration with §3.6 (Functional Equivalent):** Operating a Hosted Service whose primary functionality is a Functional Equivalent of the Work (as defined in §3.6) counts as Commercial Use under §3.3, regardless of whether the Hosted Service distributes the Work's source. This closes the clean-room rewrite gap.
+**Integration with §3.3 (Commercial Use):** Operating a Hosted Service whose primary functionality is the Work or a Derivative counts as Commercial Use under §3.3, regardless of whether the Hosted Service distributes the Work's source.
 
 **Changes to Standard Terms.** The Maintainer may change the Standard Terms (whether by changing the URL or by changing the content at the URL) by updating `NOTICE`, with **90 days' notice** for the change to take effect for existing commercial users. A change to the URL is treated the same as a change to the content for purposes of this notice period. New users are bound by the Standard Terms as they exist at the time of access.
 
@@ -109,13 +108,9 @@ If the Maintainer has declared in `NOTICE` that the OPL-AI addendum is incorpora
 
 The full definition of "AI System," the scope of restricted uses, and the available exceptions are specified in the **OPL-AI addendum** (current version: OPL-AI-1.3.1). The default is opt-in: the Maintainer must affirmatively declare in `NOTICE` that the addendum applies. The OPL-AI addendum's substance (§2–§7) is unchanged from v1.0; only the default has been flipped from opt-out (v1.0) to opt-in (v1.3). See `OPL-AI-v1.3.md` for the addendum text.
 
-### 3.6 Functional Equivalent Work
+### 3.6 Functional Equivalent Work — REMOVED in v1.4
 
-You may not create or distribute a **Functional Equivalent** of the Work under terms more permissive than this license, and you may not operate a Hosted Service whose primary functionality is a Functional Equivalent (counted as Commercial Use under §3.3), without a separate written agreement with the Maintainer.
-
-A **"Functional Equivalent"** is a work whose primary functional purpose is substantially the same as the Work's, and that was developed with access to the Work or a Derivative. Access is presumed if the Functional Equivalent is publicly released within 36 months of the Work's first public release and addresses a problem domain that the Work addresses. Independent creation evidence rebuts the presumption of access.
-
-This section does not restrict independent development that arrives at substantially similar functionality without access to the Work. The "Functional Equivalent" test is a contractual analog to the fair-use analysis in *Sega Enterprises Ltd. v. Accolade, Inc.*, 977 F.2d 1510 (9th Cir. 1992), adapted for a private license. The contractual nature of this section means that case-law developments in fair use do not automatically extend to or from this test; the section operates on its own terms.
+The Functional Equivalent restriction that previously appeared in this section was **removed in OPL-1.4**. OPL no longer restricts works that are functionally similar to the Work but independently developed. Protection against actual copying of the Work or a Derivative is provided by standard copyright law. Maintainers who wish to add a functional-equivalence restriction for a specific Work may do so in that Work's own Standard Terms or a separate written agreement.
 
 ### 3.7 Wind-down of Commercial Use
 
@@ -171,6 +166,18 @@ The conversion is **automatic**. No third-party authorization is required. No fi
 A Maintainer may voluntarily relinquish stewardship at any time by publishing a public statement and designating a successor in `NOTICE`. If no successor is named, abandonment is deemed to have begun on the date of the relinquishment.
 
 `NOTICE` may declare a shorter or longer abandonment period (12-60 months; default 36). The conversion target is always the Apache License 2.0.
+
+### 5.1 Version-Based Delayed Open Source Publication (DOSP)
+
+OPL does not impose a scheduled open-source conversion. A Maintainer who wants one must **affirmatively opt in** by declaring a DOSP period in `NOTICE`. This keeps OPL a pure fair-source license by default; scheduled conversion is the Maintainer's explicit choice.
+
+If `NOTICE` declares a DOSP period, then in addition to the abandonment conversion in §5, each **Version** of the Work converts to the **Apache License 2.0** on the scheduled date.
+
+- A "Version" is a release identified by a version number in the Work's package manifest or `NOTICE` file. The DOSP date for a Version is **N months after that Version's first public release date**, where N is the DOSP period declared in `NOTICE` (recommended range 24-60 months; other values permitted at the Maintainer's discretion, including values that exceed the recommended range for long-horizon projects).
+- The conversion is **automatic** and applies to the **source of that Version** as published. No third-party authorization, fiscal sponsor, or public notice is required.
+- **Existing licensees are unaffected.** A party who lawfully obtained Commercial Use rights under §3.3 before the DOSP date keeps those rights for the Version they licensed; DOSP only opens the source to *new* adopters after the DOSP date.
+- The abandonment conversion in §5 and the DOSP conversion in this section are **independent triggers**; whichever occurs first opens the relevant source.
+- **Opt-out by default.** If `NOTICE` declares no DOSP period, version-based DOSP does not apply and the Work converts to Apache 2.0 only under §5 (abandonment, if at all). The Work is then source-available for the life of the project unless the Maintainer later adds a DOSP period or abandons stewardship.
 
 ---
 
@@ -232,18 +239,20 @@ Nothing in this section prevents the parties from agreeing to binding arbitratio
 
 ## 13. How to apply this license
 
-To apply OPL-1.3 to a Work:
+To apply OPL-1.4 to a Work:
 
 1. Place the full text of this license in a file named `LICENSE` in the repository root.
 2. Create a `NOTICE` file containing:
-   - **OPL Version**: `1.3`
+   - **OPL Version**: `1.4`
    - **Maintainer**: name and reachable contact (email, mailing address, or other verifiable contact).
    - **Governing Jurisdiction**: the jurisdiction whose laws govern this license, per §12. If unspecified, the Maintainer's location applies.
    - **Standard Terms URL**: the URL where the Maintainer publishes their commercial-use pricing and payment mechanism. **Required for Commercial Use to be permitted** under §3.3. If absent or invalid, Commercial Use is not permitted. The Maintainer may change this URL with 90 days' notice for existing commercial users.
    - **OPL-AI opt-in/opt-out**: explicitly state whether the OPL-AI addendum applies (default: opt-out, addendum not incorporated).
    - **Abandonment period** (optional): a number of months between 12 and 60; default 36.
+   - **DOSP period** (optional, opt-in): if declared, a number of months (recommended 24-60; other values permitted at the Maintainer's discretion, including longer horizons for long-lived projects) after each Version's first public release on which that Version's source converts to Apache 2.0. **If absent, version-based DOSP does NOT apply** — the Work stays source-available (it converts to Apache 2.0 only under §5 abandonment, if at all). OPL is opt-out of scheduled conversion by default; declaring this field is the Maintainer's explicit choice to adopt DOSP.
+   - **Commercial Terms file** (optional but recommended): the filename of a `COMMERCIAL_TERMS.md` (or equivalent) file in the repository that pins the exact commercial terms — pricing, payment mechanism, and scope — for the specific Version identified in `NOTICE`. This file is immutable per Version: once published for a Version, it is not changed for that Version. It provides enterprise users a mathematically predictable, legally immutable contract for the exact Version they obtained, independent of any Standard Terms URL.
    - **Trademark notice** (optional): any trademark notice the Maintainer wishes to assert under §10.
-3. Add `SPDX-License-Identifier: OPL-1.3` to each source file.
+3. Add `SPDX-License-Identifier: OPL-1.4` to each source file.
 4. Reference the license from your package manifest (`pyproject.toml`, `Cargo.toml`, `package.json`, etc.) using the SPDX identifier.
 
 That's it. No registry required. No on-chain anything. No Guild. No Custodial Steward. No on-chain fee collection. Those are options in the optional `Open-Pact-Standard/framework` repository, available to Maintainers who want them; none of them are required by this license. The Maintainer chooses their own payment mechanism in their Standard Terms.
@@ -258,9 +267,16 @@ v1.3.1 resolves 3 open design questions from v1.3 (see `v1.3.1-CHANGELOG.md` for
 - **§3.7 Wind-down of Commercial Use (new).** Defines what happens when a Maintainer revokes Commercial Use or materially changes the Standard Terms. The 90-day wind-down period is **automatic**, applies to **existing commercial users only**, and **runs in parallel** with the §5 abandonment clock. The cure-window start time is clarified (runs from end of cure window, not from initial URL failure).
 - **§3.8 Reserved** (renumbered from old §3.7 Reserved).
 
-The substance of v1.3 is preserved. The Polyform Mixed default, the §3.5 OPL-AI opt-in, the §3.6 Functional Equivalent test, §5 abandonment, and §13 NOTICE shape are all unchanged.
+The substance of v1.3 is preserved. The Polyform Mixed default, the §3.5 OPL-AI opt-in, §5 abandonment, and §13 NOTICE shape are unchanged. (The §3.6 Functional Equivalent test was **removed** in v1.4 — see below.)
 
-## What changed from OPL-1.2
+## v1.4 — what changed from v1.3
+
+v1.4 is a substantive adoption-focused revision (not a clarification):
+
+- **§5.1 Version-Based DOSP (new, opt-in).** A Maintainer may declare a DOSP period in `NOTICE`, after which each Version's source converts to Apache License 2.0 on a scheduled date (recommended 24-60 months; other values permitted). **OPL does not impose DOSP by default** — a silent `NOTICE` means no scheduled conversion (pure fair-source; the Work converts to Apache 2.0 only under §5 abandonment, if at all). This makes OPL align with the Fair Source movement's Delayed Open Source Publication expectation *for adopters who opt in*, while preserving creator autonomy for those who do not. Existing commercial licensees keep their rights; DOSP opens the source only to *new* adopters after the DOSP date.
+- **§3.6 Functional Equivalent — REMOVED.** The functional-equivalence restriction (and its "clean-room rewrite" coverage) was deleted. OPL no longer restricts independently-developed functionally-similar works; actual copying of the Work or a Derivative remains protected by standard copyright law. This removes the "code taint" anxiety that discouraged developers and corporate legal teams from adopting OPL.
+- **§13 NOTICE shape (extended).** Added two optional fields: **DOSP period** (enables §5.1) and **Commercial Terms file** (a per-Version immutable `COMMERCIAL_TERMS.md` pinning exact pricing/payment/scope, giving enterprise users a predictable, lawyer-reviewable contract independent of the Standard Terms URL).
+- **SPDX identifier** bumped to `OPL-1.4`.
 
 | | OPL-1.2 | OPL-1.3 |
 |---|---|---|
@@ -279,4 +295,4 @@ The substance of v1.3 is preserved. The Polyform Mixed default, the §3.5 OPL-AI
 
 ---
 
-*End of OPL-1.3 draft.*
+*End of OPL-1.4 draft.*

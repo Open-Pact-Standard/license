@@ -1,12 +1,12 @@
-# Open-Pact License v1.3.1 (OPL-1.3.1)
+# Open-Pact License v1.4 (OPL-1.4)
 
 **A fair-source license**: free for personal use, paid for commercial use. The Maintainer decides how.
 
-> [v1.3.1 release](https://github.com/Open-Pact-Standard/license/releases/tag/v1.3.1) · [CHANGELOG](CHANGELOG.md) · [LICENSE](LICENSE.md)
+> [v1.4 draft](LICENSE.md) · [CHANGELOG](CHANGELOG.md) · [LICENSE](LICENSE.md)
 
 ## What this is
 
-OPL-1.3.1 is a **fair-source** license with two tiers:
+OPL-1.4 is a **fair-source** license with two tiers:
 
 - **Personal Use — free.** Use, modify, and share the Work for study, personal projects, education, research, and internal non-revenue tooling. No gate, no permission, no fee, no registry.
 - **Commercial Use — paid at the Maintainer's price.** When someone profits from the Work, they pay the Maintainer per the Standard Terms the Maintainer publishes. The Maintainer sets the price, chooses the payment mechanism, and chooses whether to restrict AI training. The license does not prescribe a rate.
@@ -28,29 +28,31 @@ These things may exist as separate products or optional tools, but they are not 
 
 ## Quick start
 
-To apply OPL-1.3.1 to a Work:
+To apply OPL-1.4 to a Work:
 
 1. **Copy [LICENSE.md](LICENSE.md)** into your repository root.
 2. **(Optional) Copy [OPL-AI.md](OPL-AI.md)** if you want AI training restricted. By default, the OPL-AI addendum is **not** incorporated; the Maintainer must opt in via `NOTICE`.
 3. **Create a `NOTICE` file** using [NOTICE.example](NOTICE.example) as a template. At minimum you need:
-   - `OPL Version: 1.3.1`
+   - `OPL Version: 1.4`
    - `Maintainer: <name and reachable contact>`
    - `Governing Jurisdiction: <state/province, country>`
    - `Standard Terms URL: <URL where your commercial-use pricing lives>`
    - `OPL-AI: opted in.` (or `opted out.` — default is opt-out)
-4. **Add `SPDX-License-Identifier: OPL-1.3.1`** to each source file.
+   - *(Optional)* `DOSP period: <months>` — declare to opt into scheduled conversion to Apache 2.0 (recommended 24-60; silent = no scheduled conversion).
+   - *(Optional)* `Commercial Terms file: COMMERCIAL_TERMS.md` — pin immutable per-Version commercial terms.
+4. **Add `SPDX-License-Identifier: OPL-1.4`** to each source file.
 5. **Reference the license** from your package manifest (`pyproject.toml`, `Cargo.toml`, `package.json`, etc.) using the SPDX identifier.
 
 That's it. No registry, no on-chain fee collection, no framework required. The license is the contract.
 
 ## Adoption tools
 
-Free CLI tools for adopting OPL-1.3.1 — automate every step of the quick start above:
+Free CLI tools for adopting OPL-1.4 — automate every step of the quick start above:
 
 | Tool | What it does |
 |------|-------------|
 | [`opl_init.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_init.py) | Generate a valid `NOTICE` file (interactive or `--non-interactive`) |
-| [`opl_spdx_inject.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_spdx_inject.py) | Add `SPDX-License-Identifier: OPL-1.3.1` to every source file (60+ languages) |
+| [`opl_spdx_inject.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_spdx_inject.py) | Add `SPDX-License-Identifier: OPL-1.4` to every source file (60+ languages) |
 | [`opl_check.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_check.py) | Validate compliance: LICENSE, NOTICE, SPDX headers, Standard Terms URL |
 | [`opl_registry_gen.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_registry_gen.py) | Generate `REGISTRY.json` for Tier 1 adopters with structured fee schedules |
 | [`opl_migrate.py`](https://github.com/Open-Pact-Standard/tools/blob/main/tools/opl_migrate.py) | Migrate from MIT/Apache/GPL/BSD — auto-detect license, generate report |
