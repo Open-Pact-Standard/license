@@ -2,7 +2,7 @@
 
 **A fair-source license**: free for personal use, paid for commercial use. The Maintainer decides how.
 
-> [v1.4 draft](LICENSE.md) · [CHANGELOG](CHANGELOG.md) · [LICENSE](LICENSE.md)
+> [v1.4 draft](LICENSE.md) · [CHANGELOG](CHANGELOG.md) · [LICENSE](LICENSE.md) · [Interoperability](INTEROPERABILITY.md)
 
 ## What this is
 
@@ -25,6 +25,24 @@ OPL-1.3.1 is not "open source" as defined by the Open Source Initiative. It rest
 - **No registry requirement.** The framework repository (if it exists) is an optional, separate product. It is not required by this license.
 
 These things may exist as separate products or optional tools, but they are not part of OPL-1.3.1. A creator can adopt this license in under an hour with three Python commands and a Standard Terms page. See [SYSTEM_DESIGN.md](SYSTEM_DESIGN.md) for the full architecture.
+
+## Governance & interoperability
+
+**OPL is independently governed** by the Open-Pact-Standard org (Ikaros Digital
+LLC). It is **not** a submission to, and is not under the stewardship of, the
+Fair Source movement or any external registry. OPL's red lines (no forced rolling
+conversion, creator autonomy paramount, zero-infra, no registry required) are
+enforced by the license text itself.
+
+**But OPL is built to be interoperable in case a bridge is wanted.** Every OPL
+conversion trigger lands on **Apache License 2.0** (§5 abandonment and §5.1
+DOSP), so an OPL work is, by construction, a *deferred* Apache-2.0 work that
+every scanner and registry already understands. A downstream user who needs a
+fair-source posture simply **opts into DOSP** in their `NOTICE`. See
+[INTEROPERABILITY.md](INTEROPERABILITY.md) for the full mapping and tooling
+guidance.
+
+*OPL is its own standard. The fair-source bridge is a feature, not a dependency.*
 
 ## Quick start
 
