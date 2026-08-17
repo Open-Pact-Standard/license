@@ -4,9 +4,11 @@
 *Purpose: confirm whether OPL v1.4.3 (draft, OPL-1.4 SPDX id) is enforceable and
 travels correctly under German law (BGB) and the EU overlay, where the Work's
 NOTICE declares "Governing Jurisdiction: Berlin, Germany" (as the origin-canary
-reference adoption does). This brief pre-forms the questions so counsel can
-confirm or correct efficiently. It is NOT a legal opinion; it is a question list
-with the relevant texts and statutory anchors.*
+reference adoption does). One of several per-jurisdiction briefs; the broader
+cross-system analysis is in REGIONAL_REVIEW.md (multi-jurisdiction scan covering
+DE/FR/UK/JP/BR). This brief pre-forms the questions so counsel can confirm or
+correct efficiently. It is NOT a legal opinion; it is a question list with the
+relevant texts and statutory anchors.*
 
 *Source texts: OPL v1.4.3 LICENSE.md (open-pact-license repo, commit 7827c1d);
 the companion REGIONAL_REVIEW.md (cross-system scan) and LEGAL_REVIEW.md

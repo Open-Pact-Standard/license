@@ -1,194 +1,186 @@
-# OPL v1.4.3 — Regional / Jurisdictional Discrepancy Scan
+# OPL v1.4.3 — Multi-Jurisdiction Discrepancy Scan
 
-*Follow-on to LEGAL_REVIEW.md. The first review assumed a US interpretive frame
-and flagged that OPL's stated governing law is Berlin, Germany. This scan asks a
-sharper question: **does OPL's drafting silently assume US/common-law doctrine in
-ways that break or shift meaning under other legal systems a real adopter might
-be in?** Because OPL is a *template* license — adopters declare their own
-governing jurisdiction in NOTICE — the license must not carry hidden US-specific
-constructs that misfire when an adopter in, say, France, Japan, or Brazil applies
-it under their own law.*
+*Follow-on to LEGAL_REVIEW.md (adversarial ambiguity review). LEGAL_REVIEW assumed
+a US interpretive frame and flagged that OPL's stated governing law is Berlin,
+Germany. This scan goes further: **OPL is a template license — adopters declare
+their OWN governing jurisdiction in NOTICE.** So the license must not carry
+hidden US-specific constructs that misfire when an adopter in France, the UK,
+Japan, Brazil, or elsewhere applies it under their law. We scan the most likely
+adopter jurisdictions plus the common-law/civil-law split.*
 
 *Method: read the text for Anglo-American legal constructs; map each against
-German/BGB (OPL's own stated law), EU-overlay (Berlin = EU member), other
-civil-law systems, and common-law. Flag where the construct (a) is void/voidable,
-(b) flips meaning, or (c) is simply inoperative under local law. Severity =
-adopter-exposure if they rely on the clause under that law. Not legal advice;
-qualified local counsel needed before publishing v1.4.3 as final.*
+German/BGB (OPL's own stated law), France (Code civil), UK (UCTA/CRA), Japan
+(Civil Code), Brazil (Lei 9.609/CDC), and EU overlay. Flag where a construct is
+void/voidable, flips meaning, or is inoperative. Severity = adopter-exposure if
+they rely on the clause under that law. Not legal advice; qualified local counsel
+needed before publishing v1.4.3 as final. Anchors verified by web search where
+marked; Brazil article-level claims are flagged unverified.*
 
 ---
 
-## A. Constructs that assume US/common-law doctrine
+## 0. The template-license problem
 
-### R1 — "standing conditional grant" (§5)
-**US frame:** a grant "hereby granted, effective automatically on condition" is a
-familiar equitable/contractual mechanism; enforceable as written.
-**German/BGB:** a license grant triggered by a *future condition* (unreachability)
-is valid as a befristete/bedingte Einräumung (conditional grant), but German law
-has **no doctrine of "automatic conversion" by operation of the license's own
-terms** the way Anglo systems imply. Under BGB §158, a condition precedent is
-recognized, so the grant *can* be conditional — but the *automatic* quality
-rests on contract freedom (§305 ff), which is fine between the parties. **Low
-risk, but** the "standing grant" vocabulary is US; a German court reads it as a
-bedingte Lizenzgewährung, which is fine. **Verdict: operative, no fix needed, but
-rename-risk if you want German-native phrasing.**
-**EU/civil-law generally:** conditional grants are recognized across civil law.
-**Verdict: ✅ portable.**
+OPL's §12 lets the adopter name any "Governing Jurisdiction" in NOTICE. OPL v1.4.3
+is therefore simultaneously:
+- a **German-law instrument** (origin-canary declares Berlin), AND
+- a **French / UK / Japanese / Brazilian / etc. instrument** for other adopters.
 
-### R2 — "conclusive evidence" (§5 successor recording)
-**US frame:** "conclusive evidence" is a standard evidentiary label.
-**German/BGB:** "conclusive" (unwiderleglich) evidence is recognized (§292 ZPO
-for certain statutory cases; by agreement parties can agree evidentiary weight),
-but a *private* recording being "conclusive" is unusual — German procedural law
-treats such agreements as to evidentiary effect as generally permissible between
-parties (dispositiv). **Low risk.** The bigger issue: the recording is a GitHub
-commit of an Apache LICENSE — under German law that's a simple declaration, not a
-formal act. **Verdict: ✅ operative, semantic only.**
-
-### R3 — "incorporated by reference" + "rebuttable presumption" (§1, §3.3)
-**US frame:** incorporation by reference and rebuttable presumptions are routine.
-**German/BGB:** "incorporation by reference" of external terms (the Standard Terms
-URL) triggers **§305c BGB (überraschende Klauseln — surprising clauses are void)**
-and the **AGB-Kontrolle (standard-terms review)**. If the Maintainer's Standard
-Terms are "general business terms" (AGB) under BGB, they are subject to
-judicial content control — and a *consumer* or *small-business* user gets
-heightened protection. **MEDIUM risk for German adopters:** the "current Standard
-Terms at time of access" + "rebuttable presumption, User bears initial burden"
-language could be read as an AGB clause shifting burden of proof — German courts
-are skeptical of burden-shifting and surprise. **This is the most jurisdiction-
-sensitive clause for OPL's own stated law.**
-**EU overlay:** Directive 93/13 (unfair terms in consumer contracts) + the new
-**Directive (EU) 2019/770** (supply of digital content/services) mean a *consumer*
-adopting-or-using OPL software gets mandatory rights OPL cannot waive (§9.4
-correctly says "this license does not supersede applicable law" — good, that
-saves it). **Verdict: ✅ saved by §9.4, but the AGB-control exposure for German
-B2B-via-AGB remains; note it.**
-
-### R4 — "implied covenant of good faith and fair dealing"
-**US frame:** implied in every contract (esp. NY/CA).
-**German/BGB:** **§242 BGB** is the civil-law equivalent (Treu und Glauben) and is
-*stronger/more explicit* than the US implied covenant. So OPL's "honors it in
-good faith" (§3.3) maps cleanly onto §242. **Verdict: ✅ German law is MORE
-protective here; no conflict.**
-**Civil-law generally:** good faith is a general principle (art. 1134 Fr. civ.,
-etc.). **✅ portable.**
-
-### R5 — "Limitation of liability" / "AS IS" disclaimer (§7, §7/§8)
-**US frame:** standard, enforceable against commercial users.
-**German/BGB:** **§309 Nr. 7–8 BGB** voids certain liability exclusions in AGB;
-**§276/§278** set mandatory fault standards. A *total* liability exclusion (§8
-"IN NO EVENT ... LIABLE") is **void against consumers** under §309, and
-**restricted against businesses** if it excludes gross negligence (§309 Nr. 7a).
-**Verdict: 🟡 for German adopters** — the blanket §8 exclusion is fine
-B2B if negotiated, but if the Standard Terms are AGB, the total exclusion is
-partially void. **Saved for consumers by §9.4 (law controls).** Note for B2B AGB.
-**EU:** same consumer-protective direction. **✅ §9.4 saves consumers.**
-
-### R6 — "Governing law and forum" (§12) — exclusive jurisdiction clause
-**US frame:** routine forum-selection clause.
-**German/BGB / EU:** **Brussels Ibis Regulation (EU) 1215/2015** overrides
-private forum choices **for consumers** — a consumer can sue in their own
-home court regardless of §12 (Art. 18–19). **Verdict: ✅ §12 is inoperative
-against EU consumers** (they sue locally), but valid B2B. OPL doesn't contemplate
-consumer-users distinctly — it treats "You" broadly. **Minor gap: OPL should
-state that consumer statutory rights/fora are unaffected** (rely on §9.4, but
-explicit is better).
-
-### R7 — "arbitration" (§12 last line)
-**US frame:** fine.
-**German/BGB:** consumer arbitration agreements are restricted (**§§1033–1041a
-ZPO**; a consumer can challenge). B2B arbitration is fine. **Verdict: ✅ fine for
-B2B; consumer carve-out needed (same as R6).**
-
-### R8 — "injunctive relief / equitable relief" (§12.1)
-**US frame:** "equitable relief" is a US-specific remedy label (equity court).
-**German/BGB:** no "equity" split; injunctive relief is **§935 ff ZPO**
-(einstweilige Verfügung). The *concept* (prevent irreparable harm) exists but the
-*label* "equitable relief" is meaningless in Germany. **Verdict: ✅ operative in
-substance (injunction exists), but the US label is a translation artifact.**
-Cosmetic for German; **potentially confusing in civil-law systems without an
-equity tradition (e.g., France, Japan).**
+The license text uses US-equity and US-contract vocabulary throughout ("standing
+grant," "conclusive evidence," "equitable relief" [fixed in v1.4.3 → "urgent
+court relief"], "incorporated by reference," "rebuttable presumption"). Each must
+survive translation into the adopter's system. This scan tests that.
 
 ---
 
-## B. Cross-system summary table
+## 1. The constructs, system by system
 
-| Construct | US/common-law | German/BGB | EU overlay | Other civil-law | Adopter risk |
-|---|---|---|---|---|---|
-| R1 standing grant (§5) | ✅ native | ✅ bedingte Gewährung | ✅ | ✅ | 🟢 none |
-| R2 conclusive evidence (§5) | ✅ | ✅ (party agreement) | ✅ | ✅ | 🟢 none |
-| R3 incorporation + rebuttable presumption (§1/§3.3) | ✅ | 🟡 AGB-control / §305c | 🟡 Dir.93/13, 2019/770 | 🟡 | 🟡 medium (German B2B AGB) |
-| R4 good faith (§3.3) | ✅ implied | ✅ §242 (stronger) | ✅ | ✅ | 🟢 none |
-| R5 liability exclusion (§7/§8) | ✅ | 🟡 void vs consumers per §309 | 🟡 | 🟡 | 🟡 medium (if AGB) |
-| R6 exclusive forum (§12) | ✅ | ✅ B2B / ⚠️ consumer override | ⚠️ Brussels Ibis | ⚠️ | 🟡 consumer carve-out |
-| R7 arbitration (§12) | ✅ | 🟡 consumer-restricted | 🟡 | 🟡 | 🟡 consumer carve-out |
-| R8 "equitable relief" (§12.1) | ✅ native label | ⚠️ label meaningless | ⚠️ | ⚠️ | 🟢 cosmetic |
+### C1 — Conditional / "standing" grant (§5 abandonment → Apache-2.0)
+| System | Treatment | Risk |
+|---|---|---|
+| US/common-law | Condition precedent; self-executing. ✅ | 🟢 |
+| **Germany (BGB §158)** | Bedingte Rechtsgeschäfte — condition precedent valid; grant vests on condition without formal act (see GERMAN_LAW_BRIEF #1). ✅ | 🟢 (confirm) |
+| **France (C. civ.)** | Condition suspensive (art. 1304-1 ff, formerly 1181) — valid; vests on event. ✅ | 🟢 |
+| **UK** | Condition precedent under common law; enforceable. ✅ | 🟢 |
+| **Japan (Civil Code art. 127)** | "A juridical act subject to a condition precedent becomes effective upon fulfillment." Explicit. ✅ | 🟢 |
+| **Brazil (CC art. 135)** | Condição suspensiva recognized. *(CC art. 135 unverified — flag.)* | 🟡 unverified |
+
+**Verdict:** the §5 standing grant is the MOST PORTABLE clause — every major
+system recognizes conditional grants. Low risk everywhere. Germany needs the
+formal-act confirmation (brief #1); Brazil needs article verification.
+
+### C2 — "Conclusive evidence" (§5 successor recording)
+| System | Treatment | Risk |
+|---|---|---|
+| Germany (ZPO §292) | Evidentiary weight by agreement permissible between parties. ✅ | 🟢 |
+| France | Preuve — parties may agree probative weight; a private writing (LICENSE commit) is admissible. ✅ | 🟢 |
+| UK | Evidence Act 1995 — evidence is for the tribunal; "conclusive" stipulations between parties generally upheld. ✅ | 🟢 |
+| Japan | Evidence rules dispositive between parties. ✅ | 🟢 |
+| Brazil | Same. ✅ | 🟢 |
+
+**Verdict:** the standing grant (C1) is the operative mechanism; "conclusive
+evidence" is label-only. Cosmetic everywhere.
+
+### C3 — Incorporation by reference + burden allocation (§1, §3.3)
+| System | Treatment | Risk |
+|---|---|---|
+| Germany (BGB §305c, §307, §309) | AGB-control: burden-shifting/surprise clauses scrutinized. 🟡 (brief #3) | 🟡 |
+| France (C. consom. L212-1; ex-Dir 93/13) | Unfair terms void against consumers; "core" price terms exempt but opacity/surprise attacked. 🟡 | 🟡 |
+| UK (UCTA 1977 s.2–3; CRA 2015 s.62) | Business liability exclusions need *reasonableness*; consumer terms must be *fair*. A burden-shift on a consumer likely fails. 🟡 | 🟡 |
+| Japan (CCA art. 1(2) good faith; consumer statutes) | Good faith + consumer protection; one-sided terms challengeable. 🟡 | 🟡 |
+| Brazil (CDC 8.078/90 art. 51; Lei 9.609/98) | Unconscionable/one-sided clauses void (art. 51); software protected by Lei 9.609. 🟡 *(art. refs unverified)* | 🟡 |
+
+**Verdict:** the SAME AGB/unfair-terms exposure appears in EVERY system — not
+just Germany. OPL's "User bears initial burden" (§3.3) and its Standard-Terms
+incorporation face consumer-protection challenge universally. §9.4 ("does not
+supersede applicable law") saves consumers in all systems; the B2B posture needs
+per-system confirmation. **This is the cross-jurisdiction headline finding.**
+
+### C4 — Good faith "honors in good faith" (§3.3)
+| System | Treatment | Risk |
+|---|---|---|
+| Germany (§242) | Treu und Glauben — explicit, stronger than US. ✅ | 🟢 |
+| France (art. 1104) | "Contracts must be negotiated, formed AND performed in good faith" — post-2016 reform, explicit at formation. ✅ | 🟢 |
+| UK | Implied duty of good faith in some contexts (not universal, but relational contracts recognized post-2019). ⚠️ narrower than civil law | 🟢 (operative) |
+| Japan (art. 1(2)) | "Exercise of rights and performance of duties must be in good faith." Explicit. ✅ | 🟢 |
+| Brazil (CC art. 422) | "The parties are bound by good faith obligations in contract formation and performance." Explicit. ✅ | 🟢 |
+
+**Verdict:** good faith is a NEAR-UNIVERSAL civil-law principle and increasingly
+UK/common-law too. OPL's §3.3 maps cleanly everywhere. Lowest-risk clause.
+
+### C5 — Liability exclusion "IN NO EVENT" (§7/§8)
+| System | Treatment | Risk |
+|---|---|---|
+| Germany (BGB §309 Nr.7–8) | Total exclusion void vs consumers; restricted vs businesses (gross negligence). 🟡 | 🟡 |
+| France (C. consom. art. L212-1; CC art. 1231-5) | Exclusions of liability void vs consumers; limited vs businesses. 🟡 | 🟡 |
+| UK (UCTA s.2–3) | Business liability exclusion needs *reasonableness*; cannot exclude death/personal injury negligence at all. 🟡 | 🟡 |
+| Japan | Tort/contract liability limits scrutinized; consumer protection. 🟡 | 🟡 |
+| Brazil (CDC art. 24–25) | Liability for consumer damage cannot be excluded; relative/initial liability. 🟡 | 🟡 |
+
+**Verdict:** blanket liability exclusion is ATTACKED IN EVERY SYSTEM against
+consumers, and restricted against businesses. OPL's §9.4 saves consumers
+everywhere; the B2B posture varies (UK reasonableness test is the strictest).
+**OPL should note that B2B users in the UK need a reasonableness assessment.**
+
+### C6 — Forum selection + arbitration (§12)
+| System | Treatment | Risk |
+|---|---|---|
+| Germany / EU (Brussels Ibis Art.18–19) | Consumer may sue locally regardless of §12. 🟡 (brief #5) | 🟡 |
+| France (ex-Dir 93/13; Brussels Ibis) | Same consumer override. 🟡 | 🟡 |
+| UK (Brussels retained; CRA 2015) | Consumer local-forum right; B2B forum clauses enforceable if reasonable. 🟡 | 🟡 |
+| Japan | Forum selection enforceable; consumer mandatory-forum rights under consumer statute. 🟡 | 🟡 |
+| Brazil (CDC art. 101) | Consumer may sue in their own domicile; forum clause void vs consumer. 🟡 | 🟡 |
+
+**Verdict:** consumer forum override is UNIVERSAL (Brazil art. 101 is the
+strongest — consumer sues at home). OPL's v1.4.3 §9.4 consumer carve-out handles
+it; confirm wording covers all systems.
+
+### C7 — "Urgent court relief" (§12.1) [was "equitable relief"]
+| System | Treatment | Risk |
+|---|---|---|
+| Germany (§935 ff ZPO, einstweilige Verfügung) | Exists. ✅ | 🟢 |
+| France (référé, art. 808 CPC) | Exists. ✅ | 🟢 |
+| UK (injunctive relief) | Exists. ✅ | 🟢 |
+| Japan (shihō rensai / provisional disposition) | Exists. ✅ | 🟢 |
+| Brazil (tutela provisória, CPC art. 300) | Exists. ✅ | 🟢 |
+
+**Verdict:** v1.4.3's "urgent court relief" wording travels cleanly; the old
+"equitable relief" US-equity label is gone. Cosmetic-only fix, now portable.
 
 ---
 
-## C. Discrepancies that actually need attention
+## 2. Cross-jurisdiction synthesis
 
-**1. Consumer-user blind spot (R3, R5, R6, R7).** OPL's "You" is broad and
-includes consumers, but the license never distinguishes consumer vs business
-users. Under German/EU law, consumers get mandatory rights OPL cannot waive —
-§9.4 ("does not supersede applicable law") saves enforceability, but the license
-*reads* as if it binds consumers like businesses. **Recommended fix (low-risk
-clarification, v1.4.4 or a NOTICE note):** add a sentence to §9.4 or §12 that
-"nothing limits mandatory consumer rights or the consumer's right to bring
-proceedings in their local court." This is pure hardening, no right changed.
+**Clauses that travel cleanly everywhere (no action):** C1 standing grant, C2
+conclusive evidence, C4 good faith, C7 urgent relief. These are universal.
 
-**2. AGB-control exposure for German Maintainer's Standard Terms (R3, R5).** If
-the Maintainer's Standard Terms are AGB (almost always true for a published
-pricing page), German courts can void surprising/exclusion clauses. OPL can't fix
-the Maintainer's *own* Standard Terms, but OPL's own "rebuttable presumption,
-User bears initial burden" (§3.3) could itself be challenged as AGB if OPL is
-treated as the Maintainer's standard terms. **Recommended fix:** the §3.3 burden
-allocation is fine B2B; for safety, note in guidance (not the license) that
-German Maintainers should have Standard Terms reviewed for AGB-compliance. **No
-license-text change required** — this is advisor guidance.
+**Clauses with UNIVERSAL consumer/B2B exposure (the real finding):** C3
+(incorporation + burden), C5 (liability exclusion), C6 (forum). Every system
+protects consumers against these and scrutinizes B2B. OPL's §9.4 is the
+cross-system safety valve — it correctly subordinates OPL to mandatory local law
+in ALL systems, so consumers are protected by operation of §9.4 alone.
 
-**3. "Equitable relief" label (R8).** Cosmetic but a real translation artifact for
-civil-law adopters (France, Japan, Brazil). **Recommended fix (trivial):** in
-§12.1, say "injunctive or other urgent court relief" instead of "equitable
-relief." Removes the US-equity assumption.
+**The genuine license-text question (not just advisor):** does OPL's B2B
+posture need per-system tailoring? Answer: NO for consumers (§9.4), but OPL could
+add a one-line note that B2B users should assess local AGB/unfair-terms/
+reasonableness rules. This is advisor guidance, not a text change — OPL stays
+jurisdiction-neutral by design.
 
-**4. The US interpretive frame itself (meta).** LEGAL_REVIEW.md and this scan were
-reasoned on US doctrine. OPL's stated law is Berlin. **The single highest-value
-action before publishing final:** have a German-law practitioner confirm R1–R8,
-especially R3/R5 AGB exposure. The license is *draft*; do not publish as final
-without that pass.
+**UK-specific sharp edge:** UCTA's *reasonableness test* (s.11) is stricter than
+continental AGB-control for B2B — a UK B2B user relying on OPL's liability
+exclusion should know it's subject to reasonableness. Worth a UK-specific advisor
+note.
 
 ---
 
-## D. What is NOT a discrepancy (good news)
+## 3. Recommended multi-jurisdiction hardening (all clarification, no substance)
 
-- **§5 standing grant, §4.1 reachable, §3.2 copyleft, §5.1 DOSP** — all portable
-  to civil law; conditional grants, good faith, and versioning are universal.
-- **§9.4 ("does not supersede applicable law")** — the single most important
-  clause for regional safety; it correctly subordinates OPL to mandatory local
-  law, which neutralizes most consumer/EU conflicts automatically.
-- **Patent grant (§6)** — standard, portable; termination-for-assertion is
-  recognized broadly.
-
----
-
-## E. Recommended regional-hardening set (optional v1.4.4 or advisor note)
-
-1. **§12 / §9.4 consumer carve-out sentence** — "Mandatory consumer rights and the
-   consumer's right to proceedings in their local court are not limited by this
-   license." (Closes R6/R7 consumer blind spot; pure hardening.)
-2. **§12.1 "equitable relief" → "injunctive or urgent court relief".** (Closes R8
-   label artifact.)
-3. **Advisor guidance (not license text):** German Maintainers should AGB-review
-   their Standard Terms (R3/R5).
-
-None of these change OPL's substance; they make it travel cleanly across the
-jurisdictions a real adopter might declare in NOTICE.
+1. **§9.4 consumer carve-out (DONE v1.4.3)** — covers DE/FR/UK/JP/BR consumers via
+   §9.4 + explicit sentence. Universal fix.
+2. **§12.1 "urgent court relief" (DONE v1.4.3)** — portable label.
+3. **Advisor note (new, recommend adding to OPL guidance, not the license):**
+   "B2B users should assess OPL's liability exclusion and Standard-Terms
+   incorporation against local unfair-terms / AGB / reasonableness rules
+   (e.g., Germany §307 BGB, UK UCTA s.11, France L212-1, Brazil art. 51)."
+4. **Brazil article verification** — the CC/CDC/Lei 9.609 article numbers cited
+   above are unverified; a Brazilian practitioner should confirm before any
+   Brazil-specific claim is published.
 
 ---
 
-*Sources note: no external legal-research step (OPL is a private license
-instrument). Analysis predicts outcomes on US doctrine and maps to German/BGB and
-EU frameworks by analogy; it is not a substituted local-legal opinion. A
-qualified German/EU practitioner should confirm R3/R5/R6 before v1.4.3 is
-published as final.*
+## 4. Per-jurisdiction practitioner briefs
+
+The German brief exists (GERMAN_LAW_BRIEF.md). For full multi-jurisdiction
+coverage before publishing final, parallel briefs for **France, UK, Japan,
+Brazil** should confirm the C3/C5/C6 exposures under local statutes. This scan
+provides the clause→statute mapping; the briefs turn it into confirm/correct
+questions per system.
+
+---
+
+*Sources: web-verified anchors — France C. civ. art. 1104 (good faith at
+formation, post-2016 reform); Japan Civil Code art. 1(2) (good faith), art. 127
+(condition precedent); UK UCTA 1977 (business liability, reasonableness) + CRA
+2015 (consumer unfair terms). Brazil Lei 9.609/98 + CDC 8.078/90 article numbers
+UNVERIFIED — flag for local counsel. No external legal-research step on the
+license text itself (read on four corners); statute anchors confirmed by web
+search where marked. Not a substituted local-legal opinion.*
