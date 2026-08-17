@@ -3,8 +3,7 @@
 *Prepared for: qualified German/EU intellectual-property & contract counsel.*
 *Purpose: confirm whether OPL v1.4.3 (draft, OPL-1.4 SPDX id) is enforceable and
 travels correctly under German law (BGB) and the EU overlay, where the Work's
-NOTICE declares "Governing Jurisdiction: Berlin, Germany" (as the origin-canary
-reference adoption does). One of several per-jurisdiction briefs; the broader
+NOTICE declares "Governing Jurisdiction: Germany" (or a German adopter applies OPL under German law). One of several per-jurisdiction briefs; the broader
 cross-system analysis is in REGIONAL_REVIEW.md (multi-jurisdiction scan covering
 DE/FR/UK/JP/BR). This brief pre-forms the questions so counsel can confirm or
 correct efficiently. It is NOT a legal opinion; it is a question list with the
@@ -19,7 +18,10 @@ this brief is the gate before that status changes.*
 
 ## 0. Scope & framing
 
-- **Governing law declared:** Berlin, Germany → BGB + EU directives as applicable.
+- **Governing law declared:** Germany → BGB + EU directives (Germany is an EU
+  member). This brief is an **example jurisdiction brief** for German adopters;
+  OPL is a template license and the reference adoption (origin-canary) declares
+  **United States**, not Germany.
 - **License type:** a public, unilateral, copyright-based license with a
   commercial-use payment tier (Standard Terms URL) and an automatic
   abandonment→Apache-2.0 conversion (§5 standing conditional grant).

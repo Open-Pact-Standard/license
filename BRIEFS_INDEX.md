@@ -8,7 +8,7 @@ sendable.*
 
 | Jurisdiction | Brief file | Governing law | Key statutes (verified) | Notes |
 |---|---|---|---|---|
-| Germany / EU | `GERMAN_LAW_BRIEF.md` | BGB + EU | BGB §§158/242/305c/307/309; ZPO §§292/935ff; Brussels Ibis 18–19 | OPL's stated law (origin-canary = Berlin). Most developed. |
+| Germany / EU | `GERMAN_LAW_BRIEF.md` | BGB + EU | BGB §§158/242/305c/307/309; ZPO §§292/935ff; Brussels Ibis 18–19 | Example jurisdiction brief (OPL is a template; origin-canary declares United States). Most developed. |
 | France | `FR_LAW_BRIEF.md` | Code civil + C. consom. | C. civ. art. 1104 (✅ in force 2016), 1304-1ff, 1231-5; C. consom. L212-1 | EU member; Brussels Ibis binds. |
 | United Kingdom | `UK_LAW_BRIEF.md` | England & Wales | UCTA 1977 (✅ in force), CRA 2015; post-Brexit 2019 Regs ss.15B/15C | **Post-Brexit: no Brussels Ibis.** UCTA reasonableness test = strictest B2B regime. |
 | Japan | `JP_LAW_BRIEF.md` | Civil Code | CC art. 1(2), 127/131, 548-2 (✅ WIPO Lex 2025) | Consumer Contract Act + Civil Preservation Act. |

@@ -51,7 +51,7 @@ Maintainer: Your Name <[email protected]>
 Governing Jurisdiction: California, United States
 # Use a specific legal jurisdiction: state/province + country. Examples:
 # "Delaware, United States", "England and Wales", "New South Wales, Australia",
-# "Ontario, Canada", "Berlin, Germany". This is the jurisdiction whose
+# "Ontario, Canada", "United States". This is the jurisdiction whose
 # laws govern the license per LICENSE.md §12. If unspecified, the
 # Maintainer's location applies.
 

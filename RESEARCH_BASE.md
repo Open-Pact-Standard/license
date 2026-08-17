@@ -236,8 +236,9 @@ confirm with counsel); ⚠️ unverified (flagged for local counsel).*
 ## 5. Next steps (to reach publish-grade)
 1. Pull exact-text primaries for the 🟡 items (state UDAP for US; CCQ 1380; CPA
    2019; CO 151; Korea Civil Act; Israel Standard Contracts Law).
-2. Decide US jurisdiction for origin-canary (you live in US — currently Berlin).
-3. Write the missing per-jurisdiction briefs (US federal+states, CA, AU, IN, CH,
+ 2. DONE: origin-canary NOTICE jurisdiction updated Berlin, Germany -> United
+ States (maintainer is US-based; state optional per S9.4).
+ 3. Write the missing per-jurisdiction briefs (US federal+states, CA, AU, IN, CH,
    KR, NL, IT, ES, IL, BR, CN) using these verified anchors; update index.
 4. Wire ALL verified jurisdictions into Custom OPL's vetted `jurisdiction` list
    (replacing the placeholder) with statute anchors + brief as backing.

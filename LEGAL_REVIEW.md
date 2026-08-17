@@ -4,7 +4,9 @@
 *Method: `ambiguity-stress-test` (contract profile) + `contract-risk-analyzer`
 (5-clause lens). Document read on its four corners; no external case-law research
 (OPL is a private license instrument, not a statute). Outcomes predicted on a
-US interpretive frame; OPL's stated governing law is Berlin, Germany — German
+US interpretive frame; the reference adoption (origin-canary) now declares
+**United States** (maintainer is US-based), and OPL remains a template license
+so any adopter declares their own jurisdiction in NOTICE — German
 doctrine would differ, noted where material.*
 
 *This is analysis, not legal advice. The adopter (Ikaros Digital LLC) should

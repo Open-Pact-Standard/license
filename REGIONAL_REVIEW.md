@@ -1,8 +1,9 @@
 # OPL v1.4.3 — Multi-Jurisdiction Discrepancy Scan
 
 *Follow-on to LEGAL_REVIEW.md (adversarial ambiguity review). LEGAL_REVIEW assumed
-a US interpretive frame and flagged that OPL's stated governing law is Berlin,
-Germany. This scan goes further: **OPL is a template license — adopters declare
+*a US interpretive frame and noted that OPL's *example* stated governing law was
+Berlin, Germany at an earlier stage. This scan goes further: **OPL is a template
+license — adopters declare
 their OWN governing jurisdiction in NOTICE.** So the license must not carry
 hidden US-specific constructs that misfire when an adopter in France, the UK,
 Japan, Brazil, or elsewhere applies it under their law. We scan the most likely

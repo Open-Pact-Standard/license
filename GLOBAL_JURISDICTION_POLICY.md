@@ -108,8 +108,9 @@ The US is unique: contract enforceability is **state law**, not federal. OPL's
 §12 governing-law clause is therefore load-bearing — the adopter MUST declare a
 state, not just "United States." The US brief will be federal framework + a
 note on the major adopter states (CA, NY, TX, DE). **Given the maintainer (Ikaros
-Digital LLC) is US-based, origin-canary's NOTICE jurisdiction should be updated
-from "Berlin, Germany" to a US state** (decision pending maintainer input).
+Digital LLC) is US-based, origin-canary's NOTICE jurisdiction is now
+**United States** (updated from the earlier Berlin placeholder). A state may be
+added for B2B clarity but is optional per §9.4.
 
 ---
 
