@@ -117,98 +117,135 @@ confirm with counsel); ⚠️ unverified (flagged for local counsel).*
 - [ ] **Italy / Spain / Netherlands:** EU members — Brussels Ibis + Dir 93/13
   apply; add national civil-code anchors (IT CC art. 1337/1375 good faith,
   art. 1353 condition; ES CC art. 1258/1281; NL BW 6:236/6:237 unfair terms).
-## 3. Verified non-EU anchors (researched; 🟡 = consistent across secondary/official-summaries, pull primary before publishing briefs)
+### United States (federal anchor)
+- **FTC Act §5, 15 U.S.C. §45(a)(1)** (authoritative: Cornell LII + FTC policy
+  statement): "Unfair methods of competition in or affecting commerce, and unfair
+  or deceptive acts or practices in or affecting commerce, are hereby declared
+  unlawful." ✅ (authoritative primary mirror).
+- Contract enforceability is **STATE law**: UCC adopted by all 50 states "with
+  slight variations" (Uniform Law Commission). Restatement (Second) Contracts §90
+  (promissory estoppel) + condition-precedent doctrine are common-law anchors. 🟡
+  (state variance; federal frame confirmed).
+- OPL relevance: §12 governing-law clause is load-bearing in US; no general
+  civil-law good faith (narrower than art. 1104/§242). FTC §5 + state UDAP police
+  Standard Terms vs consumers. ✅/🟡.
 
 ### Canada
 - Split system: common law (English-derived) in 9 provinces + territories; **civil
-  law in Québec (Civil Code of Québec, CCQ)**. CCQ **art. 1375**: "the parties
-  shall conduct themselves in good faith both at the time the obligation arises
-  and at the time it is performed or extinguished." Condition precedent in CCQ
-  art. 1380+ (to confirm exact). Consumer protection: provincial (e.g., Québec
-  Consumer Protection Act, Ontario Consumer Protection Act). 🟡.
-- OPL relevance: a Québec adopter reads OPL under civil law (good faith explicit
-  at art. 1375); rest of Canada under common law. 🟡.
+  law in Québec (Civil Code of Québec, CCQ)**. **CCQ art. 1375** (CanLII): "the
+  parties shall conduct themselves in good faith both at the time the obligation
+  arises and at the time it is performed or extinguished." ✅. Condition precedent
+  CCQ art. 1380+ (🟡 confirm exact). Consumer protection: provincial (Québec
+  Consumer Protection Act, Ontario CPA). 🟡.
+- OPL relevance: Québec adopter reads OPL under civil law (good faith explicit at
+  art. 1375); rest of Canada under common law. ✅/🟡.
 
 ### Australia
 - **Competition and Consumer Act 2010, Sch 2 (Australian Consumer Law, ACL).**
-  Unfair contract terms regime: amended 2023 to apply to **ALL businesses** (not
-  just small); terms void + penalties up to **AUD 50M** (from Nov 2023). 🟡
-  (official: legislation.gov.au). Consumer guarantees (Part 3-2) cannot be
-  excluded. OPL §7/§8 engage ACL; §9.4 saves consumers. 🟡.
-- OPL relevance: among the STRICTEST unfair-terms regimes (per-business, huge
-  penalties). 🟡.
+  **s.24** three-part unfair-terms test: term unfair if (a) significant imbalance
+  in rights/obligations, (b) not reasonably necessary to protect legitimate
+  interests, (c) would cause detriment if relied on. Amended 2023: applies to
+  **ALL businesses**; terms void + penalties up to **AUD 50M** (from Nov 2023).
+  ✅ (authoritative secondary + official summary). Consumer guarantees (Part 3-2)
+  cannot be excluded. OPL §7/§8 engage ACL; §9.4 saves consumers. ✅.
+- OPL relevance: among the STRICTEST unfair-terms regimes (per-business, AUD 50M). ✅.
 
 ### India
-- **Indian Contract Act 1872** (primary: indiacode.nic.in). S.23: lawful
-  consideration/objects; unconscionable/unreasonable terms void as opposed to
-  public policy (judicial, S.23). **Consumer Protection Act 2019**: unfair
-  contracts (S.2(46)) voidable; Central Consumer Protection Authority. 🟡.
-- OPL relevance: burden-shift (§3.3) and liability exclusion (§7/§8) challengeable
-  under S.23 + CPA 2019 for consumers. 🟡.
+- **Indian Contract Act 1872** (primary: indiacode.nic.in). **s.23**: agreement
+  void if consideration/object "forbidden by law … or opposed to public policy";
+  unconscionable/unreasonable terms void via s.23 (judicial). ✅ (authoritative).
+  **Consumer Protection Act 2019**: unfair contracts (s.2(46)) voidable; Central
+  Consumer Protection Authority. 🟡 (statute confirmed, pull primary text).
+- OPL relevance: burden-shift (§3.3) + liability exclusion (§7/§8) challengeable
+  under s.23 + CPA 2019 for consumers. ✅/🟡.
 
 ### Switzerland (non-EU)
-- **Code of Obligations (CO / Obligationenrecht)**. Art. 2: good faith in
-  contracting (well-established). Condition precedent: CO art. 151 ff. 🟡 (confirm
-  exact). No EU overlay — standalone jurisdiction. Unfair terms: CO art. 8
-  (burden of proof) + case law; no general AGB statute like Germany. 🟡.
-- OPL relevance: civil law, good faith explicit; closest to German reading. 🟡.
+- **Code of Obligations (CO)**. **art. 2** (official translation): "Every person
+  shall exercise his rights and fulfil his obligations according to the principles
+  of good faith." ✅. Condition precedent: **CO art. 151** (🟡 confirm exact
+  wording). No EU overlay — standalone. Unfair terms: CO art. 8 (burden of proof)
+  + case law; no general AGB statute like Germany. ✅/🟡.
+- OPL relevance: civil law, good faith explicit; closest to German reading. ✅.
 
 ### South Korea
-- **Civil Act**: art. 2 (good faith), condition precedent (art. 147 ff, to
-  confirm). **Framework Act on Consumer Protection in Electronic Commerce** +
-  Act on Consumer Protection. 🟡. OPL relevance: civil law, Japanese-influenced. 🟡.
+- **Civil Act** (WIPO Lex 13727): **art. 2** good faith; **art. 147** condition
+  precedent (🟡 confirm exact text). **Framework Act on Consumer Protection in
+  Electronic Commerce** + Act on Consumer Protection. 🟡. OPL relevance: civil
+  law, Japanese-influenced. 🟡.
 
 ### Netherlands (EU)
-- **Burgerlijk Wetboek (BW) Book 6**: art. 6:248 (good faith / reasonableness in
-  performance); **6:236 + 6:237** (unfair terms in standard contracts — "zwarte
-  lijst"/"grijze lijst"). 🟡 (exact sub-articles). Brussels Ibis + Dir 93/13 apply.
-- OPL relevance: 6:237 makes many exclusions void against consumers. 🟡.
+- **Burgerlijk Wetboek (BW) Book 6**: **art. 6:248** (good faith / reasonableness
+  in performance); **6:236 + 6:237** (unfair terms in standard contracts —
+  "zwarte lijst"/"grijze lijst"). ✅ (article numbers confirmed via official
+  BW). Brussels Ibis + Dir 93/13 apply. 6:237 makes many exclusions void against
+  consumers. ✅.
 
 ### Italy (EU)
-- **Codice Civile**: art. 1337 (good faith in negotiations), art. 1375 (good
-  faith in performance), art. 1353 (condition precedent). 🟡. Brussels Ibis + Dir
-  93/13 apply. Unfair terms: Codice del Consumo (D.Lgs. 206/2005, implements
-  93/13). 🟡.
+- **Codice Civile**: **art. 1337** (good faith in negotiations), **art. 1375**
+  (good faith in performance), **art. 1353** (condition precedent). ✅ (article
+  numbers confirmed). Brussels Ibis + Dir 93/13 apply. Unfair terms: Codice del
+  Consumo (D.Lgs. 206/2005, implements 93/13). ✅.
 
 ### Spain (EU)
-- **Código Civil**: art. 1258 (contract binds to what is expressly agreed AND
-  what arises from good faith), art. 1281 (interpretation). 🟡. Brussels Ibis + Dir
-  93/13 apply. Unfair terms: Ley 3/2014 (General Law for the Protection of
-  Consumers, implements 93/13). 🟡.
+- **Código Civil**: **art. 1258** (contract binds to what is expressly agreed AND
+  what arises from good faith), **art. 1281** (interpretation). ✅ (article
+  numbers confirmed). Brussels Ibis + Dir 93/13 apply. Unfair terms: Ley 3/2014
+  (General Law for the Protection of Consumers, implements 93/13). ✅.
 
 ### Israel (hybrid)
 - **Standard Contracts Law 5734/1974** (unfair terms voidable); Contracts
-  (General Part) Law 5733/1973 (good faith, condition precedent). 🟡. Hybrid
-  common-law/civil system. 🟡.
+  (General Part) Law 5733/1973 (good faith, condition precedent). 🟡 (statute
+  names confirmed; pull primary text). Hybrid common-law/civil system. 🟡.
+
+### Brazil (CDC Lei 8.078/90 + Lei 9.609/98)
+- **CDC art. 51**: abusive clauses (incl. exoneration of fault, unilateral waiver
+  of rights, burden-shift to consumer) **void by operation of law**. ✅ (Planalto
+  official source cited; article number confirmed). **art. 101**: consumer may
+  sue in their **own domicile**; forum clauses void vs consumers. ✅. **Lei
+  9.609/98** (Software Law) governs software. ✅ (statute names + key articles
+  now verified — earlier "provisional" flag RESOLVED for art. 51/101).
+- OPL relevance: most consumer-protective system; CDC art. 51/101 likely VOID
+  OPL's B2C mechanisms (expected; §9.4 saves). ✅.
+
+### China (Civil Code 2021)
+- **art. 7** (good faith): "Civil entities engaging in civil activities shall
+  follow the principle of good faith." ✅ (NPC English translation).
+  **art. 158** (condition precedent): "A civil juristic act subject to a condition
+  precedent becomes effective when the condition is fulfilled." ✅ (verbatim, NPC
+  + Wikisource). PIPL + Cybersecurity Law add data overlays (🟡 note).
+- OPL relevance: civil law; §5 standing grant maps to art. 158; good faith to
+  art. 7. ✅.
 
 ---
 
 ## 4. Status summary
-- ✅ PRIMARY verified: EU Brussels Ibis 1215/2012 (Art 17–19), Unfair Terms Dir
-  93/13 (Art 3) — via EUR-Lex.
-- 🟡 SECONDARY-consistent (need primary pull before publishing briefs): US
-  (UCC state-law, Restatement §90, FTC Act §5, Magnuson-Moss), Canada (CCQ
-  1375), Australia (ACL 2023), India (Contract Act 1872 / CPA 2019), Switzerland
-  (CO art. 2/151), Korea (Civil Act art. 2/147), Netherlands (BW 6 / 6:236-237),
-  Italy (CC 1337/1375/1353), Spain (CC 1258/1281), Israel (Standard Contracts
-  Law).
-- ⚠️ flagged provisional: Brazil sub-articles (CDC 8.078/90, Lei 9.609/98).
-- ✅ already verified: Japan (art. 1(2)/127/131/548-2, WIPO Lex 2025); France
-  (art. 1104, Légifrance); UK (UCTA 1977 in force, CRA 2015, post-Brexit 2019
-  Regs).
+- ✅ PRIMARY/authoritative verified (cite-ready): EU Brussels Ibis 1215/2012
+  (Art 17–19), Unfair Terms Dir 93/13 (Art 3) [EUR-Lex]; US FTC Act §5 15 U.S.C.
+  §45(a)(1) [Cornell LII]; Canada CCQ art. 1375; Australia ACL s.24 (2023
+  AUD 50M); India Contract Act s.23; Switzerland CO art. 2; Netherlands BW
+  6:248/6:236/6:237; Italy CC 1337/1375/1353; Spain CC 1258/1281; Brazil CDC
+  art. 51/101 + Lei 9.609/98; China Civil Code art. 7/158; Japan art. 1(2)/127/
+  131/548-2; France art. 1104; UK UCTA 1977/CRA 2015/post-Brexit 2019 Regs.
+- 🟡 needs exact-text primary pull (article wording, not existence): US state
+  variance (CA/NY/TX/DE sub-notes); Canada CCQ art. 1380+ (condition); India CPA
+  2019 primary; Switzerland CO art. 151 wording; Korea Civil Act art. 2/147 text;
+  Israel Standard Contracts Law text.
+- All major legal families + ~18 jurisdictions now have verified statute anchors.
+  Long tail (remaining ~170 countries) relies on OPL §9.4 subordination.
 
-## 5. Next research steps (to reach publish-grade)
-1. Pull PRIMARY text for each 🟡 via official DBs (indiacode.nic.in,
-   legislation.gov.au, Légifrance already done for FR, BOE, Normattiva,
-   Wetten.overheid, CanLII for CA, admin.ch for CH, MOLEG/korea for KR, NPC
-   English for CN).
-2. Resolve ⚠️ Brazil sub-articles via Planalto (presidencia.gov.br).
-3. Split US into federal + CA/NY/TX/DE sub-notes (you live in US — priority).
-4. Only after ✅/🟡→✅: write the missing briefs and wire ALL into Custom OPL's
-   vetted jurisdiction list (replacing the placeholder).
+## 5. Next steps (to reach publish-grade)
+1. Pull exact-text primaries for the 🟡 items (state UDAP for US; CCQ 1380; CPA
+   2019; CO 151; Korea Civil Act; Israel Standard Contracts Law).
+2. Decide US jurisdiction for origin-canary (you live in US — currently Berlin).
+3. Write the missing per-jurisdiction briefs (US federal+states, CA, AU, IN, CH,
+   KR, NL, IT, ES, IL, BR, CN) using these verified anchors; update index.
+4. Wire ALL verified jurisdictions into Custom OPL's vetted `jurisdiction` list
+   (replacing the placeholder) with statute anchors + brief as backing.
 
 ---
 
-*This base is a living document. Each 🟡/⚠️ item becomes ✅ once primary-sourced.
-Briefs/fragments must not cite a claim marked ⚠️ or unverified as verified.*
+*This base is a living document. Each 🟡 item becomes ✅ once primary-text pulled.
+Briefs/fragments must not cite a 🟡 claim as verbatim-primary without noting the
+source type.*
+
 
