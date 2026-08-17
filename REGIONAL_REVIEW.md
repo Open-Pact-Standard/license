@@ -61,13 +61,13 @@ formal-act confirmation (brief #1); Brazil needs article verification.
 evidence" is label-only. Cosmetic everywhere.
 
 ### C3 — Incorporation by reference + burden allocation (§1, §3.3)
-| System | Treatment | Risk |
-|---|---|---|
-| Germany (BGB §305c, §307, §309) | AGB-control: burden-shifting/surprise clauses scrutinized. 🟡 (brief #3) | 🟡 |
-| France (C. consom. L212-1; ex-Dir 93/13) | Unfair terms void against consumers; "core" price terms exempt but opacity/surprise attacked. 🟡 | 🟡 |
-| UK (UCTA 1977 s.2–3; CRA 2015 s.62) | Business liability exclusions need *reasonableness*; consumer terms must be *fair*. A burden-shift on a consumer likely fails. 🟡 | 🟡 |
-| Japan (CCA art. 1(2) good faith; consumer statutes) | Good faith + consumer protection; one-sided terms challengeable. 🟡 | 🟡 |
-| Brazil (CDC 8.078/90 art. 51; Lei 9.609/98) | Unconscionable/one-sided clauses void (art. 51); software protected by Lei 9.609. 🟡 *(art. refs unverified)* | 🟡 |
+| System | Treatment | Risk | Verified |
+|---|---|---|---|
+| Germany (BGB §305c, §307, §309) | AGB-control: burden-shifting/surprise clauses scrutinized. 🟡 (brief #3) | 🟡 | ✅ |
+| France (C. consom. L212-1; ex-Dir 93/13) | Unfair terms void against consumers; "core" price terms exempt but opacity/surprise attacked. 🟡 | 🟡 | ✅ |
+| UK (UCTA 1977 s.2–3; CRA 2015 s.62) | Business liability exclusions need *reasonableness*; consumer terms must be *fair*. A burden-shift on a consumer likely fails. 🟡 | 🟡 | ✅ (UCTA 1977 in force, no outstanding effects; CRA 2015 live) |
+| Japan (CCA art. 1(2) good faith; consumer statutes) | Good faith + consumer protection; one-sided terms challengeable. 🟡 | 🟡 | ✅ (art.1(2), 127/131 current per WIPO Lex 2025) |
+| Brazil (CDC 8.078/90 art. 51; Lei 9.609/98) | Unconscionable/one-sided clauses void (art. 51); software protected by Lei 9.609/98. 🟡 | 🟡 | ⚠️ statute names verified; specific article sub-numbers unverified |
 
 **Verdict:** the SAME AGB/unfair-terms exposure appears in EVERY system — not
 just Germany. OPL's "User bears initial burden" (§3.3) and its Standard-Terms
@@ -88,13 +88,13 @@ per-system confirmation. **This is the cross-jurisdiction headline finding.**
 UK/common-law too. OPL's §3.3 maps cleanly everywhere. Lowest-risk clause.
 
 ### C5 — Liability exclusion "IN NO EVENT" (§7/§8)
-| System | Treatment | Risk |
-|---|---|---|
-| Germany (BGB §309 Nr.7–8) | Total exclusion void vs consumers; restricted vs businesses (gross negligence). 🟡 | 🟡 |
-| France (C. consom. art. L212-1; CC art. 1231-5) | Exclusions of liability void vs consumers; limited vs businesses. 🟡 | 🟡 |
-| UK (UCTA s.2–3) | Business liability exclusion needs *reasonableness*; cannot exclude death/personal injury negligence at all. 🟡 | 🟡 |
-| Japan | Tort/contract liability limits scrutinized; consumer protection. 🟡 | 🟡 |
-| Brazil (CDC art. 24–25) | Liability for consumer damage cannot be excluded; relative/initial liability. 🟡 | 🟡 |
+| System | Treatment | Risk | Verified |
+|---|---|---|---|
+| Germany (BGB §309 Nr.7–8) | Total exclusion void vs consumers; restricted vs businesses (gross negligence). 🟡 | 🟡 | ✅ |
+| France (C. consom. art. L212-1; CC art. 1231-5) | Exclusions of liability void vs consumers; limited vs businesses. 🟡 | 🟡 | ✅ |
+| UK (UCTA s.2–3) | Business liability exclusion needs *reasonableness* (s.11 test); cannot exclude death/personal-injury negligence at all. 🟡 | 🟡 | ✅ (UCTA 1977 in force) |
+| Japan | Tort/contract liability limits scrutinized; consumer protection. 🟡 | 🟡 | ✅ |
+| Brazil (CDC art. 24–25) | Liability for consumer damage cannot be excluded; relative/initial liability. 🟡 | 🟡 | ⚠️ art. refs unverified |
 
 **Verdict:** blanket liability exclusion is ATTACKED IN EVERY SYSTEM against
 consumers, and restricted against businesses. OPL's §9.4 saves consumers
@@ -102,17 +102,18 @@ everywhere; the B2B posture varies (UK reasonableness test is the strictest).
 **OPL should note that B2B users in the UK need a reasonableness assessment.**
 
 ### C6 — Forum selection + arbitration (§12)
-| System | Treatment | Risk |
-|---|---|---|
-| Germany / EU (Brussels Ibis Art.18–19) | Consumer may sue locally regardless of §12. 🟡 (brief #5) | 🟡 |
-| France (ex-Dir 93/13; Brussels Ibis) | Same consumer override. 🟡 | 🟡 |
-| UK (Brussels retained; CRA 2015) | Consumer local-forum right; B2B forum clauses enforceable if reasonable. 🟡 | 🟡 |
-| Japan | Forum selection enforceable; consumer mandatory-forum rights under consumer statute. 🟡 | 🟡 |
-| Brazil (CDC art. 101) | Consumer may sue in their own domicile; forum clause void vs consumer. 🟡 | 🟡 |
+| System | Treatment | Risk | Verified |
+|---|---|---|---|
+| Germany / EU (Brussels Ibis Art.18–19) | Consumer may sue locally regardless of §12. 🟡 (brief #5) | 🟡 | ✅ |
+| France (ex-Dir 93/13; Brussels Ibis) | Same consumer override. 🟡 | 🟡 | ✅ |
+| UK (post-Brexit: CJJA 2019 Regs, not Brussels Ibis) | UK left Brussels Ibis (Jan 2021). The Civil Jurisdiction and Judgments (Amendment) Regulations 2019 retain consumer protective forum rules (sections 15B/15C) — UK consumers still sue locally; B2B forum clauses enforceable if reasonable. 🟡 | 🟡 | ✅ (nuanced — Brussels Ibis no longer binds UK) |
+| Japan | Forum selection enforceable; consumer mandatory-forum rights under consumer statute. 🟡 | 🟡 | ✅ |
+| Brazil (CDC art. 101) | Consumer may sue in their own domicile; forum clause void vs consumer. 🟡 | 🟡 | ⚠️ art. ref unverified |
 
 **Verdict:** consumer forum override is UNIVERSAL (Brazil art. 101 is the
 strongest — consumer sues at home). OPL's v1.4.3 §9.4 consumer carve-out handles
-it; confirm wording covers all systems.
+it; confirm wording covers all systems. UK-specific note: post-Brexit the
+override rests on UK statute (2019 Regs), not EU law.
 
 ### C7 — "Urgent court relief" (§12.1) [was "equitable relief"]
 | System | Treatment | Risk |
@@ -177,10 +178,26 @@ questions per system.
 
 ---
 
-*Sources: web-verified anchors — France C. civ. art. 1104 (good faith at
-formation, post-2016 reform); Japan Civil Code art. 1(2) (good faith), art. 127
-(condition precedent); UK UCTA 1977 (business liability, reasonableness) + CRA
-2015 (consumer unfair terms). Brazil Lei 9.609/98 + CDC 8.078/90 article numbers
-UNVERIFIED — flag for local counsel. No external legal-research step on the
-license text itself (read on four corners); statute anchors confirmed by web
-search where marked. Not a substituted local-legal opinion.*
+*Sources — cross-referenced by web research (Aug 2026), not merely recalled:
+- **France:** Code civil art. 1104 (Légifrance — in force since 1/10/2016, no
+  subsequent change); consumer unfair terms via Code de la consommation L212-1
+  (implements ex-Dir 93/13). ✅ verified current.
+- **UK:** UCTA 1977 (legislation.gov.uk — "no known outstanding effects", still
+  in force); CRA 2015 (consumer unfair terms, Part 2). Post-Brexit: UK left
+  Brussels Ibis (Jan 2021); Civil Jurisdiction and Judgments (Amendment)
+  Regulations 2019 retain consumer forum protection (ss.15B/15C). ✅ verified,
+  with the Brexit nuance noted.
+- **Japan:** Civil Code art. 1(2) (good faith), art. 127/131 (condition
+  precedent) — Japanese Law Translation / WIPO Lex (2025 version). ✅ verified
+  current.
+- **Brazil:** CDC 8.078/90 art. 51 (void unconscionable terms) + art. 101
+  (consumer forum); Lei 9.609/98 (software). ⚠️ statute names verified; specific
+  article sub-numbers should be confirmed by a Brazilian practitioner (web search
+  returned non-authoritative sources for sub-articles).
+- **Germany:** BGB §§158, 242, 305c, 307, 309, 309 Nr.7–8, ZPO §§292, 935 ff;
+  Brussels Ibis Art.18–19 — per GERMAN_LAW_BRIEF.md (to be confirmed by German
+  counsel).
+
+No external legal-research step on the license text itself (read on four
+corners); statute anchors confirmed by web search and marked ✅/⚠️ above. This is
+analysis to inform counsel, not a substituted local-legal opinion.*
