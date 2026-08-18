@@ -5,7 +5,40 @@ All notable changes to the Open-Pact License will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.4.3] - 2026-08-18 (Published)
+
+OPL-1.4.3 is the first **published** release of the OPL-1.4 series. It supersedes
+v1.3.1 and carries the same `OPL-1.4` SPDX identifier. v1.4.3 incorporates the
+complete legal-skills-review pass (ambiguity stress-test + 5-clause risk scan +
+regional discrepancy scan) on top of the v1.4 major revision.
+
+The v1.4 series (v1.4 → v1.4.1 → v1.4.2 → v1.4.3) is a **substantive,
+adoption-focused revision** of OPL from the published v1.3.1:
+
+### Changed (v1.4 vs v1.3.1)
+- **§5.1 Version-Based DOSP (new, opt-in).** A Maintainer may declare a DOSP
+  period in `NOTICE`, after which each Version's source converts to Apache
+  License 2.0 on a scheduled date (recommended 24-60 months). Silent `NOTICE` =
+  no scheduled conversion. Aligns with the Fair Source movement's DOSP
+  expectation *for adopters who opt in* while preserving creator autonomy.
+- **§3.6 Functional Equivalent — REMOVED.** The functional-equivalence
+  restriction (and clean-room-rewrite coverage) was deleted. Removes the "code
+  taint" anxiety that discouraged adoption. Actual copying remains protected by
+  copyright law.
+- **§13 NOTICE shape (extended).** Added two optional fields: **DOSP period**
+  (enables §5.1) and **Commercial Terms file** (a per-Version immutable
+  `COMMERCIAL_TERMS.md` pinning pricing/payment/scope).
+- **§5 abandonment — robust.** Replaced the vague "converts to Apache-2.0" with
+  an explicit **standing conditional grant** effective automatically on
+  abandonment (no actor, successor, or registry required); added an optional,
+  strictly-bounded Designated Successor who may *record* the conversion but holds
+  no other power.
+- **SPDX identifier** bumped to `OPL-1.4`.
+
+### Notes
+- v1.4.1 / v1.4.2 / v1.4.3 are successive tightening passes; no rights or
+  obligations were added beyond the v1.4 revision. Keeping the `OPL-1.4` SPDX
+  identifier stable across them.
 
 ## [1.3.1] - 2026-06-11 (Published)
 

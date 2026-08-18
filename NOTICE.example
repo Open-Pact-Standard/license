@@ -1,8 +1,8 @@
-# OPL-1.3.1 NOTICE File Example
-# ==============================
+# OPL-1.4 NOTICE File Example
+# =============================
 #
 # This is an EXAMPLE of a NOTICE file for a project licensed under the
-# Open-Pact License v1.3.1 (OPL-1.3.1). It is a template.
+# Open-Pact License v1.4 (OPL-1.4). It is a template.
 #
 # How to use this file:
 #   1. Copy this file to NOTICE in the root of your project repository.
@@ -11,7 +11,7 @@
 #   4. Keep every line that does NOT begin with "#".
 #   5. Optional fields may be removed entirely; do not include them at all.
 #
-# Per OPL-1.3.1 §13, your NOTICE must include at minimum:
+# Per OPL-1.4 §13, your NOTICE must include at minimum:
 #   - OPL Version
 #   - Maintainer's name and reachable contact
 #   - Governing Jurisdiction
@@ -29,13 +29,13 @@
 # LICENSE.md §3.3 for the full 7-criteria definition and the rebuttable-
 # presumption rule with burden allocation.
 #
-# For the full OPL-1.3.1 license text, see LICENSE.md.
-# For the OPL-AI addendum (v1.3.1), see OPL-AI-v1.3.1.md.
+# For the full OPL-1.4 license text, see LICENSE.md.
+# For the OPL-AI addendum (OPL-AI-1.3.1), see OPL-AI.md.
 # For the Standard Terms requirements, see LICENSE.md §3.3.
 
 # ----- REQUIRED FIELDS -----
 
-OPL Version: 1.3.1
+OPL Version: 1.4
 # The Open-Pact License version this NOTICE is authored against. Useful
 # for future-proofing: if you upgrade later, update this line. The
 # SPDX-License-Identifier in each source file is the authoritative
@@ -97,12 +97,12 @@ OPL-AI: opted out.
 #              permitted under the same terms as other use." (Or simply
 #              omit this line; the default is opt-out.)
 # To opt in:  "OPL-AI: opted in. AI training is restricted under the
-#              OPL-AI addendum (v1.3.1)." See OPL-AI-v1.3.1.md.
+#              OPL-AI addendum (OPL-AI-1.3.1)." See OPL-AI.md.
 #
 # Canonical syntax: the prefix "OPL-AI:" is case-sensitive; the value
 # "opted in." / "opted out." is case-insensitive; whitespace is
 # tolerant; trailing text after the value is treated as human-readable
-# commentary. See OPL-AI-v1.3.1.md §8.1–§8.3 for the full parsing
+# commentary. See OPL-AI.md §8.1–§8.3 for the full parsing
 # rules and 16+ examples.
 
 # ----- OPTIONAL FIELDS -----

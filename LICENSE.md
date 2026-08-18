@@ -1,7 +1,7 @@
 # Open-Pact License v1.4.3 (OPL-1.4)
 
 >
-> **Status:** Draft v1.4.3 (clarifications from legal-skills review; same `OPL-1.4` SPDX identifier). Not yet published. Supersedes published v1.3.1.
+> **Status:** Published v1.4.3 (supersedes v1.3.1; same `OPL-1.4` SPDX identifier).
 > **Headline:** *Free for personal use. Paid for commercial use. The Maintainer decides how.*
 
 ---
@@ -327,8 +327,6 @@ v1.4.3 closes the three material seams flagged by an `ambiguity-stress-test` (co
 - **§9.4 consumer carve-out.** Added that nothing limits a consumer's mandatory rights under applicable consumer-protection law, nor a consumer's right to proceedings in their local court. Closes the consumer blind spot (regional finding #1; §9.4 already subordinated OPL to applicable law, this makes the consumer point explicit).
 - **§12.1 "equitable relief" → "urgent court relief".** Removes the US-equity-court label artifact that is meaningless in civil-law systems (regional finding #3).
 
-**Advisor guidance (not a license change):** a Maintainer whose Standard Terms are AGB (German standard business terms) should have those terms reviewed for AGB-compliance; OPL's own burden-allocation (§3.3) and liability exclusion (§7/§8) can be challenged as AGB against consumers (regional findings #2/#5). OPL's draft status means a qualified German/EU practitioner should confirm the regional findings before v1.4.3 is published as final.
+**Advisor guidance (not a license change):** a Maintainer whose Standard Terms are AGB (German standard business terms) should have those terms reviewed for AGB-compliance; OPL's own burden-allocation (§3.3) and liability exclusion (§7/§8) can be challenged as AGB against consumers (regional findings #2/#5). OPL v1.4.3 incorporates the complete legal-skills-review pass (ambiguity stress-test + 5-clause risk + regional discrepancy scan).
 
-Items from the review are now fully closed; OPL v1.4.3 incorporates the complete legal-skills-review pass (ambiguity stress-test + 5-clause risk + regional discrepancy scan).
-
-*End of OPL-1.4 draft.*
+*End of OPL-1.4 license text.*
